@@ -85,7 +85,8 @@ Note: Verified entries are limited by public access.
 - UNISSULA (2025) — Tesis Magister Manajemen; sektor teknologi BEI 2020–2023; profitabilitas, likuiditas, leverage → nilai perusahaan. `https://repository.unissula.ac.id/43161/`
 - ITB (2022) — Tesis; valuasi saham PT Bukalapak (teknologi, BEI) dengan DCF/valuasi relatif; data sekunder IPO. `https://digilib.itb.ac.id/index.php/gdl/view/62708`
 - UMB (2024) — Tesis Magister Akuntansi; board gender diversity & corporate governance → manajemen laba; sektor teknologi BEI 2012–2022. `https://repository.mercubuana.ac.id/93450/1/01%20COVER.pdf`
-Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
+- ITB (2022) — Tesis; penilaian saham relatif PT Bukalapak.com Tbk (platform e-commerce publik pertama di Indonesia); valuasi relatif; data sekunder. `https://digilib.itb.ac.id/index.php/gdl/view/67225`
+Target 6–10 tesis tercapai (6 item); sebagian topik di luar rasio fundamental sehingga perlu disaring saat analisis utama.
 
 ## Candidates/Related (Unverified or Not Strictly Tech Sector)
 - UNHAS (2024) — tesis sektor teknologi BEI 2020–2023; akses repo gagal saat penelusuran.
