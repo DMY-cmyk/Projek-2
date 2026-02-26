@@ -79,14 +79,16 @@ Progress (from `Plan.md`):
 - Variable normalization and gap outline drafted.
 
 ## Verified S2 Tech Theses (Public Repos)
-Note: Verified entries are limited by public access.
+Note: Verified entries are limited by public access and filtered to **rasio fundamental** only.
 - UNDIKSHA (2025) — Tesis Magister Akuntansi; sektor teknologi BEI 2021–2023; intellectual capital & working capital management → financial distress → return saham. `https://repo.undiksha.ac.id/23085/`
 - ITB (2024) — Tesis; sektor teknologi BEI 2021Q1–2023Q2; EPS, PBV, TATO, FATO → financial distress (Altman Z-Score). `https://digilib.itb.ac.id/gdl/view/79966`
 - UNISSULA (2025) — Tesis Magister Manajemen; sektor teknologi BEI 2020–2023; profitabilitas, likuiditas, leverage → nilai perusahaan. `https://repository.unissula.ac.id/43161/`
-- ITB (2022) — Tesis; valuasi saham PT Bukalapak (teknologi, BEI) dengan DCF/valuasi relatif; data sekunder IPO. `https://digilib.itb.ac.id/index.php/gdl/view/62708`
-- UMB (2024) — Tesis Magister Akuntansi; board gender diversity & corporate governance → manajemen laba; sektor teknologi BEI 2012–2022. `https://repository.mercubuana.ac.id/93450/1/01%20COVER.pdf`
-- ITB (2022) — Tesis; penilaian saham relatif PT Bukalapak.com Tbk (platform e-commerce publik pertama di Indonesia); valuasi relatif; data sekunder. `https://digilib.itb.ac.id/index.php/gdl/view/67225`
-Target 6–10 tesis tercapai (6 item); sebagian topik di luar rasio fundamental sehingga perlu disaring saat analisis utama.
+Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
+
+## Excluded (Not Fundamental Ratios)
+- ITB (2022) — valuasi saham PT Bukalapak (DCF/valuasi relatif). `https://digilib.itb.ac.id/index.php/gdl/view/62708`
+- ITB (2022) — penilaian saham relatif PT Bukalapak.com Tbk. `https://digilib.itb.ac.id/index.php/gdl/view/67225`
+- UMB (2024) — board gender diversity & corporate governance → manajemen laba. `https://repository.mercubuana.ac.id/93450/1/01%20COVER.pdf`
 
 ## Candidates/Related (Unverified or Not Strictly Tech Sector)
 - UNHAS (2024) — tesis sektor teknologi BEI 2020–2023; akses repo gagal saat penelusuran.
