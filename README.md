@@ -93,9 +93,12 @@ Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
 ## Candidates/Related (Unverified or Not Strictly Tech Sector)
 - UNHAS (2024) — tesis sektor teknologi BEI 2020–2023; akses repo gagal saat penelusuran.
 - UNEJ (2021) — tesis Magister Akuntansi tentang reaksi pasar atas pengumuman investasi TI pada emiten BEI (relevan teknologi/IT, bukan sektor teknologi).
-- UNILA (2025) — tesis S2 Magister Ilmu Akuntansi; mobile banking & investasi TI → NPL dan fee based income (perbankan, bukan sektor teknologi). citeturn0search2
-- UNDIKSHA (2024) — tesis S2; CSER & investasi TI → nilai perusahaan pertambangan (bukan sektor teknologi). citeturn0search36
-- UNISSULA (2024) — tesis S2; TI memoderasi kompetensi SDM → kinerja perusahaan; studi perbankan syariah (bukan sektor teknologi). citeturn0search38
+- UNILA (2025) — tesis S2 Magister Ilmu Akuntansi; mobile banking & investasi TI → NPL dan fee based income (perbankan, bukan sektor teknologi).
+- UNDIKSHA (2024) — tesis S2; CSER & investasi TI → nilai perusahaan pertambangan (bukan sektor teknologi).
+- UNISSULA (2024) — tesis S2; TI memoderasi kompetensi SDM → kinerja perusahaan; studi perbankan syariah (bukan sektor teknologi).
+
+## Search Status (2026-02-26)
+- Additional searches for S2 tech-sector BEI theses using fundamental ratios returned mostly journal articles or non-tech-sector theses, with no new verifiable matches added in this round.
 
 ## Git Ignore
 - `Plan.md` is gitignored.
