@@ -59,6 +59,13 @@ Generate yearly closing prices for PBV input:
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
 - `analysis_output.md`: final synthesis (ringkasan, tabel tesis, gap, ide judul, metodologi).
 
+## Appendices
+`analysis_output.md` now includes:
+- Variable definitions and formulas.
+- Minimal dataset schema.
+- Empirical design models (baseline, moderation, structural break).
+- Diagnostics and robustness checks.
+
 ## Notes
 - SEC API requires a descriptive `User-Agent`.
 - Default ratios are FY-only from 10-K/20-F; pass `-NoFyOnly` to include interim values.

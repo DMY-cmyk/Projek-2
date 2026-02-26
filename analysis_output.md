@@ -35,5 +35,45 @@ Hasil verifikasi publik saat ini menghasilkan **3 tesis** yang memenuhi kriteria
 - Robustness: GMM / subsample / lagging.
 - AI proxy: disclosure index dari annual report atau intangible intensity.
 
+## Metodologi Appendix
+### A. Definisi Variabel dan Rumus
+- ROA = Laba Bersih / Total Aset
+- ROE = Laba Bersih / (Total Aset - Total Liabilitas)
+- NPM = Laba Bersih / Pendapatan
+- CR = Aset Lancar / Liabilitas Lancar
+- DER = Total Liabilitas / Ekuitas
+- TATO = Pendapatan / Total Aset
+- EPS = Laba Bersih / Jumlah Saham Beredar
+- PBV = Harga Saham / Nilai Buku per Saham
+- Tobin’s Q = (Nilai Pasar Ekuitas + Total Liabilitas) / Total Aset
+
+### B. Skema Dataset (Minimal)
+Kolom wajib:
+- `firm_id`, `ticker`, `year`, `sector`
+- `price`, `return`, `pbv`, `tobins_q`
+- `roa`, `roe`, `npm`, `cr`, `der`, `tato`, `eps`
+- `size`, `growth`, `volatility`, `firm_age`
+- `ai_disclosure_index`, `intangible_intensity`
+
+Kolom opsional:
+- `macro_inflation`, `macro_fx`, `macro_rate`
+- `event_dummy` (misal 2022/2023 sebagai era GenAI)
+
+### C. Desain Empiris
+- Model dasar: Y_it = α + βX_it + γControls_it + μ_i + ε_it
+- Moderasi AI: Y_it = α + βX_it + θAI_it + λ(X_it * AI_it) + γControls_it + μ_i + ε_it
+- Structural break: tambah dummy era GenAI + interaksi dummy dengan X_it
+
+### D. Uji Diagnostik
+- Multikolinearitas: VIF
+- Heteroskedastisitas: White/Breusch-Pagan
+- Autokorelasi: Durbin-Watson / Wooldridge
+- Hausman: FE vs RE
+
+### E. Robustness
+- GMM (lagged dependent variable)
+- Subsample pre/post 2022
+- Winsorizing outlier 1%/5%
+
 ## Catatan Keterbatasan
 Target 6–10 tesis belum tercapai karena akses publik terbatas. Disarankan melanjutkan penelusuran repositori kampus lain atau meminta akses via perpustakaan kampus.
