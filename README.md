@@ -80,10 +80,10 @@ Progress (from `Plan.md`):
 
 ## Verified S2 Tech Theses (Public Repos)
 Note: Verified entries are limited by public access.
-- UNDIKSHA (2025) — Tesis Magister Akuntansi; sektor teknologi BEI 2021–2023; intellectual capital & working capital management → financial distress → return saham.
-- ITB (2024) — Tesis; sektor teknologi BEI 2021Q1–2023Q2; EPS, PBV, TATO, FATO → financial distress (Altman Z-Score).
-- ITB (2024) — Tesis; valuasi saham sektor teknologi BEI 2018–2022; valuasi relatif & DCF; sampel IPO teknologi.
-- UNISSULA (2025) — Tesis Magister Manajemen; sektor teknologi BEI 2020–2023; profitabilitas, likuiditas, leverage → nilai perusahaan.
+- UNDIKSHA (2025) — Tesis Magister Akuntansi; sektor teknologi BEI 2021–2023; intellectual capital & working capital management → financial distress → return saham. `https://repo.undiksha.ac.id/23085/`
+- ITB (2024) — Tesis; sektor teknologi BEI 2021Q1–2023Q2; EPS, PBV, TATO, FATO → financial distress (Altman Z-Score). `https://digilib.itb.ac.id/gdl/view/79966`
+- UNISSULA (2025) — Tesis Magister Manajemen; sektor teknologi BEI 2020–2023; profitabilitas, likuiditas, leverage → nilai perusahaan. `https://repository.unissula.ac.id/43161/`
+- UNHAS (2024) — Thesis; sektor teknologi BEI 2020–2023; IC, likuiditas, solvabilitas, profitabilitas → kinerja perusahaan; full text terbatas. `https://repository.unhas.ac.id/id/eprint/37698/`
 Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
 
 ## Git Ignore
