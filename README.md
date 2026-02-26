@@ -57,6 +57,7 @@ Generate yearly closing prices for PBV input:
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
+- `analysis_output.md`: final synthesis (ringkasan, tabel tesis, gap, ide judul, metodologi).
 
 ## Notes
 - SEC API requires a descriptive `User-Agent`.
