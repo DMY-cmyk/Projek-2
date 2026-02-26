@@ -44,25 +44,11 @@
 ## FASE 1: TINJAUAN PUSTAKA & KERANGKA TEORI
 
 ### Step 1.1 — Mapping Literatur Tesis Pembanding
-- [ ] Kumpulkan minimal 6–10 tesis S2 yang relevan (target belum tercapai, baru 3 terverifikasi)
-- [ ] Sumber pencarian:
-  - OneSearch Perpusnas (onesearch.id)
-  - GARUDA (garuda.kemdikbud.go.id)
-  - Google Scholar (scholar.google.com)
-  - Repositori kampus: UNDIKSHA, ITB, UNISSULA, UGM, UI, UNPAD, UNDIP, dll.
-- [ ] Query template:
-  ```
-  "analisis fundamental" AND ("sektor teknologi" OR "technology sector")
-  AND ("data sekunder" OR "secondary data") AND (tesis OR "magister")
-  AND (BEI OR IDX) filetype:pdf
-  ```
-- [ ] Verifikasi setiap tesis:
-  - Level: S2 (bukan S1)
-  - Data: Sekunder (bukan primer/kuesioner)
-  - Topik: Rasio fundamental
-  - Sektor: Teknologi atau relevan
-  - Fulltext tersedia
-- [ ] Catat di tabel inventaris: peneliti, tahun, kampus, sektor, periode, variabel, metode, temuan kunci
+- [x] Kumpulkan minimal 6–10 tesis S2 yang relevan ✅ (8 tesis S2 terverifikasi: 4 sektor teknologi + 4 sektor lain)
+- [x] Sumber pencarian: Google Scholar, repositori kampus (UNDIKSHA, ITB, UNISSULA, UNAND, UI, UPI, U.Bakrie) ✅
+- [x] Verifikasi setiap tesis: Level S2, data sekunder, rasio fundamental ✅
+- [x] Catat di tabel inventaris ✅ (lihat `output/literatur_tesis.md`)
+- [x] Tambahan: 4 kandidat level tidak jelas + 3 artikel jurnal terkait ✅
 
 ### Step 1.2 — Mapping Artikel Jurnal Pendukung
 - [ ] Cari 20–30 artikel jurnal (nasional + internasional) yang relevan
