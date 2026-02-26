@@ -100,6 +100,9 @@ Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
 ## Search Status (2026-02-26)
 - Additional searches for S2 tech-sector BEI theses using fundamental ratios returned mostly journal articles or non-tech-sector theses, with no new verifiable matches added in this round.
 
+## Search Status (2026-02-26, Round 2)
+- Follow-up searches confirmed the existing ITB 2024 thesis entry but found no additional publicly verifiable S2 tech-sector BEI theses using fundamental ratios in this round.
+
 ## Git Ignore
 - `Plan.md` is gitignored.
 - `data/` and credential/secret files are gitignored.
