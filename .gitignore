@@ -1,0 +1,15 @@
+/target
+**/*.rs.bk
+Cargo.lock
+data/
+Plan.md
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+*credentials*
+secrets.*
+*secrets*
