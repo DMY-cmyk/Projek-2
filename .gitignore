@@ -2,7 +2,6 @@
 **/*.rs.bk
 Cargo.lock
 data/
-Plan.md
 .env
 .env.*
 *.pem
