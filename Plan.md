@@ -203,6 +203,7 @@
   - (Dari catatan atas laporan keuangan jika perlu)
 - [x] Monitoring availability FS/AR/Price otomatis disiapkan ✅ (`scripts/update_collection_availability.ps1`, `output/data_collection_master_status.csv`, `output/data_collection_availability_report.md`)
 - [x] Download queue FS disiapkan ✅ (`output/download_queue_fs.csv`, `output/download_queue_summary.md`)
+- [x] Batch harian koleksi data disiapkan ✅ (`output/daily_collection_batch.md`, `scripts/build_daily_collection_batch.ps1`)
 
 ### Step 3.3 — Download Data Harga Saham
 - [ ] Download closing price akhir tahun (31 Desember atau hari bursa terakhir) untuk setiap sampel
@@ -434,6 +435,7 @@
 - [x] Queue aksi pending terstruktur disiapkan ✅ (`output/pending_actions.csv`, `output/pending_actions_summary.md`)
 - [x] Sprint prioritas aksi berikutnya disiapkan ✅ (`output/next_actions_sprint.md`)
 - [x] One-command refresh operasional disiapkan ✅ (`scripts/refresh_operational_dashboard.ps1`, `output/operational_refresh_summary.md`)
+- [x] Laporan blocker kritis disiapkan ✅ (`output/critical_blockers_report.md`, `scripts/build_blocker_report.ps1`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

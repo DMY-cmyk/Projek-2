@@ -172,6 +172,17 @@ Outputs:
 - `output/manual_crosscheck_10pct.csv`
 - `output/data_collection_manifest_interim.md`
 
+Build daily ticker batch for manual collection:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_daily_collection_batch.ps1 `
+  -StatusCsv .\output\data_collection_master_status.csv `
+  -BatchSize 5 `
+  -OutMd .\output\daily_collection_batch.md
+```
+
+Output:
+- `output/daily_collection_batch.md`
+
 Refresh file-availability status against expected paths:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\update_collection_availability.ps1 `
@@ -388,6 +399,7 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 - `output/pending_actions.csv`
 - `output/pending_actions_summary.md`
 - `output/next_actions_sprint.md`
+- `output/critical_blockers_report.md`
 
 Regenerate pending action queue from `Plan.md`:
 ```powershell
@@ -411,6 +423,15 @@ powershell -ExecutionPolicy Bypass -File .\scripts\refresh_operational_dashboard
 
 Output:
 - `output/operational_refresh_summary.md`
+
+Build critical blockers snapshot:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_blocker_report.ps1 `
+  -AvailabilityReport .\output\data_collection_availability_report.md `
+  -ModelReadiness .\output\model_readiness_report.md `
+  -PendingSummary .\output\pending_actions_summary.md `
+  -OutMd .\output\critical_blockers_report.md
+```
 
 ## Proposal Kickoff Template
 - `draft/proposal_awal_outline.md`

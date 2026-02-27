@@ -331,6 +331,8 @@ Untuk fokus eksekusi mingguan, prioritas tindakan dapat mengikuti antrean `outpu
 
 Seluruh artefak monitoring operasional dapat diperbarui serentak melalui skrip `scripts/refresh_operational_dashboard.ps1` dengan ringkasan hasil pada `output/operational_refresh_summary.md`.
 
+Untuk eksekusi koleksi data harian dan identifikasi hambatan utama, dokumen `output/daily_collection_batch.md` dan `output/critical_blockers_report.md` digunakan sebagai panduan operasional.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)
