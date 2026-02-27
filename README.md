@@ -359,6 +359,7 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 ## Supervisor and Exam Package (Step 6.2 / 6.3)
 Prepared files:
 - `output/supervisor_submission_checklist.md`
+- `output/supervisor_consultation_tracker.md`
 - `draft/consultation_revision_log.md`
 - `draft/one_page_summary_penguji.md`
 - `draft/one_page_summary_penguji.docx`
@@ -371,6 +372,8 @@ Prepared files:
 - `draft/defense_slides_v2.pptx`
 - `draft/defense_speaker_notes.md`
 - `output/presentation_rehearsal_plan.md`
+- `output/presentation_rehearsal_log_template.md`
+- `output/post_defense_revision_tracker.md`
 
 Canva note:
 - `output/canva_integration_note.md`

@@ -428,12 +428,14 @@
 - [ ] Submit draft ke pembimbing 2 (jika ada)
 - [ ] Revisi final
 - [x] Paket konsultasi pembimbing disiapkan (`output/supervisor_submission_checklist.md`, `draft/consultation_revision_log.md`)
+- [x] Tracker eksekusi konsultasi disiapkan ✅ (`output/supervisor_consultation_tracker.md`)
 
 ### Step 6.3 — Persiapan Ujian
 - [x] Siapkan presentasi (PPT/slides) -> `draft/defense_slides.pptx`
 - [x] Siapkan ringkasan 1 halaman untuk penguji (`draft/one_page_summary_penguji.docx`, `.pdf`)
 - [ ] Latihan presentasi (15–20 menit)
 - [x] Runbook latihan presentasi disiapkan (`output/presentation_rehearsal_plan.md`, `draft/defense_speaker_notes.md`)
+- [x] Log template latihan presentasi disiapkan ✅ (`output/presentation_rehearsal_log_template.md`)
 - [x] Draft ringkasan 1 halaman penguji disiapkan (`draft/one_page_summary_penguji.md`, `.docx`, `.pdf`)
 - [x] Outline slide ujian disiapkan (`draft/slides_outline.md`)
 - [x] Antisipasi pertanyaan disiapkan (`draft/faq_sidang.md`)
@@ -449,6 +451,7 @@
 - [ ] Finalisasi tesis
 - [ ] Upload ke repositori kampus
 - [ ] (Opsional) Publikasi ke jurnal nasional terakreditasi
+- [x] Tracker revisi pasca-ujian disiapkan ✅ (`output/post_defense_revision_tracker.md`)
 
 ---
 
