@@ -387,6 +387,7 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 - `output/plan_progress_dashboard.md`
 - `output/pending_actions.csv`
 - `output/pending_actions_summary.md`
+- `output/next_actions_sprint.md`
 
 Regenerate pending action queue from `Plan.md`:
 ```powershell
@@ -395,6 +396,16 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build_pending_actions.ps1 `
   -OutCsv .\output\pending_actions.csv `
   -OutMd .\output\pending_actions_summary.md
 ```
+
+Build priority sprint queue from pending actions:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_execution_sprint.ps1 `
+  -PendingCsv .\output\pending_actions.csv `
+  -OutMd .\output\next_actions_sprint.md
+```
+
+## Proposal Kickoff Template
+- `draft/proposal_awal_outline.md`
 
 ## Supervisor and Exam Package (Step 6.2 / 6.3)
 Prepared files:

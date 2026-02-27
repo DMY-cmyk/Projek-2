@@ -17,6 +17,7 @@
 - [ ] ⏳ **BUTUH AKSI MANUSIA**: Daftarkan judul ke program studi / kaprodi
 - [ ] ⏳ **BUTUH AKSI MANUSIA**: Dapatkan persetujuan pembimbing
 - [ ] ⏳ **BUTUH AKSI MANUSIA**: Siapkan proposal awal (format sesuai panduan kampus)
+- [x] Template outline proposal awal disiapkan ✅ (`draft/proposal_awal_outline.md`)
 - [x] Pastikan akses ke:
   - IDX website (idx.co.id) untuk laporan keuangan & annual report ✅
   - Database harga saham (Yahoo Finance / IDX / Bloomberg jika tersedia) ✅
@@ -431,6 +432,7 @@
 - [x] Cek format sesuai panduan tesis kampus (template-based draft sudah diselaraskan)
 - [x] Dashboard progres rencana disiapkan ✅ (`output/plan_progress_dashboard.md`)
 - [x] Queue aksi pending terstruktur disiapkan ✅ (`output/pending_actions.csv`, `output/pending_actions_summary.md`)
+- [x] Sprint prioritas aksi berikutnya disiapkan ✅ (`output/next_actions_sprint.md`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

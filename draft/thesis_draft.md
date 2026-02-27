@@ -327,6 +327,8 @@ Untuk pengendalian progres implementasi, monitoring checklist keseluruhan disara
 
 Sebagai daftar kerja harian, butir-butir pending yang tersisa juga dapat dikelola melalui `output/pending_actions.csv` dan ringkasannya di `output/pending_actions_summary.md`.
 
+Untuk fokus eksekusi mingguan, prioritas tindakan dapat mengikuti antrean `output/next_actions_sprint.md`, sedangkan persiapan proposal administratif awal dapat menggunakan `draft/proposal_awal_outline.md`.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)
