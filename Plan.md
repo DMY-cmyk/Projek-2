@@ -107,6 +107,7 @@
 - [x] **Catatan penting**: Sektor teknologi BEI relatif baru (banyak IPO post-2019). Analisis 6 skenario selesai ✅:
 - [x] Automation siap: `scripts/estimate_sample.ps1` + template `output/sample_selection_template.csv` + summary `output/sample_estimation.md`
   - Relaksasi kriteria (misal listing sebelum 2020) ✅ dianalisis
+  - Output relaksasi terdokumentasi ✅ (`output/sample_estimation_relaxed.md`, `output/sample_selection_result_relaxed.csv`)
   - Unbalanced panel (izinkan entry/exit) ✅ dianalisis
   - Atau perluas ke sektor terkait (Technology + Telecommunication) ✅ **Rekomendasi utama: Tech + Telecom balanced panel (27 perusahaan, 189 observasi)**
 
@@ -203,6 +204,8 @@
 - [ ] Sumber: Yahoo Finance, IDX, atau `scripts/price_fetch.ps1` (untuk saham AS)
 - [ ] Download juga harga bulanan (untuk menghitung volatilitas)
 - [ ] Simpan di `data/prices/`
+- [x] Otomasi batch fetch harga untuk kandidat sampel disiapkan (`scripts/fetch_all_prices.ps1`)
+- [x] Skrip validasi koneksi Yahoo disiapkan (`scripts/test_yahoo.ps1`)
 
 ### Step 3.4 — Download & Analisis Annual Report (untuk AI Disclosure Index)
 - [ ] Download annual report (bukan laporan keuangan) untuk setiap sampel 2019–2025

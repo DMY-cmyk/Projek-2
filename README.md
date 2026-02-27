@@ -56,6 +56,16 @@ Generate yearly closing prices for PBV input:
 .\scripts\price_fetch.ps1 -Ticker AAPL -StartYear 2019 -EndYear 2025 -Out .\data\prices_aapl.csv
 ```
 
+IDX batch price fetch for candidate sample tickers:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\fetch_all_prices.ps1 -StartYear 2019 -EndYear 2025 -OutDir .\data\prices
+```
+
+Quick Yahoo connectivity check:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\test_yahoo.ps1
+```
+
 ## EViews Integration (Automated Analysis)
 Detected on this PC:
 - `EViews 12 (64-bit)` at `C:\Program Files\EViews 12\`
@@ -119,6 +129,9 @@ Optional relaxed listing cutoff (<= 2020-01-01):
 Outputs:
 - `output/sample_selection_result.csv`
 - `output/sample_estimation.md`
+- `output/sample_selection_result_relaxed.csv`
+- `output/sample_estimation_relaxed.md`
+- `output/sample_analysis_comprehensive.md`
 
 ### IDX Population Ingestion (before sample estimation)
 If you export IDX issuer list to CSV, normalize it first:
