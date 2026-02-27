@@ -219,10 +219,16 @@ Generated draft files:
 - `draft/thesis_draft.md`
 - `draft/thesis_draft.docx`
 - `draft/thesis_draft.pdf`
+- `draft/daftar_pustaka_draft.md`
+- `draft/lampiran_draft.md`
+
+Campus-ready template used:
+- `Skripsi_31998_DZAKI.docx`
+- `Skripsi_31998_DZAKI.pdf`
 
 Regenerate DOCX:
 ```powershell
-pandoc .\draft\thesis_draft.md -o .\draft\thesis_draft.docx
+pandoc .\draft\thesis_draft.md --reference-doc=.\Skripsi_31998_DZAKI.docx -o .\draft\thesis_draft.docx
 ```
 
 Regenerate PDF:
@@ -230,6 +236,9 @@ Regenerate PDF:
 pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu --print-to-pdf="D:\VsCode\Projek-2\draft\thesis_draft.pdf" "file:///D:/VsCode/Projek-2/draft/thesis_draft.html"
 ```
+
+## Internal Review Progress (Step 6.1)
+- `output/review_internal_checklist.md`
 
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).

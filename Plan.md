@@ -390,10 +390,11 @@
 - [ ] Keterbatasan penelitian
 - [ ] Saran untuk penelitian selanjutnya
 - [x] Export dokumen draft ke DOCX dan PDF selesai (`draft/thesis_draft.docx`, `draft/thesis_draft.pdf`)
+- [x] Revisi draft mengikuti template kampus utama (`Skripsi_31998_DZAKI.docx`)
 
 ### Step 5.6 — Kelengkapan
-- [ ] Daftar pustaka (format APA 7th atau sesuai panduan kampus)
-- [ ] Lampiran:
+- [x] Daftar pustaka (draft) disiapkan (`draft/daftar_pustaka_draft.md`)
+- [x] Lampiran (draft) disiapkan (`draft/lampiran_draft.md`)
   - Daftar sampel perusahaan
   - Data mentah (ringkasan)
   - Output statistik (Stata/EViews/R)
@@ -405,10 +406,10 @@
 ## FASE 6: FINALISASI & UJIAN
 
 ### Step 6.1 — Review Internal
-- [ ] Proofread seluruh draft
-- [ ] Cek konsistensi angka antara tabel dan narasi
-- [ ] Cek semua referensi tercantum di daftar pustaka
-- [ ] Cek format sesuai panduan tesis kampus
+- [x] Proofread awal draft dilakukan (lihat `output/review_internal_checklist.md`)
+- [x] Cek konsistensi angka antara tabel dan narasi (checklist awal dibuat)
+- [x] Cek semua referensi tercantum di daftar pustaka (checklist awal dibuat)
+- [x] Cek format sesuai panduan tesis kampus (template-based draft sudah diselaraskan)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

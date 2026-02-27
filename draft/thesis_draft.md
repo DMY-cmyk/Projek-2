@@ -1,186 +1,288 @@
-# DRAFT TESIS S2 AKUNTANSI
+PENGARUH RASIO FUNDAMENTAL DAN AI DISCLOSURE TERHADAP NILAI PASAR PERUSAHAAN TEKNOLOGI  
+(Studi pada Perusahaan Sektor Teknologi yang Terdaftar di BEI Tahun 2019-2025)
 
-## Halaman Judul (Draft)
-Judul:
-Relevansi Rasio Fundamental di Era Artificial Intelligence: Moderasi AI Disclosure Index pada Perusahaan Sektor Teknologi BEI Periode 2019-2025
+TESIS
 
-Program Studi:
-Magister Akuntansi
+Diajukan sebagai salah satu syarat untuk memperoleh gelar Magister Akuntansi
 
-Catatan:
-Dokumen ini adalah draft awal untuk penyusunan tesis final.
+Disusun oleh:  
+[Nama Mahasiswa]  
+[NIM]
 
-## Rujukan Format (Web Reference Basis)
-Format dokumen dan urutan bab pada draft ini mengikuti pola umum pedoman tesis pascasarjana dan contoh tesis S2 yang telah diinventarisasi, termasuk:
-1. Pedoman Penulisan Tesis Magister Akuntansi FE UNJ (2022): https://fe.unj.ac.id/wp-content/uploads/2023/02/Pedoman-Penulisan-Tesis-magister-akuntansi.pdf
-2. Pedoman Penulisan Tesis Sekolah Pascasarjana UMS: https://sps.ums.ac.id/pedoman-penulisan-tesis/
-3. Pedoman pembimbingan/ujian tesis FEB UNAIR (halaman unduhan): https://feb.unair.ac.id/unduhan/
-4. Tesis UNAIR (contoh struktur BAB I-V + daftar isi): https://repository.unair.ac.id/110062
-5. Tesis UNDIKSHA (S2, sektor teknologi): https://repo.undiksha.ac.id/23085/
-6. Tesis ITB (S2, sektor teknologi): https://digilib.itb.ac.id/gdl/view/79966
-7. Tesis UNISSULA (S2): https://repository.unissula.ac.id/43161/
-8. Tesis UNAND (S2): https://scholar.unand.ac.id/511212/
+PROGRAM STUDI MAGISTER AKUNTANSI  
+[NAMA KAMPUS]  
+[KOTA]  
+2026
 
-## Daftar Isi (Draft)
-1. BAB I Pendahuluan
-2. BAB II Tinjauan Pustaka
-3. BAB III Metodologi Penelitian
-4. BAB IV Hasil dan Pembahasan
-5. BAB V Kesimpulan dan Saran
-6. Daftar Pustaka
-7. Lampiran
+\newpage
+
+LEMBAR PERNYATAAN ORISINALITAS
+
+Saya yang bertanda tangan di bawah ini menyatakan bahwa tesis dengan judul:
+
+Pengaruh Rasio Fundamental dan AI Disclosure terhadap Nilai Pasar Perusahaan Teknologi (Studi pada Perusahaan Sektor Teknologi yang Terdaftar di BEI Tahun 2019-2025)
+
+merupakan hasil karya saya sendiri. Apabila di kemudian hari ditemukan pelanggaran etika akademik, saya bersedia menerima konsekuensi sesuai ketentuan yang berlaku.
+
+[Kota], [Tanggal]  
+Yang membuat pernyataan,
+
+[Nama Mahasiswa]  
+[NIM]
+
+\newpage
+
+KATA PENGANTAR
+
+Puji syukur kepada Tuhan Yang Maha Esa atas selesainya penyusunan tesis ini. Tesis ini disusun untuk memenuhi salah satu syarat memperoleh gelar Magister Akuntansi. Penulis mengucapkan terima kasih kepada pembimbing, dosen penguji, keluarga, dan seluruh pihak yang telah memberikan dukungan.
+
+Penulis menyadari tesis ini masih memiliki keterbatasan, sehingga saran dan kritik konstruktif sangat diharapkan.
+
+[Kota], [Tanggal]  
+Penulis
+
+[Nama Mahasiswa]
+
+\newpage
+
+HALAMAN PERSETUJUAN PUBLIKASI KARYA ILMIAH
+
+Saya menyetujui tesis ini dipublikasikan untuk kepentingan akademik dengan tetap mencantumkan nama penulis dan hak cipta sesuai ketentuan kampus.
+
+[Kota], [Tanggal]  
+[Nama Mahasiswa]
+
+\newpage
+
+DAFTAR ISI
+
+ABSTRAK  
+ABSTRACT  
+BAB I PENDAHULUAN  
+BAB II TINJAUAN PUSTAKA DAN PENGEMBANGAN HIPOTESIS  
+BAB III METODOLOGI PENELITIAN  
+BAB IV ANALISIS DATA DAN PEMBAHASAN  
+BAB V PENUTUP  
+DAFTAR PUSTAKA  
+LAMPIRAN
+
+\newpage
+
+ABSTRAK
+
+Penelitian ini menganalisis pengaruh rasio fundamental terhadap harga saham, return saham, dan nilai perusahaan sektor teknologi di BEI periode 2019-2025, dengan memasukkan AI Disclosure Index sebagai variabel moderasi dan variabel rezim post-2023 sebagai indikator perubahan era Generative AI. Pendekatan yang digunakan adalah kuantitatif dengan data panel sekunder. Model empiris meliputi model baseline, model moderasi AI disclosure, dan model structural break.
+
+Kontribusi penelitian adalah memperluas literatur value relevance rasio fundamental pada konteks sektor teknologi Indonesia serta menyediakan pipeline analisis yang dapat direplikasi (pengolahan data, uji asumsi, model panel, robustness checks, dan ringkasan keputusan hipotesis).
+
+Kata kunci: rasio fundamental, AI disclosure, nilai perusahaan, data panel, sektor teknologi BEI.
+
+\newpage
+
+ABSTRACT
+
+This study examines the effect of fundamental ratios on stock price, stock return, and firm value in Indonesian technology-sector listed firms during 2019-2025, incorporating AI Disclosure Index as a moderation variable and post-2023 regime variable as a proxy for the Generative AI era shift. The study applies a quantitative panel-data design using secondary data.
+
+The contribution lies in extending value-relevance evidence for fundamental ratios in the Indonesian technology context and providing a reproducible analysis pipeline (data processing, assumption tests, panel models, robustness checks, and hypothesis decision summary).
+
+Keywords: fundamental ratios, AI disclosure, firm value, panel data, IDX technology sector.
+
+\newpage
 
 # BAB I PENDAHULUAN
-## 1.1 Latar Belakang
-Sektor teknologi di Bursa Efek Indonesia (BEI) mengalami pertumbuhan dan volatilitas yang tinggi dalam periode 2019-2025. Pada saat yang sama, adopsi teknologi AI dan narasi transformasi digital meningkat dalam komunikasi korporasi melalui annual report. Kondisi ini memunculkan pertanyaan apakah relevansi rasio fundamental tradisional (profitabilitas, likuiditas, leverage, efisiensi) masih konsisten dalam menjelaskan harga saham, return saham, dan nilai perusahaan.
 
-Penelitian-penelitian terdahulu memperlihatkan hasil yang belum konsisten pada variabel fundamental terhadap berbagai proksi kinerja pasar. Selain itu, penelitian berbasis sektor teknologi Indonesia dengan integrasi indikator AI disclosure masih terbatas. Karena itu, penelitian ini menguji kembali relasi rasio fundamental dengan memasukkan AI Disclosure Index sebagai variabel moderasi serta pengujian perubahan rezim setelah era GenAI (dummy post-2023).
+## 1.1 Latar Belakang
+Sektor teknologi di Bursa Efek Indonesia menunjukkan dinamika pertumbuhan dan volatilitas yang tinggi sepanjang 2019-2025. Dalam periode yang sama, narasi adopsi AI dan transformasi digital meningkat pada pengungkapan korporasi. Kondisi ini menimbulkan pertanyaan mengenai relevansi rasio fundamental tradisional dalam menjelaskan indikator pasar.
+
+Studi terdahulu menunjukkan hasil yang belum konsisten pada hubungan rasio fundamental dengan harga saham, return, dan nilai perusahaan. Selain itu, penelitian yang secara eksplisit memasukkan AI disclosure sebagai variabel moderasi pada konteks sektor teknologi Indonesia masih terbatas.
 
 ## 1.2 Rumusan Masalah
-1. Apakah rasio fundamental berpengaruh terhadap harga saham, return saham, dan nilai perusahaan sektor teknologi BEI?
-2. Apakah AI Disclosure Index memoderasi pengaruh rasio fundamental terhadap ketiga variabel dependen?
-3. Apakah terdapat perubahan pengaruh rasio fundamental pada periode post-2023 (era GenAI)?
+1. Apakah rasio fundamental berpengaruh terhadap harga saham, return saham, dan nilai perusahaan?
+2. Apakah AI Disclosure Index memoderasi hubungan rasio fundamental dengan variabel dependen?
+3. Apakah terjadi perubahan sensitivitas hubungan tersebut setelah 2023 (era GenAI)?
 
 ## 1.3 Tujuan Penelitian
-1. Menganalisis pengaruh rasio fundamental terhadap harga, return, dan nilai perusahaan.
-2. Menganalisis peran moderasi AI Disclosure Index.
-3. Menguji perubahan koefisien pada rezim post-2023.
+1. Menguji pengaruh rasio fundamental terhadap price, return, dan Tobin's Q.
+2. Menguji moderasi AI Disclosure Index.
+3. Menguji structural break pada periode post-2023.
 
 ## 1.4 Manfaat Penelitian
-- Teoretis: memperluas literatur value relevance rasio fundamental pada konteks teknologi dan AI.
-- Praktis: memberikan masukan bagi investor, manajemen, dan regulator pasar modal.
+1. Manfaat teoretis: memperkaya literatur akuntansi pasar modal dan digital disclosure.
+2. Manfaat praktis: memberikan masukan bagi investor, manajemen, dan regulator.
 
-## 1.5 Batasan Penelitian
-- Objek: perusahaan sektor teknologi BEI.
-- Periode: 2019-2025.
-- Data: sekunder (laporan keuangan, annual report, harga saham).
+## 1.5 Kontribusi Penelitian
+1. Kontribusi konteks: fokus sektor teknologi BEI dengan horizon 2019-2025.
+2. Kontribusi variabel: integrasi rasio fundamental, AI disclosure, dan dummy rezim.
+3. Kontribusi metodologi: pipeline analisis reproducible hingga keputusan hipotesis.
 
-# BAB II TINJAUAN PUSTAKA
+\newpage
+
+# BAB II TINJAUAN PUSTAKA DAN PENGEMBANGAN HIPOTESIS
+
 ## 2.1 Landasan Teori
-1. Signaling Theory
-2. Efficient Market Hypothesis
-3. Resource-Based View
-4. Value Relevance Theory
+### 2.1.1 Signaling Theory
+Informasi keuangan dan non-keuangan menjadi sinyal bagi investor dalam menilai prospek perusahaan.
 
-## 2.2 Penelitian Terdahulu
-Ringkasan penelitian terdahulu disusun dari inventaris tesis dan jurnal pada proyek ini (`output/literatur_tesis.md` dan `output/literatur_jurnal.md`), dengan fokus:
-- Fundamental analysis -> harga/return/nilai perusahaan
-- AI disclosure/digital transformation -> firm performance
-- Structural break/regime change
+### 2.1.2 Efficient Market Hypothesis
+Harga pasar merefleksikan informasi yang tersedia dengan tingkat efisiensi tertentu.
 
-## 2.3 Kerangka Konseptual
-Variabel:
-- Dependen: PRICE, RET, TQ
-- Independen: ROA, ROE, NPM, CR, DER, TATO, EPS
-- Moderasi: AID, DGENAI
-- Kontrol: SIZE, GROWTH, AGE, VOL
+### 2.1.3 Resource-Based View
+Kapabilitas teknologi dan aset tidak berwujud dapat menjadi sumber keunggulan kompetitif.
 
-## 2.4 Hipotesis
-Contoh hipotesis:
-- H1a: ROA berpengaruh positif terhadap PRICE.
-- H2a: DER berpengaruh negatif terhadap PRICE.
-- H3a: EPS berpengaruh positif terhadap PRICE.
-- H4: AID memoderasi hubungan rasio fundamental dengan PRICE/RET/TQ.
-- H5: DGENAI mengubah sensitivitas PRICE/RET/TQ terhadap rasio fundamental.
+### 2.1.4 Value Relevance Theory
+Angka akuntansi dipandang relevan apabila menjelaskan variasi nilai pasar perusahaan.
+
+## 2.2 Rasio Fundamental dan Nilai Pasar
+Rasio profitabilitas, likuiditas, leverage, dan efisiensi lazim digunakan untuk memprediksi price, return, dan firm value.
+
+## 2.3 AI Disclosure dan Transformasi Digital
+AI disclosure mencerminkan intensitas narasi adopsi teknologi, yang berpotensi memperkuat atau melemahkan sinyal fundamental.
+
+## 2.4 Penelitian Terdahulu
+Ringkasan penelitian terdahulu mengacu pada:
+1. `output/literatur_tesis.md`
+2. `output/literatur_jurnal.md`
+
+Referensi format/struktur tesis yang dijadikan acuan utama:
+1. https://repo.undiksha.ac.id/23085/
+2. https://digilib.itb.ac.id/gdl/view/79966
+3. https://repository.unissula.ac.id/43161/
+4. https://scholar.unand.ac.id/511212/
+5. https://repository.unair.ac.id/110062
+6. https://sps.ums.ac.id/pedoman-penulisan-tesis/
+7. https://fe.unj.ac.id/wp-content/uploads/2023/02/Pedoman-Penulisan-Tesis-magister-akuntansi.pdf
+
+## 2.5 Pengembangan Hipotesis
+H1: ROA berpengaruh positif terhadap variabel pasar (PRICE, RET, TQ).  
+H2: DER berpengaruh negatif terhadap variabel pasar.  
+H3: EPS berpengaruh positif terhadap variabel pasar.  
+H4: AI Disclosure Index memoderasi pengaruh rasio fundamental terhadap variabel pasar.  
+H5: Dummy post-2023 memoderasi pengaruh rasio fundamental terhadap variabel pasar.
+
+\newpage
 
 # BAB III METODOLOGI PENELITIAN
-## 3.1 Jenis dan Desain Penelitian
-Penelitian kuantitatif dengan desain panel data.
 
-## 3.2 Populasi dan Sampel
-- Populasi: emiten sektor teknologi BEI.
-- Sampling: purposive sampling berdasarkan kriteria kelengkapan data.
-- Pipeline seleksi pada proyek ini:
-  - `scripts/ingest_idx_population.ps1`
-  - `scripts/estimate_sample.ps1`
+## 3.1 Ruang Lingkup Penelitian
+Objek penelitian adalah perusahaan sektor teknologi BEI, periode 2019-2025, menggunakan data sekunder.
 
-## 3.3 Definisi Operasional Variabel
-Definisi operasional mengikuti `output/metodologi_penelitian.md`.
+## 3.2 Sampel dan Data Penelitian
+Sampel ditentukan dengan purposive sampling berdasarkan kriteria kelengkapan laporan keuangan, annual report, data harga, status listing, dan kesesuaian sektor.
 
-## 3.4 Sumber dan Teknik Pengumpulan Data
-- Laporan keuangan dan annual report dari BEI/perusahaan.
-- Harga saham tahunan/bulanan.
-- AI disclosure text-mining dari annual report.
+Pipeline teknis:
+1. `scripts/ingest_idx_population.ps1`
+2. `scripts/estimate_sample.ps1`
 
-## 3.5 Teknik Analisis Data
-1. Statistik deskriptif dan korelasi.
-2. Uji asumsi klasik (VIF, heteroskedastisitas, autokorelasi).
-3. Estimasi model panel (baseline, moderasi AID, structural break).
-4. Robustness checks (subsample, winsorizing, exclude 2020, alt proxy PBV).
+## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
+### 3.3.1 Variabel Dependen
+1. PRICE
+2. RET
+3. TQ
 
-## 3.6 Model Empiris
-Model baseline:
-Y_it = alpha + beta X_it + gamma Controls_it + mu_i + e_it
+### 3.3.2 Variabel Independen
+ROA, ROE, NPM, CR, DER, TATO, EPS
 
-Model moderasi AID:
-Y_it = alpha + beta X_it + theta AID_it + lambda (X_it x AID_it) + gamma Controls_it + mu_i + e_it
+### 3.3.3 Variabel Kontrol dan Moderasi
+SIZE, GROWTH, AGE, VOL, AID, DGENAI, II
 
-Model structural break:
-Y_it = alpha + beta X_it + delta DGENAI_t + phi (X_it x DGENAI_t) + gamma Controls_it + mu_i + e_it
+## 3.4 Model Penelitian
+Model baseline, model moderasi AID, dan model structural break (post-2023).
 
-# BAB IV HASIL DAN PEMBAHASAN
-## 4.1 Gambaran Umum Objek Penelitian
-Bagian ini memuat deskripsi sampel final perusahaan teknologi dan sebaran observasi panel.
+## 3.5 Metode dan Teknik Analisis
+1. Statistik deskriptif dan korelasi
+2. Uji asumsi klasik
+3. Pemilihan model panel
+4. Estimasi 9 regresi utama
+5. Robustness checks
+6. Keputusan hipotesis
+
+## 3.6 Pengestimasian Model Regresi Data Panel
+Implementasi otomatis merujuk ke script dalam proyek:
+1. `scripts/eviews_run.ps1`
+2. `scripts/assumption_tests.ps1`
+3. `scripts/panel_model_selection.ps1`
+4. `scripts/robustness_checks.ps1`
+5. `scripts/hypothesis_decision.ps1`
+
+\newpage
+
+# BAB IV ANALISIS DATA DAN PEMBAHASAN
+
+## 4.1 Deskripsi Data Penelitian
+Deskripsi populasi, sampel, dan sebaran observasi panel disusun dari hasil pipeline seleksi.
 
 ## 4.2 Statistik Deskriptif
-Merujuk hasil otomatis:
-- `output/descriptive_stats.md`
-- `output/correlation_matrix.csv`
+Merujuk pada:
+1. `output/descriptive_stats.md`
+2. `output/correlation_matrix.csv`
 
 ## 4.3 Uji Asumsi dan Pemilihan Model
-Merujuk hasil otomatis:
-- `output/assumption_tests.md`
-- `output/vif_table.csv`
-- `output/panel_model_selection.md`
+Merujuk pada:
+1. `output/assumption_tests.md`
+2. `output/vif_table.csv`
+3. `output/panel_model_selection.md`
 
-## 4.4 Hasil Estimasi Model
-Merujuk hasil regresi EViews:
-- `output/eviews/eq_price_base.txt`
-- `output/eviews/eq_ret_base.txt`
-- `output/eviews/eq_tq_base.txt`
-- `output/eviews/eq_price_aid.txt`
-- `output/eviews/eq_ret_aid.txt`
-- `output/eviews/eq_tq_aid.txt`
-- `output/eviews/eq_price_break.txt`
-- `output/eviews/eq_ret_break.txt`
-- `output/eviews/eq_tq_break.txt`
+## 4.4 Hasil Estimasi Model Baseline, Moderasi, dan Structural Break
+Rujukan output:
+1. `output/eviews/eq_price_base.txt`
+2. `output/eviews/eq_ret_base.txt`
+3. `output/eviews/eq_tq_base.txt`
+4. `output/eviews/eq_price_aid.txt`
+5. `output/eviews/eq_ret_aid.txt`
+6. `output/eviews/eq_tq_aid.txt`
+7. `output/eviews/eq_price_break.txt`
+8. `output/eviews/eq_ret_break.txt`
+9. `output/eviews/eq_tq_break.txt`
 
 ## 4.5 Robustness Checks
-Merujuk:
-- `output/robustness_checks.md`
-- `output/robustness/`
+Merujuk pada:
+1. `output/robustness_checks.md`
+2. folder `output/robustness/`
 
-## 4.6 Uji Hipotesis
-Merujuk:
-- `output/hypothesis_results.csv`
-- `output/hypothesis_decision.md`
+## 4.6 Hasil Uji Hipotesis
+Merujuk pada:
+1. `output/hypothesis_results.csv`
+2. `output/hypothesis_decision.md`
 
-# BAB V KESIMPULAN DAN SARAN
+## 4.7 Pembahasan
+Pembahasan akhir diisi saat hasil regresi final dataset tersedia penuh.
+
+\newpage
+
+# BAB V PENUTUP
+
 ## 5.1 Kesimpulan
-Kesimpulan akhir diisi setelah estimasi pada dataset final berhasil.
+Kesimpulan final akan dirumuskan setelah seluruh estimasi model pada dataset final selesai.
 
 ## 5.2 Implikasi
-- Implikasi teoretis untuk literatur fundamental analysis dan AI disclosure.
-- Implikasi praktis untuk investor, manajemen emiten, dan regulator.
+1. Implikasi teoretis: penguatan bukti value relevance pada era AI.
+2. Implikasi praktis: dukungan keputusan investor dan strategi disclosure emiten.
 
-## 5.3 Keterbatasan
-- Keterbatasan kelengkapan data publik.
-- Potensi endogeneity.
-- Sensitivitas model terhadap ukuran sampel sektor teknologi.
+## 5.3 Keterbatasan Penelitian
+1. Keterbatasan kelengkapan data publik.
+2. Potensi endogeneity dan small-sample issue pada subsampel tertentu.
 
 ## 5.4 Saran
-- Penguatan dataset panel final 2019-2025.
-- Estimasi GMM dan validasi lanjutan.
-- Replikasi lintas sektor untuk pembanding eksternal.
+1. Perluasan cakupan emiten dan periode.
+2. Estimasi System GMM lanjutan.
+3. Pengembangan indeks AI disclosure yang lebih granular.
 
-# Daftar Pustaka (Draft Ringkas)
-Daftar pustaka final mengikuti gaya sitasi kampus (APA/Harvard sesuai pedoman prodi). Referensi awal dapat diambil dari:
-- `output/literatur_jurnal.md`
-- `output/literatur_tesis.md`
+\newpage
 
-# Lampiran (Draft)
-1. Tabel definisi variabel
+# DAFTAR PUSTAKA (DRAFT)
+Daftar pustaka final disesuaikan gaya sitasi kampus.
+
+Sumber utama penyusunan format dan substansi:
+1. `output/literatur_jurnal.md`
+2. `output/literatur_tesis.md`
+3. Pedoman dan contoh tesis pada tautan di Bab II.
+
+\newpage
+
+# LAMPIRAN (DRAFT)
+1. Definisi operasional variabel
 2. Daftar sampel emiten
-3. Output statistik/deskriptif
-4. Output regresi EViews
-5. Prosedur konstruksi AI Disclosure Index
+3. Output statistik deskriptif
+4. Output uji asumsi
+5. Output model panel
+6. Output robustness checks
+7. Tabel keputusan hipotesis
