@@ -73,6 +73,22 @@ Run-Step -Label "build_execution_sprint" -Log $log -Block {
       -OutMd .\output\next_actions_sprint.md | Out-Null
 }
 
+Run-Step -Label "record_progress_snapshot" -Log $log -Block {
+    powershell -ExecutionPolicy Bypass -File .\scripts\record_progress_snapshot.ps1 `
+      -AvailabilityReport .\output\data_collection_availability_report.md `
+      -DashboardReport .\output\plan_progress_dashboard.md `
+      -PendingSummary .\output\pending_actions_summary.md `
+      -OutCsv .\output\progress_history.csv | Out-Null
+}
+
+Run-Step -Label "build_daily_standup" -Log $log -Block {
+    powershell -ExecutionPolicy Bypass -File .\scripts\build_daily_standup.ps1 `
+      -ProgressHistory .\output\progress_history.csv `
+      -BlockerReport .\output\critical_blockers_report.md `
+      -DailyBatch .\output\daily_collection_batch.md `
+      -OutMd .\output\daily_standup.md | Out-Null
+}
+
 $summaryPath = ".\output\operational_refresh_summary.md"
 $okCount = @($log | Where-Object { $_.status -eq "ok" }).Count
 $failCount = @($log | Where-Object { $_.status -eq "failed" }).Count
@@ -102,6 +118,8 @@ $md += "- output/ai_disclosure_spotcheck_10pct.csv"
 $md += "- output/plan_progress_dashboard.md"
 $md += "- output/pending_actions.csv + output/pending_actions_summary.md"
 $md += "- output/next_actions_sprint.md"
+$md += "- output/progress_history.csv"
+$md += "- output/daily_standup.md"
 
 $outDir = Split-Path -Parent $summaryPath
 if ($outDir) { New-Item -ItemType Directory -Force -Path $outDir | Out-Null }

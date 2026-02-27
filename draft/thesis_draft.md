@@ -333,6 +333,8 @@ Seluruh artefak monitoring operasional dapat diperbarui serentak melalui skrip `
 
 Untuk eksekusi koleksi data harian dan identifikasi hambatan utama, dokumen `output/daily_collection_batch.md` dan `output/critical_blockers_report.md` digunakan sebagai panduan operasional.
 
+Evaluasi kemajuan antar hari dapat dipantau melalui `output/progress_history.csv` dan ringkasan harian `output/daily_standup.md`.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)

@@ -436,6 +436,7 @@
 - [x] Sprint prioritas aksi berikutnya disiapkan ✅ (`output/next_actions_sprint.md`)
 - [x] One-command refresh operasional disiapkan ✅ (`scripts/refresh_operational_dashboard.ps1`, `output/operational_refresh_summary.md`)
 - [x] Laporan blocker kritis disiapkan ✅ (`output/critical_blockers_report.md`, `scripts/build_blocker_report.ps1`)
+- [x] Snapshot histori progres + standup harian disiapkan ✅ (`output/progress_history.csv`, `output/daily_standup.md`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

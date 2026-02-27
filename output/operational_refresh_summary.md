@@ -1,6 +1,6 @@
 # Operational Refresh Summary
 
-- Steps OK: 8
+- Steps OK: 10
 - Steps Failed: 0
 
 ## Step Log
@@ -12,6 +12,8 @@
 - [OK] build_plan_dashboard
 - [OK] build_pending_actions
 - [OK] build_execution_sprint
+- [OK] record_progress_snapshot
+- [OK] build_daily_standup
 
 ## Refreshed Outputs
 - output/data_collection_master_status.csv
@@ -23,3 +25,5 @@
 - output/plan_progress_dashboard.md
 - output/pending_actions.csv + output/pending_actions_summary.md
 - output/next_actions_sprint.md
+- output/progress_history.csv
+- output/daily_standup.md

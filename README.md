@@ -423,6 +423,8 @@ powershell -ExecutionPolicy Bypass -File .\scripts\refresh_operational_dashboard
 
 Output:
 - `output/operational_refresh_summary.md`
+- `output/progress_history.csv`
+- `output/daily_standup.md`
 
 Build critical blockers snapshot:
 ```powershell
@@ -431,6 +433,24 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build_blocker_report.ps1 `
   -ModelReadiness .\output\model_readiness_report.md `
   -PendingSummary .\output\pending_actions_summary.md `
   -OutMd .\output\critical_blockers_report.md
+```
+
+Record progress snapshot only:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\record_progress_snapshot.ps1 `
+  -AvailabilityReport .\output\data_collection_availability_report.md `
+  -DashboardReport .\output\plan_progress_dashboard.md `
+  -PendingSummary .\output\pending_actions_summary.md `
+  -OutCsv .\output\progress_history.csv
+```
+
+Build daily standup sheet:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_daily_standup.ps1 `
+  -ProgressHistory .\output\progress_history.csv `
+  -BlockerReport .\output\critical_blockers_report.md `
+  -DailyBatch .\output\daily_collection_batch.md `
+  -OutMd .\output\daily_standup.md
 ```
 
 ## Proposal Kickoff Template
