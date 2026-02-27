@@ -204,6 +204,16 @@ Outputs:
 - `output/robustness/panel_winsor_5_95.csv`
 - `output/robustness/panel_alt_proxy_pbv.csv`
 
+## Hypothesis Decision Table (Step 4.6)
+Run:
+```powershell
+.\scripts\hypothesis_decision.ps1 -EViewsOutDir .\output\eviews -Alpha 0.05
+```
+
+Outputs:
+- `output/hypothesis_results.csv`
+- `output/hypothesis_decision.md`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
