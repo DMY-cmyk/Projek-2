@@ -199,6 +199,8 @@ Status ketersediaan dokumen (FS/AR/Price) dapat dipantau melalui `output/data_co
 
 Untuk proses coding AI disclosure penuh, lembar kerja manual seluruh firm-year telah disiapkan pada `output/ai_disclosure_manual_sheet_interim.csv`, dan sinkronisasi status availability ke seleksi sampel interim terdokumentasi pada `output/sample_selection_result_interim.csv`.
 
+Antrian unduh dokumen per kategori (FS, AR, dan harga) serta runbook pelaksanaan harian juga telah disiapkan pada `output/download_queue_*.csv` dan `output/manual_data_collection_runbook.md`.
+
 ## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
 ### 3.3.1 Variabel Dependen
 1. PRICE

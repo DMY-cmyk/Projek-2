@@ -201,6 +201,7 @@
   - Shares Outstanding
   - (Dari catatan atas laporan keuangan jika perlu)
 - [x] Monitoring availability FS/AR/Price otomatis disiapkan ✅ (`scripts/update_collection_availability.ps1`, `output/data_collection_master_status.csv`, `output/data_collection_availability_report.md`)
+- [x] Download queue FS disiapkan ✅ (`output/download_queue_fs.csv`, `output/download_queue_summary.md`)
 
 ### Step 3.3 — Download Data Harga Saham
 - [ ] Download closing price akhir tahun (31 Desember atau hari bursa terakhir) untuk setiap sampel
@@ -209,6 +210,7 @@
 - [ ] Simpan di `data/prices/`
 - [x] Otomasi batch fetch harga untuk kandidat sampel disiapkan (`scripts/fetch_all_prices.ps1`)
 - [x] Skrip validasi koneksi Yahoo disiapkan (`scripts/test_yahoo.ps1`)
+- [x] Download queue harga disiapkan ✅ (`output/download_queue_price.csv`)
 
 ### Step 3.4 — Download & Analisis Annual Report (untuk AI Disclosure Index)
 - [ ] Download annual report (bukan laporan keuangan) untuk setiap sampel 2019–2025
@@ -216,6 +218,8 @@
 - [ ] Lakukan content analysis sesuai Step 2.5
 - [ ] Hasilkan skor AI Disclosure Index per perusahaan per tahun
 - [ ] Simpan hasil di spreadsheet master
+- [x] Download queue annual report disiapkan ✅ (`output/download_queue_ar.csv`)
+- [x] Template content analysis penuh disiapkan ✅ (`output/ai_disclosure_manual_sheet_interim.csv`, `output/ai_disclosure_manual_sheet_note.md`)
 - [x] Lembar coding manual AI disclosure untuk seluruh firm-year disiapkan ✅ (`output/ai_disclosure_manual_sheet_interim.csv`, `output/ai_disclosure_manual_sheet_note.md`)
 
 ### Step 3.5 — Hitung Semua Variabel

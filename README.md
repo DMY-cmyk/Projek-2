@@ -184,6 +184,23 @@ Outputs:
 - `output/data_collection_master_status.csv`
 - `output/data_collection_availability_report.md`
 
+Build pending download queues (FS/AR/Price):
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_download_queues.ps1 `
+  -StatusCsv .\output\data_collection_master_status.csv `
+  -OutFsCsv .\output\download_queue_fs.csv `
+  -OutArCsv .\output\download_queue_ar.csv `
+  -OutPriceCsv .\output\download_queue_price.csv `
+  -OutSummaryMd .\output\download_queue_summary.md
+```
+
+Outputs:
+- `output/download_queue_fs.csv`
+- `output/download_queue_ar.csv`
+- `output/download_queue_price.csv`
+- `output/download_queue_summary.md`
+- `output/manual_data_collection_runbook.md`
+
 Sync availability status into sample-selection result:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\sync_sample_from_collection.ps1 `
