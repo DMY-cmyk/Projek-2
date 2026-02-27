@@ -430,6 +430,7 @@
 - [x] Cek semua referensi tercantum di daftar pustaka (checklist awal dibuat)
 - [x] Cek format sesuai panduan tesis kampus (template-based draft sudah diselaraskan)
 - [x] Dashboard progres rencana disiapkan ✅ (`output/plan_progress_dashboard.md`)
+- [x] Queue aksi pending terstruktur disiapkan ✅ (`output/pending_actions.csv`, `output/pending_actions_summary.md`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

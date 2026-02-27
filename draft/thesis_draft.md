@@ -325,6 +325,8 @@ Pada tahap interim ini, implikasi praktis difokuskan pada kesiapan protokol anal
 
 Untuk pengendalian progres implementasi, monitoring checklist keseluruhan disarankan menggunakan `output/plan_progress_dashboard.md` dan tracker fase finalisasi pada folder `output/`.
 
+Sebagai daftar kerja harian, butir-butir pending yang tersisa juga dapat dikelola melalui `output/pending_actions.csv` dan ringkasannya di `output/pending_actions_summary.md`.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)

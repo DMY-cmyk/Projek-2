@@ -385,6 +385,16 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 ## Internal Review Progress (Step 6.1)
 - `output/review_internal_checklist.md`
 - `output/plan_progress_dashboard.md`
+- `output/pending_actions.csv`
+- `output/pending_actions_summary.md`
+
+Regenerate pending action queue from `Plan.md`:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_pending_actions.ps1 `
+  -PlanPath .\Plan.md `
+  -OutCsv .\output\pending_actions.csv `
+  -OutMd .\output\pending_actions_summary.md
+```
 
 ## Supervisor and Exam Package (Step 6.2 / 6.3)
 Prepared files:
