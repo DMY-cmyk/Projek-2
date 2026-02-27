@@ -1,6 +1,6 @@
 # Assumption Tests (Automation)
 
-- Source: .\output\panel_dataset_built.csv
+- Source: .\data\processed\panel_dataset.csv
 - Dependent: price
 - Complete-case N: 4
 - Effective predictors: roa

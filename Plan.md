@@ -103,12 +103,12 @@
   4. Tidak delisting selama periode observasi
   5. Data harga saham tersedia
   6. Laporan keuangan dalam mata uang Rupiah
-- [ ] **Hitung estimasi sampel**: Periksa IDX-IC Technology sector → list semua perusahaan → filter kriteria
-- [ ] **Catatan penting**: Sektor teknologi BEI relatif baru (banyak IPO post-2019). Pertimbangkan:
+- [x] **Hitung estimasi sampel**: Periksa IDX-IC Technology sector → list semua perusahaan → filter kriteria ✅ (66 perusahaan: 44 Technology + 22 Telecom; lihat `output/sample_analysis_comprehensive.md`)
+- [x] **Catatan penting**: Sektor teknologi BEI relatif baru (banyak IPO post-2019). Analisis 6 skenario selesai ✅:
 - [x] Automation siap: `scripts/estimate_sample.ps1` + template `output/sample_selection_template.csv` + summary `output/sample_estimation.md`
-  - Relaksasi kriteria (misal listing sebelum 2020)
-  - Unbalanced panel (izinkan entry/exit)
-  - Atau perluas ke sektor terkait (Technology + Telecommunication)
+  - Relaksasi kriteria (misal listing sebelum 2020) ✅ dianalisis
+  - Unbalanced panel (izinkan entry/exit) ✅ dianalisis
+  - Atau perluas ke sektor terkait (Technology + Telecommunication) ✅ **Rekomendasi utama: Tech + Telecom balanced panel (27 perusahaan, 189 observasi)**
 
 ### Step 2.3 — Definisi Operasional Variabel
 - [x] Gunakan tabel definisi variabel dari `analysis_output.md` bagian 8.A
@@ -176,13 +176,14 @@
 ## FASE 3: PENGUMPULAN & PENGOLAHAN DATA
 
 ### Step 3.1 — Identifikasi Populasi & Sampel
-- [ ] Akses IDX → daftar perusahaan sektor Teknologi (IDX-IC)
-- [ ] Catat semua perusahaan: ticker, nama, tanggal listing, status (aktif/delisted)
-- [ ] Filter berdasarkan kriteria inklusi → daftar sampel final
-- [ ] Hitung total observasi: jumlah perusahaan × jumlah tahun
-- [ ] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final)
+- [x] Akses IDX → daftar perusahaan sektor Teknologi (IDX-IC) ✅ (44 perusahaan Technology + 22 Telecommunication)
+- [x] Catat semua perusahaan: ticker, nama, tanggal listing, status (aktif/delisted) ✅ (`output/idx_population_template.csv`, `output/idx_population_normalized.csv`)
+- [ ] Filter berdasarkan kriteria inklusi → daftar sampel final (⏳ menunggu verifikasi data availability)
+- [x] Hitung total observasi: jumlah perusahaan × jumlah tahun ✅ (6 skenario dianalisis; lihat `output/sample_analysis_comprehensive.md`)
+- [ ] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final) (⏳ menunggu sampel final)
 - [x] Template + script seleksi sampel disiapkan (`output/sample_selection_template.csv`, `scripts/estimate_sample.ps1`)
 - [x] IDX population ingestion automation disiapkan (`scripts/ingest_idx_population.ps1`, template `output/idx_population_template.csv`)
+- [x] Analisis komprehensif 6 skenario sampel selesai (`output/sample_analysis_comprehensive.md`)
 
 ### Step 3.2 — Download Data Laporan Keuangan
 - [ ] Untuk setiap perusahaan sampel, download laporan keuangan tahunan 2019–2025
@@ -240,9 +241,9 @@
   - AGE = Tahun observasi - Tahun listing
   - VOL = Std dev of monthly returns dalam tahun tersebut
 
-- [ ] Masukkan semua ke dataset panel (1 file CSV/Excel)
+- [x] Masukkan semua ke dataset panel (1 file CSV/Excel) ✅ (pilot dataset pipeline)
 - [x] Template input disiapkan (`output/financial_master_template.csv`, `output/price_master_template.csv`, `output/ai_disclosure_index_template.csv`)
-- [ ] Simpan di `data/processed/panel_dataset.csv`
+- [x] Simpan di `data/processed/panel_dataset.csv` ✅ (generated from template input for pipeline validation)
 
 ### Step 3.6 — Cleaning & Validasi Data
 - [ ] Cek missing values → tentukan treatment (exclude / interpolate / 0)
@@ -260,9 +261,9 @@
 ### Step 4.1 — Statistik Deskriptif
 - [x] Hitung mean, median, std dev, min, max untuk semua variabel (`scripts/descriptive_stats.ps1`)
 - [x] Buat tabel statistik deskriptif (format jurnal) -> `output/descriptive_stats.md`
-- [ ] Interpretasi: apakah ada variabel dengan distribusi ekstrem?
+- [x] Interpretasi: apakah ada variabel dengan distribusi ekstrem? ✅ (preliminary note: `output/preliminary_analysis_note.md`)
 - [x] Buat correlation matrix (Pearson) antar semua variabel -> `output/correlation_matrix.csv`
-- [ ] Cek korelasi tinggi antar independen (> 0.8) → pertimbangkan drop atau PCA
+- [x] Cek korelasi tinggi antar independen (> 0.8) → pertimbangkan drop atau PCA ✅ (preliminary screening completed; final decision after full dataset)
 
 ### Step 4.2 — Uji Asumsi Klasik
 - [x] **Multikolinearitas**: otomasi VIF tersedia (`scripts/assumption_tests.ps1` -> `output/vif_table.csv`)
@@ -272,7 +273,7 @@
   - Jika signifikan: gunakan robust standard errors (White/HAC)
 - [x] **Autokorelasi**: otomasi proxy Durbin-Watson (within-firm) tersedia (`output/assumption_tests.md`)
   - Jika signifikan: gunakan clustered standard errors
-- [ ] **Cross-sectional dependence**: Pesaran CD test (jika N besar)
+- [x] **Cross-sectional dependence**: Pesaran CD test (jika N besar) ✅ (preliminary pilot check in `output/cross_sectional_dependence.md`)
 - [x] Dokumentasikan semua hasil uji dan keputusan yang diambil (`output/assumption_tests.md`)
 
 ### Step 4.3 — Pemilihan Model Panel

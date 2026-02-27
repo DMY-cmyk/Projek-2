@@ -1,6 +1,6 @@
 # Descriptive Statistics
 
-Source: .\output\panel_dataset_built.csv
+Source: .\data\processed\panel_dataset.csv
 
 | Variable | N | Mean | Median | Std Dev | Min | Max |
 |---|---:|---:|---:|---:|---:|---:|

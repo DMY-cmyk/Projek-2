@@ -139,11 +139,11 @@ Template inputs:
 
 Run (example with templates):
 ```powershell
-.\scripts\build_panel_dataset.ps1 `
+powershell -ExecutionPolicy Bypass -File .\scripts\build_panel_dataset.ps1 `
   -FinancialCsv .\output\financial_master_template.csv `
   -PriceCsv .\output\price_master_template.csv `
   -AidCsv .\output\ai_disclosure_index_template.csv `
-  -OutCsv .\output\panel_dataset_built.csv `
+  -OutCsv .\data\processed\panel_dataset.csv `
   -OutCleaningLog .\output\data_cleaning_log.md
 ```
 
@@ -159,7 +159,7 @@ Outputs:
 ## Descriptive Stats Automation (Step 4.1)
 Run:
 ```powershell
-.\scripts\descriptive_stats.ps1 -InputCsv .\output\panel_dataset_built.csv
+powershell -ExecutionPolicy Bypass -File .\scripts\descriptive_stats.ps1 -InputCsv .\data\processed\panel_dataset.csv
 ```
 
 Outputs:
@@ -169,7 +169,7 @@ Outputs:
 ## Assumption Tests Automation (Step 4.2)
 Run:
 ```powershell
-.\scripts\assumption_tests.ps1 -InputCsv .\output\panel_dataset_built.csv -Dependent price
+powershell -ExecutionPolicy Bypass -File .\scripts\assumption_tests.ps1 -InputCsv .\data\processed\panel_dataset.csv -Dependent price
 ```
 
 Outputs:
@@ -192,7 +192,7 @@ Outputs:
 ## Robustness Dataset Pipeline (Step 4.5)
 Run:
 ```powershell
-.\scripts\robustness_checks.ps1 -InputCsv .\output\panel_dataset_built.csv
+powershell -ExecutionPolicy Bypass -File .\scripts\robustness_checks.ps1 -InputCsv .\data\processed\panel_dataset.csv
 ```
 
 Outputs:
@@ -277,6 +277,8 @@ Build manifest:
 - `output/kerangka_teori.md`: Theoretical framework.
 - `output/hipotesis.md`: Hypothesis set.
 - `output/metodologi_penelitian.md`: Methodology implementation notes.
+- `output/preliminary_analysis_note.md`: Preliminary interpretation on pilot panel dataset.
+- `output/cross_sectional_dependence.md`: Preliminary Pesaran CD diagnostic (pilot only).
 
 ## Research Plan Progress Snapshot
 - Step 1.1 complete: thesis inventory/classification.
@@ -284,6 +286,12 @@ Build manifest:
 - Step 1.3-1.5 complete: theory, gap, and hypotheses.
 - Step 2 scaffolding complete in tooling/docs (methodology templates and automation scripts).
 - EViews COM connection validated with smoke test.
+- Step 3.5 pilot complete: `data/processed/panel_dataset.csv` generated from templates.
+- Step 4.1 interpretation and high-correlation screening documented (preliminary, pilot basis).
+- Step 4.2 cross-sectional dependence preliminary check documented (pilot basis).
+
+## Current Limitation
+- Current panel file is still pilot-sized (4 rows), so model selection and full inference remain pending until full real dataset collection is completed.
 
 ## Notes
 - SEC API requires a descriptive `User-Agent`.

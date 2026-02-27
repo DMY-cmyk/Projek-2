@@ -214,12 +214,18 @@ Deskripsi populasi, sampel, dan sebaran observasi panel disusun dari hasil pipel
 Merujuk pada:
 1. `output/descriptive_stats.md`
 2. `output/correlation_matrix.csv`
+3. `output/preliminary_analysis_note.md`
+
+Interpretasi awal (berbasis dataset template/pilot) menunjukkan bahwa variabel PRICE dan TQ bergerak searah, variabel profitabilitas bernilai positif pada seluruh observasi, dan AID memiliki variasi antar firm-year. Namun, jumlah observasi yang sangat terbatas membuat inferensi statistik belum dapat dijadikan kesimpulan utama.
 
 ## 4.3 Uji Asumsi dan Pemilihan Model
 Merujuk pada:
 1. `output/assumption_tests.md`
 2. `output/vif_table.csv`
 3. `output/panel_model_selection.md`
+4. `output/cross_sectional_dependence.md`
+
+Pada tahap pilot, estimasi model penuh belum stabil karena isu near-singular matrix dan ukuran sampel efektif yang kecil. Oleh karena itu, pemilihan model final (Pooled vs FE vs RE) ditetapkan sebagai agenda tahap dataset final.
 
 ## 4.4 Hasil Estimasi Model Baseline, Moderasi, dan Structural Break
 Rujukan output:
