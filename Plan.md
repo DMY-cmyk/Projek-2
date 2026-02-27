@@ -105,6 +105,7 @@
   6. Laporan keuangan dalam mata uang Rupiah
 - [ ] **Hitung estimasi sampel**: Periksa IDX-IC Technology sector → list semua perusahaan → filter kriteria
 - [ ] **Catatan penting**: Sektor teknologi BEI relatif baru (banyak IPO post-2019). Pertimbangkan:
+- [x] Automation siap: `scripts/estimate_sample.ps1` + template `output/sample_selection_template.csv` + summary `output/sample_estimation.md`
   - Relaksasi kriteria (misal listing sebelum 2020)
   - Unbalanced panel (izinkan entry/exit)
   - Atau perluas ke sektor terkait (Technology + Telecommunication)
@@ -180,6 +181,7 @@
 - [ ] Filter berdasarkan kriteria inklusi → daftar sampel final
 - [ ] Hitung total observasi: jumlah perusahaan × jumlah tahun
 - [ ] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final)
+- [x] Template + script seleksi sampel disiapkan (`output/sample_selection_template.csv`, `scripts/estimate_sample.ps1`)
 
 ### Step 3.2 — Download Data Laporan Keuangan
 - [ ] Untuk setiap perusahaan sampel, download laporan keuangan tahunan 2019–2025

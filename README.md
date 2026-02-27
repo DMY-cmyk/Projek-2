@@ -93,6 +93,27 @@ Run:
 Output:
 - `output/ai_disclosure_index.csv`
 
+## Sample Estimation Automation (Step 2.2 / 3.1)
+Prepare input file:
+- `output/sample_selection_template.csv`
+
+Columns expected:
+- `ticker,company_name,listing_date,active_status,idx_ic_sector,has_fs_2019_2025,has_ar_2019_2025,has_price_data,idr_reporting`
+
+Run:
+```powershell
+.\scripts\estimate_sample.ps1
+```
+
+Optional relaxed listing cutoff (<= 2020-01-01):
+```powershell
+.\scripts\estimate_sample.ps1 -RelaxListingTo2020
+```
+
+Outputs:
+- `output/sample_selection_result.csv`
+- `output/sample_estimation.md`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
