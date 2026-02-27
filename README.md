@@ -249,6 +249,11 @@ Prepared files:
 - `draft/one_page_summary_penguji.pdf`
 - `draft/slides_outline.md`
 - `draft/faq_sidang.md`
+- `draft/defense_slides.md`
+- `draft/defense_slides.pptx` (Canva-ready import)
+
+Canva note:
+- `output/canva_integration_note.md`
 
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).

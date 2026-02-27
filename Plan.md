@@ -419,7 +419,7 @@
 - [x] Paket konsultasi pembimbing disiapkan (`output/supervisor_submission_checklist.md`, `draft/consultation_revision_log.md`)
 
 ### Step 6.3 — Persiapan Ujian
-- [ ] Siapkan presentasi (PPT/slides)
+- [x] Siapkan presentasi (PPT/slides) -> `draft/defense_slides.pptx`
 - [ ] Siapkan ringkasan 1 halaman untuk penguji
 - [ ] Latihan presentasi (15–20 menit)
 - [x] Draft ringkasan 1 halaman penguji disiapkan (`draft/one_page_summary_penguji.md`, `.docx`, `.pdf`)
