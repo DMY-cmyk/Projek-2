@@ -265,15 +265,15 @@
 - [ ] Cek korelasi tinggi antar independen (> 0.8) → pertimbangkan drop atau PCA
 
 ### Step 4.2 — Uji Asumsi Klasik
-- [ ] **Multikolinearitas**: Hitung VIF untuk semua model
+- [x] **Multikolinearitas**: otomasi VIF tersedia (`scripts/assumption_tests.ps1` -> `output/vif_table.csv`)
   - Jika VIF > 10: drop variabel atau gunakan PCA
   - Catatan: ROA, ROE, NPM kemungkinan berkorelasi tinggi
-- [ ] **Heteroskedastisitas**: Breusch-Pagan test / White test
+- [x] **Heteroskedastisitas**: otomasi Breusch-Pagan LM tersedia (`output/assumption_tests.md`)
   - Jika signifikan: gunakan robust standard errors (White/HAC)
-- [ ] **Autokorelasi**: Wooldridge test for serial correlation in panel data
+- [x] **Autokorelasi**: otomasi proxy Durbin-Watson (within-firm) tersedia (`output/assumption_tests.md`)
   - Jika signifikan: gunakan clustered standard errors
 - [ ] **Cross-sectional dependence**: Pesaran CD test (jika N besar)
-- [ ] Dokumentasikan semua hasil uji dan keputusan yang diambil
+- [x] Dokumentasikan semua hasil uji dan keputusan yang diambil (`output/assumption_tests.md`)
 
 ### Step 4.3 — Pemilihan Model Panel
 - [ ] Estimasi Pooled OLS, Fixed Effect, Random Effect untuk model baseline

@@ -160,6 +160,16 @@ Outputs:
 - `output/descriptive_stats.md`
 - `output/correlation_matrix.csv`
 
+## Assumption Tests Automation (Step 4.2)
+Run:
+```powershell
+.\scripts\assumption_tests.ps1 -InputCsv .\output\panel_dataset_built.csv -Dependent price
+```
+
+Outputs:
+- `output/assumption_tests.md`
+- `output/vif_table.csv`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
