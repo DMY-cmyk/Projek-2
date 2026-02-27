@@ -258,10 +258,10 @@
 ## FASE 4: ANALISIS DATA & PENGUJIAN HIPOTESIS
 
 ### Step 4.1 — Statistik Deskriptif
-- [ ] Hitung mean, median, std dev, min, max untuk semua variabel
-- [ ] Buat tabel statistik deskriptif (format jurnal)
+- [x] Hitung mean, median, std dev, min, max untuk semua variabel (`scripts/descriptive_stats.ps1`)
+- [x] Buat tabel statistik deskriptif (format jurnal) -> `output/descriptive_stats.md`
 - [ ] Interpretasi: apakah ada variabel dengan distribusi ekstrem?
-- [ ] Buat correlation matrix (Pearson) antar semua variabel
+- [x] Buat correlation matrix (Pearson) antar semua variabel -> `output/correlation_matrix.csv`
 - [ ] Cek korelasi tinggi antar independen (> 0.8) → pertimbangkan drop atau PCA
 
 ### Step 4.2 — Uji Asumsi Klasik

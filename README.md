@@ -150,6 +150,16 @@ Outputs:
 - `data/processed/panel_dataset.csv` (default path)
 - `output/data_cleaning_log.md`
 
+## Descriptive Stats Automation (Step 4.1)
+Run:
+```powershell
+.\scripts\descriptive_stats.ps1 -InputCsv .\output\panel_dataset_built.csv
+```
+
+Outputs:
+- `output/descriptive_stats.md`
+- `output/correlation_matrix.csv`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
