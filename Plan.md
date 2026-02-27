@@ -283,6 +283,7 @@
 - [x] Estimasi Pooled OLS, Fixed Effect, Random Effect untuk model baseline (otomasi tersedia: `scripts/panel_model_selection.ps1`)
 - [x] **Chow test**: Pooled OLS vs Fixed Effect (H0: pooled lebih baik) -> auto-attempt di script + fallback manual EViews
 - [x] **Hausman test**: Fixed Effect vs Random Effect (H0: RE konsisten) -> auto-attempt di script + fallback manual EViews
+- [x] Dokumentasi readiness model final tersedia (`output/model_readiness_report.md`) ✅
 - [ ] Pilih model terbaik berdasarkan hasil uji
 - [ ] Jika FE terpilih: gunakan entity-fixed effects (firm dummies)
 - [ ] Pertimbangkan time-fixed effects juga (year dummies)
@@ -325,6 +326,7 @@
 - [x] Untuk setiap hipotesis, tentukan: diterima / ditolak (otomasi: `scripts/hypothesis_decision.ps1`)
 - [x] Gunakan significance level: alpha = 0.05 (script support; bisa rerun untuk 0.01/0.10)
 - [x] Buat tabel ringkasan hipotesis (`output/hypothesis_results.csv`, `output/hypothesis_decision.md`)
+- [x] Rerun status hipotesis setelah uji EViews terbaru ✅ (masih `Pending` karena output persamaan belum terbentuk pada dataset pilot; lihat `output/model_readiness_report.md`)
   | Hipotesis | Variabel | Dependen | Koefisien | Signifikansi | Keputusan |
   |-----------|----------|----------|-----------|--------------|-----------|
   | H1a | ROA | PRICE | ... | ... | Diterima/Ditolak |

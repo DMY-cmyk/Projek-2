@@ -253,6 +253,7 @@ Merujuk pada:
 2. `output/vif_table.csv`
 3. `output/panel_model_selection.md`
 4. `output/cross_sectional_dependence.md`
+5. `output/model_readiness_report.md`
 
 Pada tahap pilot, estimasi model penuh belum stabil karena isu near-singular matrix dan ukuran sampel efektif yang kecil. Oleh karena itu, pemilihan model final (Pooled vs FE vs RE) ditetapkan sebagai agenda tahap dataset final.
 

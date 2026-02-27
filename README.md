@@ -215,6 +215,17 @@ Outputs:
 - `output/eviews_model_selection/eq_re.txt` (if RE command succeeds)
 - `output/eviews_model_selection/chow_test.txt` and `hausman_test.txt` (if supported by command path)
 
+Model readiness check (recommended before interpreting regressions):
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\model_readiness_report.ps1 `
+  -EViewsSummary .\output\eviews\eviews_run_summary.md `
+  -PanelCsv .\data\processed\panel_dataset.csv `
+  -OutMd .\output\model_readiness_report.md
+```
+
+Output:
+- `output/model_readiness_report.md`
+
 ## Robustness Dataset Pipeline (Step 4.5)
 Run:
 ```powershell
