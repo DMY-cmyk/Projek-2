@@ -429,6 +429,7 @@
 - [x] Cek konsistensi angka antara tabel dan narasi (checklist awal dibuat)
 - [x] Cek semua referensi tercantum di daftar pustaka (checklist awal dibuat)
 - [x] Cek format sesuai panduan tesis kampus (template-based draft sudah diselaraskan)
+- [x] Dashboard progres rencana disiapkan ✅ (`output/plan_progress_dashboard.md`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1
@@ -437,6 +438,7 @@
 - [ ] Revisi final
 - [x] Paket konsultasi pembimbing disiapkan (`output/supervisor_submission_checklist.md`, `draft/consultation_revision_log.md`)
 - [x] Tracker eksekusi konsultasi disiapkan ✅ (`output/supervisor_consultation_tracker.md`)
+- [x] Template email pengiriman draft ke pembimbing disiapkan ✅ (`output/supervisor_submission_email_template.md`)
 
 ### Step 6.3 — Persiapan Ujian
 - [x] Siapkan presentasi (PPT/slides) -> `draft/defense_slides.pptx`
@@ -460,6 +462,8 @@
 - [ ] Upload ke repositori kampus
 - [ ] (Opsional) Publikasi ke jurnal nasional terakreditasi
 - [x] Tracker revisi pasca-ujian disiapkan ✅ (`output/post_defense_revision_tracker.md`)
+- [x] Matriks respons revisi penguji disiapkan ✅ (`output/defense_revision_response_matrix.md`)
+- [x] Checklist upload repositori kampus disiapkan ✅ (`output/campus_repository_upload_checklist.md`)
 
 ---
 

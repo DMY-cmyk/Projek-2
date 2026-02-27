@@ -384,11 +384,13 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 
 ## Internal Review Progress (Step 6.1)
 - `output/review_internal_checklist.md`
+- `output/plan_progress_dashboard.md`
 
 ## Supervisor and Exam Package (Step 6.2 / 6.3)
 Prepared files:
 - `output/supervisor_submission_checklist.md`
 - `output/supervisor_consultation_tracker.md`
+- `output/supervisor_submission_email_template.md`
 - `draft/consultation_revision_log.md`
 - `draft/one_page_summary_penguji.md`
 - `draft/one_page_summary_penguji.docx`
@@ -403,6 +405,8 @@ Prepared files:
 - `output/presentation_rehearsal_plan.md`
 - `output/presentation_rehearsal_log_template.md`
 - `output/post_defense_revision_tracker.md`
+- `output/defense_revision_response_matrix.md`
+- `output/campus_repository_upload_checklist.md`
 
 Canva note:
 - `output/canva_integration_note.md`

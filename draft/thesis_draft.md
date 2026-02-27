@@ -323,6 +323,8 @@ Pada tahap interim ini, implikasi praktis difokuskan pada kesiapan protokol anal
 3. Pengembangan indeks AI disclosure yang lebih granular.
 4. Finalisasi data primer sekunder (laporan keuangan, annual report, dan harga) per emiten agar model inferensial utama dapat ditutup.
 
+Untuk pengendalian progres implementasi, monitoring checklist keseluruhan disarankan menggunakan `output/plan_progress_dashboard.md` dan tracker fase finalisasi pada folder `output/`.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)
