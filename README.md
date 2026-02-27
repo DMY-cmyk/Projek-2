@@ -134,6 +134,20 @@ Outputs:
 - `output/sample_analysis_comprehensive.md`
 - `output/sample_selection_flow_interim.md`
 
+## Data Collection Master Builder (Step 3.2 / 3.6)
+Run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_collection_master.ps1 `
+  -SampleTemplate .\output\sample_selection_template.csv `
+  -StartYear 2019 `
+  -EndYear 2025
+```
+
+Outputs:
+- `output/data_collection_master_interim.csv`
+- `output/manual_crosscheck_10pct.csv`
+- `output/data_collection_manifest_interim.md`
+
 ### IDX Population Ingestion (before sample estimation)
 If you export IDX issuer list to CSV, normalize it first:
 ```powershell

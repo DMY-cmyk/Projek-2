@@ -190,7 +190,7 @@
 - [ ] Untuk setiap perusahaan sampel, download laporan keuangan tahunan 2019–2025
 - [ ] Sumber: IDX (idx.co.id) → Listed Companies → Financial Statements & Annual Report
 - [ ] Simpan di `data/raw/` dengan penamaan: `{TICKER}_{YEAR}_FS.pdf`
-- [ ] Buat spreadsheet master: 1 baris per perusahaan per tahun
+- [x] Buat spreadsheet master: 1 baris per perusahaan per tahun ✅ (`output/data_collection_master_interim.csv`, 189 firm-year rows)
 - [ ] Ekstrak data berikut dari setiap laporan keuangan:
   - Total Assets, Total Liabilities, Total Equity
   - Current Assets, Current Liabilities
@@ -256,6 +256,7 @@
 - [ ] Cross-check 10% sampel secara manual dengan laporan keuangan asli
 - [x] Logging cleaning decision otomatis tersedia (`output/data_cleaning_log.md` dari `scripts/build_panel_dataset.ps1`)
 - [x] Dokumentasikan semua data cleaning decisions ✅ (`output/data_cleaning_log.md`, `output/data_validation_interim.md`)
+- [x] Template cross-check 10% untuk verifikasi manual disiapkan ✅ (`output/manual_crosscheck_10pct.csv`, `output/data_collection_manifest_interim.md`)
 
 ---
 
