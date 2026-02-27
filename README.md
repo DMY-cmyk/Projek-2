@@ -259,6 +259,14 @@ Prepared files:
 Canva note:
 - `output/canva_integration_note.md`
 
+One-command Canva-ready build:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\canva_ready.ps1
+```
+
+Build manifest:
+- `output/canva_ready_manifest.md`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.

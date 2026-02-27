@@ -426,6 +426,7 @@
 - [x] Draft ringkasan 1 halaman penguji disiapkan (`draft/one_page_summary_penguji.md`, `.docx`, `.pdf`)
 - [x] Outline slide ujian disiapkan (`draft/slides_outline.md`)
 - [x] Antisipasi pertanyaan disiapkan (`draft/faq_sidang.md`)
+- [x] Otomasi build Canva-ready disiapkan (`scripts/canva_ready.ps1`, `output/canva_ready_manifest.md`)
   - Mengapa sektor teknologi?
   - Bagaimana mengukur AI disclosure?
   - Mengapa 2023 sebagai cutoff GenAI?
