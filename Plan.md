@@ -181,6 +181,7 @@
 - [x] Akses IDX → daftar perusahaan sektor Teknologi (IDX-IC) ✅ (44 perusahaan Technology + 22 Telecommunication)
 - [x] Catat semua perusahaan: ticker, nama, tanggal listing, status (aktif/delisted) ✅ (`output/idx_population_template.csv`, `output/idx_population_normalized.csv`)
 - [ ] Filter berdasarkan kriteria inklusi → daftar sampel final (⏳ menunggu verifikasi data availability)
+- [x] Sinkronisasi otomatis status availability -> hasil seleksi interim disiapkan ✅ (`scripts/sync_sample_from_collection.ps1`, `output/sample_selection_result_interim.csv`, `output/sample_selection_interim_summary.md`)
 - [x] Hitung total observasi: jumlah perusahaan × jumlah tahun ✅ (6 skenario dianalisis; lihat `output/sample_analysis_comprehensive.md`)
 - [x] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final) ✅ (interim table: `output/sample_selection_flow_interim.md`; final angka akan diperbarui setelah verifikasi availability)
 - [x] Template + script seleksi sampel disiapkan (`output/sample_selection_template.csv`, `scripts/estimate_sample.ps1`)
@@ -215,6 +216,7 @@
 - [ ] Lakukan content analysis sesuai Step 2.5
 - [ ] Hasilkan skor AI Disclosure Index per perusahaan per tahun
 - [ ] Simpan hasil di spreadsheet master
+- [x] Lembar coding manual AI disclosure untuk seluruh firm-year disiapkan ✅ (`output/ai_disclosure_manual_sheet_interim.csv`, `output/ai_disclosure_manual_sheet_note.md`)
 
 ### Step 3.5 — Hitung Semua Variabel
 - [x] Dari data mentah, hitung semua variabel: ✅ (pipeline `scripts/build_panel_dataset.ps1`, status pilot dataset)

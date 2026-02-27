@@ -197,6 +197,8 @@ Untuk tahap operasional pengumpulan data, lembar master firm-year juga telah dis
 
 Status ketersediaan dokumen (FS/AR/Price) dapat dipantau melalui `output/data_collection_master_status.csv` dan `output/data_collection_availability_report.md`, sementara template validasi AI disclosure 10% disiapkan pada `output/ai_disclosure_spotcheck_10pct.csv`.
 
+Untuk proses coding AI disclosure penuh, lembar kerja manual seluruh firm-year telah disiapkan pada `output/ai_disclosure_manual_sheet_interim.csv`, dan sinkronisasi status availability ke seleksi sampel interim terdokumentasi pada `output/sample_selection_result_interim.csv`.
+
 ## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
 ### 3.3.1 Variabel Dependen
 1. PRICE

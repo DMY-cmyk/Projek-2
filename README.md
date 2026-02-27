@@ -121,6 +121,18 @@ Outputs:
 - `output/ai_disclosure_spotcheck_10pct.csv`
 - `output/ai_disclosure_spotcheck_note.md`
 
+Build full manual coding sheet (all firm-year rows):
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_ai_manual_sheet.ps1 `
+  -CollectionStatus .\output\data_collection_master_status.csv `
+  -OutCsv .\output\ai_disclosure_manual_sheet_interim.csv `
+  -OutMd .\output\ai_disclosure_manual_sheet_note.md
+```
+
+Outputs:
+- `output/ai_disclosure_manual_sheet_interim.csv`
+- `output/ai_disclosure_manual_sheet_note.md`
+
 ## Sample Estimation Automation (Step 2.2 / 3.1)
 Prepare input file:
 - `output/sample_selection_template.csv`
@@ -171,6 +183,19 @@ powershell -ExecutionPolicy Bypass -File .\scripts\update_collection_availabilit
 Outputs:
 - `output/data_collection_master_status.csv`
 - `output/data_collection_availability_report.md`
+
+Sync availability status into sample-selection result:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\sync_sample_from_collection.ps1 `
+  -SampleTemplate .\output\sample_selection_template.csv `
+  -CollectionStatus .\output\data_collection_master_status.csv `
+  -OutCsv .\output\sample_selection_result_interim.csv `
+  -OutSummaryMd .\output\sample_selection_interim_summary.md
+```
+
+Outputs:
+- `output/sample_selection_result_interim.csv`
+- `output/sample_selection_interim_summary.md`
 
 ### IDX Population Ingestion (before sample estimation)
 If you export IDX issuer list to CSV, normalize it first:
