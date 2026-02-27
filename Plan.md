@@ -63,28 +63,24 @@
 - [ ] Buat literature matrix (tabel: penulis, tahun, variabel, metode, temuan, gap)
 
 ### Step 1.3 — Identifikasi Teori Dasar
-- [ ] Pilih dan jelaskan teori yang mendasari:
-  - **Signaling Theory** — rasio fundamental sebagai sinyal ke investor
-  - **Efficient Market Hypothesis (EMH)** — apakah informasi fundamental tercermin di harga
-  - **Resource-Based View (RBV)** — intangible assets & AI sebagai sumber daya strategis
-  - **Technology Acceptance Model / Innovation Diffusion** (opsional, untuk konteks AI)
-- [ ] Hubungkan setiap teori ke hipotesis penelitian
-- [ ] Buat kerangka pemikiran (conceptual framework diagram)
+- [x] Pilih dan jelaskan teori yang mendasari ✅ (lihat `output/kerangka_teori.md`):
+  - **Signaling Theory** (Spence 1973, Ross 1977) ✅
+  - **Efficient Market Hypothesis** (Fama 1970) ✅
+  - **Resource-Based View** (Barney 1991) ✅
+  - **Value Relevance Theory** (Ohlson 1995, Ball & Brown 1968) ✅
+  - **Innovation Diffusion Theory** (Rogers 1962) ✅
+- [x] Hubungkan setiap teori ke hipotesis penelitian ✅
+- [x] Buat kerangka pemikiran (conceptual framework diagram) ✅
 
 ### Step 1.4 — Finalisasi Research Gap
-- [ ] Konfirmasi 5 gap dari `analysis_output.md` bagian 4 masih valid setelah tinjauan pustaka lebih luas
-- [ ] Jika ada gap baru dari literatur tambahan, tambahkan
-- [ ] Tulis narasi gap research (1–2 halaman) yang menunjukkan posisi penelitian ini
+- [x] Konfirmasi 5 gap masih valid setelah tinjauan pustaka diperluas (8 tesis S2) ✅
+- [x] Narasi gap research lengkap dengan novelty statement ✅ (lihat `output/research_gap.md`)
+- [x] Semua gap terkonfirmasi: AI moderator, structural break, GMM, multi-dependen, periode 2019–2025 ✅
 
 ### Step 1.5 — Susun Hipotesis
-- [ ] Tulis hipotesis berdasarkan rumusan masalah:
-  - H1a: ROA berpengaruh positif signifikan terhadap harga saham
-  - H1b: ROA berpengaruh positif signifikan terhadap return saham
-  - H1c: ROA berpengaruh positif signifikan terhadap Tobin's Q
-  - (ulangi untuk ROE, NPM, CR, DER, TATO, EPS)
-  - H2: AI Disclosure Index memoderasi hubungan rasio fundamental → dependen
-  - H3: Terdapat structural break pada hubungan rasio fundamental → dependen sebelum dan sesudah era GenAI (2023)
-- [ ] Tentukan arah hipotesis (positif/negatif) berdasarkan teori dan literatur
+- [x] Hipotesis lengkap dengan 11 kelompok, 25+ sub-hipotesis ✅ (lihat `output/hipotesis.md`)
+- [x] Arah hipotesis ditentukan berdasarkan teori ✅
+- [x] Tabel ringkasan hipotesis tersedia ✅
 
 ---
 
