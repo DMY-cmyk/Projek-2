@@ -329,6 +329,8 @@ Sebagai daftar kerja harian, butir-butir pending yang tersisa juga dapat dikelol
 
 Untuk fokus eksekusi mingguan, prioritas tindakan dapat mengikuti antrean `output/next_actions_sprint.md`, sedangkan persiapan proposal administratif awal dapat menggunakan `draft/proposal_awal_outline.md`.
 
+Seluruh artefak monitoring operasional dapat diperbarui serentak melalui skrip `scripts/refresh_operational_dashboard.ps1` dengan ringkasan hasil pada `output/operational_refresh_summary.md`.
+
 \newpage
 
 # DAFTAR PUSTAKA (DRAFT)

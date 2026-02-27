@@ -433,6 +433,7 @@
 - [x] Dashboard progres rencana disiapkan ✅ (`output/plan_progress_dashboard.md`)
 - [x] Queue aksi pending terstruktur disiapkan ✅ (`output/pending_actions.csv`, `output/pending_actions_summary.md`)
 - [x] Sprint prioritas aksi berikutnya disiapkan ✅ (`output/next_actions_sprint.md`)
+- [x] One-command refresh operasional disiapkan ✅ (`scripts/refresh_operational_dashboard.ps1`, `output/operational_refresh_summary.md`)
 
 ### Step 6.2 — Konsultasi Pembimbing
 - [ ] Submit draft ke pembimbing 1

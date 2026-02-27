@@ -14,9 +14,9 @@ if ($rows.Count -eq 0) { throw "Pending CSV is empty: $PendingCsv" }
 function Score-Task([string]$phase, [string]$task) {
     $score = 0
     # Prioritize data-collection blockers first.
-    if ($phase -like "3:*") { $score += 50 }
-    if ($phase -like "2:*") { $score += 35 }
-    if ($phase -like "4:*") { $score += 30 }
+    if ($phase -like "3:*") { $score += 80 }
+    if ($phase -like "2:*") { $score += 60 }
+    if ($phase -like "4:*") { $score += 40 }
     if ($phase -like "6:*") { $score += 20 }
     if ($phase -like "0:*") { $score += 10 }
 

@@ -404,6 +404,14 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build_execution_sprint.ps1 `
   -OutMd .\output\next_actions_sprint.md
 ```
 
+One-command refresh for all operational trackers:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\refresh_operational_dashboard.ps1 -PlanPath .\Plan.md
+```
+
+Output:
+- `output/operational_refresh_summary.md`
+
 ## Proposal Kickoff Template
 - `draft/proposal_awal_outline.md`
 
