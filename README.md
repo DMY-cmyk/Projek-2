@@ -190,6 +190,18 @@ Outputs:
 - `output/assumption_tests.md`
 - `output/vif_table.csv`
 
+## Interim Data Validation (Step 3.6)
+Run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\validate_panel_data.ps1 `
+  -PanelCsv .\data\processed\panel_dataset.csv `
+  -FinancialCsv .\data\processed\financial_master.csv `
+  -OutMd .\output\data_validation_interim.md
+```
+
+Output:
+- `output/data_validation_interim.md`
+
 ## Panel Model Selection Automation (Step 4.3)
 Run (EViews COM):
 ```powershell
@@ -232,6 +244,7 @@ Outputs:
 - `output/us_sec_ratios_2019_2025.csv`
 - `output/us_id_descriptive_comparison.md`
 - `output/us_id_context_discussion.md`
+- `output/supplementary_analysis_scope_note.md`
 
 ## Hypothesis Decision Table (Step 4.6)
 Run:
