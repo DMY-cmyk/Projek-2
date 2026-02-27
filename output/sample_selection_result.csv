@@ -1,1 +1,5 @@
-ticker,company_name,listing_date,active_status,idx_ic_sector,has_fs_2019_2025,has_ar_2019_2025,has_price_data,idr_reporting,include_flag,exclude_reason
+﻿"ticker","company_name","listing_date","active_status","idx_ic_sector","has_fs_2019_2025","has_ar_2019_2025","has_price_data","idr_reporting","include_flag","exclude_reason"
+"BUKA","Bukalapak.com Tbk","2021-08-06","Active","Technology","","","","","0","listing_after_cutoff;incomplete_financial_statements;incomplete_annual_reports;missing_price_data;non_idr_reporting"
+"DCII","DCI Indonesia Tbk","2021-01-06","Active","Technology","","","","","0","listing_after_cutoff;incomplete_financial_statements;incomplete_annual_reports;missing_price_data;non_idr_reporting"
+"GOTO","GoTo Gojek Tokopedia Tbk","2021-04-11","Active","Technology","","","","","0","listing_after_cutoff;incomplete_financial_statements;incomplete_annual_reports;missing_price_data;non_idr_reporting"
+"MTDL","Metrodata Electronics Tbk","1990-04-09","Active","Technology","","","","","0","incomplete_financial_statements;incomplete_annual_reports;missing_price_data;non_idr_reporting"

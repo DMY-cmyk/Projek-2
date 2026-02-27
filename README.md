@@ -114,6 +114,17 @@ Outputs:
 - `output/sample_selection_result.csv`
 - `output/sample_estimation.md`
 
+### IDX Population Ingestion (before sample estimation)
+If you export IDX issuer list to CSV, normalize it first:
+```powershell
+.\scripts\ingest_idx_population.ps1 -InputCsv .\output\idx_population_template.csv
+```
+
+Outputs:
+- `output/idx_population_normalized.csv`
+- `output/sample_selection_template.csv` (prefilled from IDX population)
+- `output/idx_population_summary.md`
+
 ## Panel Dataset Builder (Step 3.5 / 3.6)
 Template inputs:
 - `output/financial_master_template.csv`

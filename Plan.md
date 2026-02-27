@@ -182,6 +182,7 @@
 - [ ] Hitung total observasi: jumlah perusahaan × jumlah tahun
 - [ ] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final)
 - [x] Template + script seleksi sampel disiapkan (`output/sample_selection_template.csv`, `scripts/estimate_sample.ps1`)
+- [x] IDX population ingestion automation disiapkan (`scripts/ingest_idx_population.ps1`, template `output/idx_population_template.csv`)
 
 ### Step 3.2 — Download Data Laporan Keuangan
 - [ ] Untuk setiap perusahaan sampel, download laporan keuangan tahunan 2019–2025
