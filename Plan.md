@@ -420,8 +420,9 @@
 
 ### Step 6.3 — Persiapan Ujian
 - [x] Siapkan presentasi (PPT/slides) -> `draft/defense_slides.pptx`
-- [ ] Siapkan ringkasan 1 halaman untuk penguji
+- [x] Siapkan ringkasan 1 halaman untuk penguji (`draft/one_page_summary_penguji.docx`, `.pdf`)
 - [ ] Latihan presentasi (15–20 menit)
+- [x] Runbook latihan presentasi disiapkan (`output/presentation_rehearsal_plan.md`, `draft/defense_speaker_notes.md`)
 - [x] Draft ringkasan 1 halaman penguji disiapkan (`draft/one_page_summary_penguji.md`, `.docx`, `.pdf`)
 - [x] Outline slide ujian disiapkan (`draft/slides_outline.md`)
 - [x] Antisipasi pertanyaan disiapkan (`draft/faq_sidang.md`)

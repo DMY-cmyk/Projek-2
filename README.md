@@ -251,6 +251,10 @@ Prepared files:
 - `draft/faq_sidang.md`
 - `draft/defense_slides.md`
 - `draft/defense_slides.pptx` (Canva-ready import)
+- `draft/defense_slides_v2.md`
+- `draft/defense_slides_v2.pptx`
+- `draft/defense_speaker_notes.md`
+- `output/presentation_rehearsal_plan.md`
 
 Canva note:
 - `output/canva_integration_note.md`

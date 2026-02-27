@@ -6,6 +6,7 @@ Direct Canva account/API connection cannot be executed from this environment (no
 ## Working Alternative (Implemented)
 Canva supports importing PowerPoint files. A Canva-ready deck has been generated:
 - `draft/defense_slides.pptx`
+- `draft/defense_slides_v2.pptx`
 
 ## Upload Steps in Canva
 1. Open Canva.
