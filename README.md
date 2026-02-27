@@ -114,6 +114,31 @@ Outputs:
 - `output/sample_selection_result.csv`
 - `output/sample_estimation.md`
 
+## Panel Dataset Builder (Step 3.5 / 3.6)
+Template inputs:
+- `output/financial_master_template.csv`
+- `output/price_master_template.csv`
+- `output/ai_disclosure_index_template.csv`
+
+Run (example with templates):
+```powershell
+.\scripts\build_panel_dataset.ps1 `
+  -FinancialCsv .\output\financial_master_template.csv `
+  -PriceCsv .\output\price_master_template.csv `
+  -AidCsv .\output\ai_disclosure_index_template.csv `
+  -OutCsv .\output\panel_dataset_built.csv `
+  -OutCleaningLog .\output\data_cleaning_log.md
+```
+
+Optional winsorization:
+```powershell
+.\scripts\build_panel_dataset.ps1 -Winsorize
+```
+
+Outputs:
+- `data/processed/panel_dataset.csv` (default path)
+- `output/data_cleaning_log.md`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.

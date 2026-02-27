@@ -211,6 +211,7 @@
 
 ### Step 3.5 — Hitung Semua Variabel
 - [ ] Dari data mentah, hitung semua variabel:
+- [x] Automation tersedia untuk perhitungan variabel (`scripts/build_panel_dataset.ps1`)
 
   **Dependen:**
   - PRICE = Closing price akhir tahun
@@ -239,6 +240,7 @@
   - VOL = Std dev of monthly returns dalam tahun tersebut
 
 - [ ] Masukkan semua ke dataset panel (1 file CSV/Excel)
+- [x] Template input disiapkan (`output/financial_master_template.csv`, `output/price_master_template.csv`, `output/ai_disclosure_index_template.csv`)
 - [ ] Simpan di `data/processed/panel_dataset.csv`
 
 ### Step 3.6 — Cleaning & Validasi Data
@@ -247,6 +249,7 @@
 - [ ] Cek konsistensi: total aset = total liabilitas + ekuitas
 - [ ] Cek variabel negatif yang tidak seharusnya negatif (misal CR < 0)
 - [ ] Cross-check 10% sampel secara manual dengan laporan keuangan asli
+- [x] Logging cleaning decision otomatis tersedia (`output/data_cleaning_log.md` dari `scripts/build_panel_dataset.ps1`)
 - [ ] Dokumentasikan semua data cleaning decisions
 
 ---
