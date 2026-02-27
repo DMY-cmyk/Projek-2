@@ -6,8 +6,10 @@ Rust workspace for thesis analysis tooling with SEC `data.sec.gov` integration.
 - `Cargo.toml`: Workspace root.
 - `crates/app/`: Main CLI application.
 - `scripts/`: PowerShell helpers for SEC data.
+- `scripts/eviews_run.ps1`: EViews COM automation runner for panel analysis.
+- `scripts/build_ai_disclosure_index.ps1`: AI disclosure index builder from annual report text.
 - `chat_transcript.md`: Input transcript (reference).
-- `Plan.md`: Analysis plan (gitignored).
+- `Plan.md`: Analysis plan.
 
 ## Quick Start
 ```powershell
@@ -54,63 +56,63 @@ Generate yearly closing prices for PBV input:
 .\scripts\price_fetch.ps1 -Ticker AAPL -StartYear 2019 -EndYear 2025 -Out .\data\prices_aapl.csv
 ```
 
+## EViews Integration (Automated Analysis)
+Detected on this PC:
+- `EViews 12 (64-bit)` at `C:\Program Files\EViews 12\`
+
+### 1) Prepare dataset
+Required columns:
+`firm_id,year,price,ret,tq,roa,roe,npm,cr,der,tato,eps,size,growth,age,vol,aid,ii,dgenai`
+
+Start template:
+- `output/panel_dataset_template.csv`
+
+### 2) Run EViews automation
+```powershell
+.\scripts\eviews_run.ps1 -DatasetPath .\output\panel_dataset_template.csv
+```
+
+Quick smoke check with small/synthetic data:
+```powershell
+.\scripts\eviews_run.ps1 -DatasetPath .\output\panel_dataset_template.csv -SmokeMode
+```
+
+Generated outputs:
+- `output/eviews/panel_2019_2025.wf1`
+- `output/eviews/eq_*.txt`
+
+### 3) Build AI disclosure index (semi-automated)
+Place annual report text files as:
+- `output/annual_reports_txt/{TICKER}_{YEAR}_AR.txt`
+
+Run:
+```powershell
+.\scripts\build_ai_disclosure_index.ps1
+```
+
+Output:
+- `output/ai_disclosure_index.csv`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
-- `analysis_output.md`: final synthesis (ringkasan, tabel tesis, gap, ide judul, metodologi).
+- `analysis_output.md`: Final synthesis.
+- `output/literatur_tesis.md`: Thesis matrix.
+- `output/literatur_jurnal.md`: 28-article journal matrix.
+- `output/research_gap.md`: Research gap narrative.
+- `output/kerangka_teori.md`: Theoretical framework.
+- `output/hipotesis.md`: Hypothesis set.
+- `output/metodologi_penelitian.md`: Methodology implementation notes.
 
-## Appendices
-`analysis_output.md` now includes:
-- Variable definitions and formulas.
-- Minimal dataset schema.
-- Empirical design models (baseline, moderation, structural break).
-- Diagnostics and robustness checks.
+## Research Plan Progress Snapshot
+- Step 1.1 complete: thesis inventory/classification.
+- Step 1.2 complete: 28 journal references matrix.
+- Step 1.3-1.5 complete: theory, gap, and hypotheses.
+- Step 2 scaffolding complete in tooling/docs (methodology templates and automation scripts).
+- EViews COM connection validated with smoke test.
 
 ## Notes
 - SEC API requires a descriptive `User-Agent`.
 - Default ratios are FY-only from 10-K/20-F; pass `-NoFyOnly` to include interim values.
-
-## Research Plan Summary
-Scope from `Plan.md`:
-- Tesis S2, analisis fundamental (rasio keuangan), data sekunder.
-- Sektor teknologi (IDX-IC), periode 2019-2025.
-- Dependen: harga, return, nilai perusahaan.
-- Tambahan: indikator AI/teknologi (disclosure index, intangible intensity).
-- Pembanding global opsional via SEC `data.sec.gov`.
-
-Progress (from `Plan.md`):
-- External-claim inventory complete.
-- Thesis inventory/classification complete (provisional).
-- Potential issues flagged (needs source verification).
-- Scope reaffirmed.
-- Inclusion/exclusion criteria drafted.
-- Variable normalization and gap outline drafted.
-
-## Verified S2 Tech Theses (Public Repos)
-Note: Verified entries are limited by public access and filtered to **rasio fundamental** only.
-- UNDIKSHA (2025) — Tesis Magister Akuntansi; sektor teknologi BEI 2021–2023; intellectual capital & working capital management → financial distress → return saham. `https://repo.undiksha.ac.id/23085/`
-- ITB (2024) — Tesis; sektor teknologi BEI 2021Q1–2023Q2; EPS, PBV, TATO, FATO → financial distress (Altman Z-Score). `https://digilib.itb.ac.id/gdl/view/79966`
-- UNISSULA (2025) — Tesis Magister Manajemen; sektor teknologi BEI 2020–2023; profitabilitas, likuiditas, leverage → nilai perusahaan. `https://repository.unissula.ac.id/43161/`
-Target 6–10 tesis belum tercapai; perlu penelusuran repositori tambahan.
-
-## Excluded (Not Fundamental Ratios)
-- ITB (2022) — valuasi saham PT Bukalapak (DCF/valuasi relatif). `https://digilib.itb.ac.id/index.php/gdl/view/62708`
-- ITB (2022) — penilaian saham relatif PT Bukalapak.com Tbk. `https://digilib.itb.ac.id/index.php/gdl/view/67225`
-- UMB (2024) — board gender diversity & corporate governance → manajemen laba. `https://repository.mercubuana.ac.id/93450/1/01%20COVER.pdf`
-
-## Candidates/Related (Unverified or Not Strictly Tech Sector)
-- UNHAS (2024) — tesis sektor teknologi BEI 2020–2023; akses repo gagal saat penelusuran.
-- UNEJ (2021) — tesis Magister Akuntansi tentang reaksi pasar atas pengumuman investasi TI pada emiten BEI (relevan teknologi/IT, bukan sektor teknologi).
-- UNILA (2025) — tesis S2 Magister Ilmu Akuntansi; mobile banking & investasi TI → NPL dan fee based income (perbankan, bukan sektor teknologi).
-- UNDIKSHA (2024) — tesis S2; CSER & investasi TI → nilai perusahaan pertambangan (bukan sektor teknologi).
-- UNISSULA (2024) — tesis S2; TI memoderasi kompetensi SDM → kinerja perusahaan; studi perbankan syariah (bukan sektor teknologi).
-
-## Search Status (2026-02-26)
-- Additional searches for S2 tech-sector BEI theses using fundamental ratios returned mostly journal articles or non-tech-sector theses, with no new verifiable matches added in this round.
-
-## Search Status (2026-02-26, Round 2)
-- Follow-up searches confirmed the existing ITB 2024 thesis entry but found no additional publicly verifiable S2 tech-sector BEI theses using fundamental ratios in this round.
-
-## Git Ignore
-- `Plan.md` is gitignored.
-- `data/` and credential/secret files are gitignored.
+- `data/` is gitignored.
+- Keep secrets/credentials out of repo.

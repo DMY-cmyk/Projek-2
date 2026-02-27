@@ -38,6 +38,7 @@
   └── draft/                 # Draft bab tesis
   ```
 - [x] (Opsional) Setup `scripts/sec_fetch.ps1` dan `scripts/price_fetch.ps1` dari project ini untuk data pembanding AS ✅ (sudah tersedia)
+- [x] Integrasi EViews 12 via COM automation selesai (script: `scripts/eviews_run.ps1`, template: `scripts/eviews/panel_analysis_template.prg`)
 
 ---
 
@@ -51,16 +52,16 @@
 - [x] Tambahan: 4 kandidat level tidak jelas + 3 artikel jurnal terkait ✅
 
 ### Step 1.2 — Mapping Artikel Jurnal Pendukung
-- [ ] Cari 20–30 artikel jurnal (nasional + internasional) yang relevan
-- [ ] Topik yang harus dicakup:
+- [x] Cari 20–30 artikel jurnal (nasional + internasional) yang relevan ✅ (28 artikel; lihat `output/literatur_jurnal.md`)
+- [x] Topik yang harus dicakup ✅:
   - Analisis fundamental & harga/return/nilai perusahaan (minimal 10 artikel)
   - AI disclosure / digital transformation & firm performance (minimal 5 artikel)
   - Structural break / regime change dalam keuangan (minimal 3 artikel)
   - Sektor teknologi & valuasi (minimal 5 artikel)
-- [ ] Jurnal target:
+- [x] Jurnal target ✅:
   - **Internasional**: Journal of Financial Economics, Journal of Accounting Research, Review of Financial Studies, Technological Forecasting & Social Change, International Review of Financial Analysis
   - **Nasional**: Jurnal Akuntansi dan Keuangan, Jurnal Dinamika Akuntansi, Jurnal Akuntansi Multiparadigma, Media Akuntansi
-- [ ] Buat literature matrix (tabel: penulis, tahun, variabel, metode, temuan, gap)
+- [x] Buat literature matrix (tabel: penulis, tahun, variabel, metode, temuan, gap) ✅ (`output/literatur_jurnal.md`)
 
 ### Step 1.3 — Identifikasi Teori Dasar
 - [x] Pilih dan jelaskan teori yang mendasari ✅ (lihat `output/kerangka_teori.md`):
@@ -87,15 +88,15 @@
 ## FASE 2: METODOLOGI PENELITIAN
 
 ### Step 2.1 — Desain Penelitian
-- [ ] Jenis: Kuantitatif, kausal/asosiatif
-- [ ] Pendekatan: Deduktif (teori → hipotesis → pengujian)
-- [ ] Data: Sekunder (panel data)
+- [x] Jenis: Kuantitatif, kausal/asosiatif (set in `output/metodologi_penelitian.md`)
+- [x] Pendekatan: Deduktif (teori -> hipotesis -> pengujian)
+- [x] Data: Sekunder (panel data)
 
 ### Step 2.2 — Populasi & Sampel
-- [ ] **Populasi**: Seluruh perusahaan sektor Teknologi (IDX-IC) yang terdaftar di BEI
-- [ ] **Periode**: 2019–2025 (7 tahun)
-- [ ] **Teknik sampling**: Purposive sampling
-- [ ] **Kriteria inklusi**:
+- [x] **Populasi**: Seluruh perusahaan sektor Teknologi (IDX-IC) yang terdaftar di BEI
+- [x] **Periode**: 2019-2025 (7 tahun)
+- [x] **Teknik sampling**: Purposive sampling
+- [x] **Kriteria inklusi**:
   1. Terdaftar di BEI dalam klasifikasi IDX-IC sektor Teknologi
   2. Listing sebelum 1 Januari 2019 (agar ada data penuh 2019–2025)
   3. Menerbitkan laporan keuangan & annual report lengkap selama periode observasi
@@ -109,8 +110,8 @@
   - Atau perluas ke sektor terkait (Technology + Telecommunication)
 
 ### Step 2.3 — Definisi Operasional Variabel
-- [ ] Gunakan tabel definisi variabel dari `analysis_output.md` bagian 8.A
-- [ ] Untuk setiap variabel, tentukan:
+- [x] Gunakan tabel definisi variabel dari `analysis_output.md` bagian 8.A
+- [x] Untuk setiap variabel, tentukan (lihat `output/metodologi_penelitian.md`):
   - Nama variabel
   - Definisi konseptual
   - Definisi operasional (rumus)
@@ -122,10 +123,10 @@
 - [ ] **Annual report**: Download dari IDX atau website perusahaan
 - [ ] **Harga saham**: Download dari Yahoo Finance atau IDX (closing price akhir tahun)
 - [ ] **Data pendukung**: Website perusahaan untuk informasi AI/digital transformation
-- [ ] Buat checklist data per perusahaan per tahun
+- [x] Buat checklist data per perusahaan per tahun (`output/data_collection_checklist.md`)
 
 ### Step 2.5 — Konstruksi AI Disclosure Index (Variabel Moderasi Kunci)
-- [ ] **Langkah 1**: Buat daftar kata kunci (keyword list):
+- [x] **Langkah 1**: Buat daftar kata kunci (keyword list) (implemented in `scripts/build_ai_disclosure_index.ps1`)
   ```
   Kategori 1 (AI Core): "artificial intelligence", "kecerdasan buatan", "AI",
     "machine learning", "deep learning", "neural network"
@@ -137,14 +138,14 @@
 - [ ] **Langkah 2**: Download annual report semua sampel (2019–2025)
 - [ ] **Langkah 3**: Lakukan content analysis:
   - Opsi A (Manual): Baca setiap annual report, cari kata kunci, beri skor biner per kategori
-  - Opsi B (Semi-otomatis): Gunakan Python/R untuk text mining PDF → hitung frekuensi kata kunci
-- [ ] **Langkah 4**: Hitung indeks:
+  - Opsi B (Semi-otomatis): text mining sudah disiapkan via `scripts/build_ai_disclosure_index.ps1`
+- [x] **Langkah 4**: Hitung indeks (binary + frequency methods tersedia di script)
   - Metode 1 (Biner): AID = jumlah kategori yang disebut / total kategori (skor 0–1)
   - Metode 2 (Frekuensi): AID = total kemunculan kata kunci / total kata dalam annual report
 - [ ] **Langkah 5**: Validasi:
   - Jika manual: inter-coder reliability test (Cohen's Kappa > 0.7)
   - Jika semi-otomatis: spot-check 10% sampel secara manual
-- [ ] **Langkah 6**: Dokumentasikan prosedur lengkap untuk lampiran tesis
+- [x] **Langkah 6**: Dokumentasikan prosedur lengkap untuk lampiran tesis (`output/metodologi_penelitian.md`)
 
 ### Step 2.6 — Metode Analisis Data
 - [ ] **Statistik deskriptif**: Mean, median, std dev, min, max untuk semua variabel
@@ -157,7 +158,7 @@
   - Pooled OLS vs Fixed Effect: Chow test / F-test
   - Fixed Effect vs Random Effect: Hausman test
   - Jika heteroskedastisitas: gunakan robust standard errors (HAC)
-- [ ] **Model regresi** (3 model utama):
+- [x] **Model regresi** (3 model utama) (otomasi tersedia di `scripts/eviews_run.ps1`):
   - Model 1 (Baseline): Y_it = α + βX_it + γControls_it + μ_i + ε_it
   - Model 2 (Moderasi AID): Y_it = α + βX_it + θAID_it + λ(X_it × AID_it) + γControls_it + μ_i + ε_it
   - Model 3 (Structural Break): Y_it = α + βX_it + δD_GenAI + φ(X_it × D_GenAI) + γControls_it + μ_i + ε_it

@@ -13,3 +13,6 @@ credentials.*
 secrets.*
 *secrets*
 .claude/
+output/eviews/
+output/eviews_eq1.txt
+output/eviews_smoke.csv
