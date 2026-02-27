@@ -132,6 +132,7 @@ Outputs:
 - `output/sample_selection_result_relaxed.csv`
 - `output/sample_estimation_relaxed.md`
 - `output/sample_analysis_comprehensive.md`
+- `output/sample_selection_flow_interim.md`
 
 ### IDX Population Ingestion (before sample estimation)
 If you export IDX issuer list to CSV, normalize it first:

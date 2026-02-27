@@ -191,6 +191,8 @@ Pipeline teknis:
 
 Analisis skenario populasi-sampel menunjukkan opsi paling memadai secara statistik adalah perluasan ke Technology + Telecommunication dengan cutoff listing ketat (27 perusahaan, 189 observasi panel balanced), sebagaimana diringkas di `output/sample_analysis_comprehensive.md`. Penetapan sampel final tetap bergantung pada verifikasi kelengkapan data manual.
 
+Tabel seleksi sampel interim disajikan pada `output/sample_selection_flow_interim.md` sebagai basis dokumentasi alur Populasi -> Kriteria -> Kandidat Sampel sebelum verifikasi final availability.
+
 ## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
 ### 3.3.1 Variabel Dependen
 1. PRICE
@@ -234,6 +236,8 @@ Implementasi otomatis merujuk ke script dalam proyek:
 Deskripsi populasi, sampel, dan sebaran observasi panel disusun dari hasil pipeline seleksi.
 
 Secara operasional, data yang sudah tersedia dalam repositori mencakup: (1) template dan hasil normalisasi populasi IDX, (2) hasil analisis skenario sampel, (3) dataset panel pilot untuk validasi pipeline, dan (4) keluaran awal statistik/deskriptif serta asumsi.
+
+Sebagai ringkasan interim untuk pelaporan BAB IV, alur seleksi sampel sudah dirangkum dalam tabel seleksi interim (`output/sample_selection_flow_interim.md`) dengan rekomendasi sementara skenario balanced panel 27 emiten (189 observasi).
 
 ## 4.2 Statistik Deskriptif
 Merujuk pada:

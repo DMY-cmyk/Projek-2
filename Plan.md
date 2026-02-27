@@ -181,7 +181,7 @@
 - [x] Catat semua perusahaan: ticker, nama, tanggal listing, status (aktif/delisted) ✅ (`output/idx_population_template.csv`, `output/idx_population_normalized.csv`)
 - [ ] Filter berdasarkan kriteria inklusi → daftar sampel final (⏳ menunggu verifikasi data availability)
 - [x] Hitung total observasi: jumlah perusahaan × jumlah tahun ✅ (6 skenario dianalisis; lihat `output/sample_analysis_comprehensive.md`)
-- [ ] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final) (⏳ menunggu sampel final)
+- [x] Dokumentasikan proses seleksi sampel (tabel: populasi → kriteria → sampel final) ✅ (interim table: `output/sample_selection_flow_interim.md`; final angka akan diperbarui setelah verifikasi availability)
 - [x] Template + script seleksi sampel disiapkan (`output/sample_selection_template.csv`, `scripts/estimate_sample.ps1`)
 - [x] IDX population ingestion automation disiapkan (`scripts/ingest_idx_population.ps1`, template `output/idx_population_template.csv`)
 - [x] Analisis komprehensif 6 skenario sampel selesai (`output/sample_analysis_comprehensive.md`)
