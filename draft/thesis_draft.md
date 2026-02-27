@@ -195,6 +195,8 @@ Tabel seleksi sampel interim disajikan pada `output/sample_selection_flow_interi
 
 Untuk tahap operasional pengumpulan data, lembar master firm-year juga telah disiapkan pada `output/data_collection_master_interim.csv` (189 baris) beserta sampel verifikasi manual 10% pada `output/manual_crosscheck_10pct.csv`.
 
+Status ketersediaan dokumen (FS/AR/Price) dapat dipantau melalui `output/data_collection_master_status.csv` dan `output/data_collection_availability_report.md`, sementara template validasi AI disclosure 10% disiapkan pada `output/ai_disclosure_spotcheck_10pct.csv`.
+
 ## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
 ### 3.3.1 Variabel Dependen
 1. PRICE

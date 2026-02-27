@@ -147,6 +147,7 @@
 - [ ] **Langkah 5**: Validasi:
   - Jika manual: inter-coder reliability test (Cohen's Kappa > 0.7)
   - Jika semi-otomatis: spot-check 10% sampel secara manual
+- [x] Paket template validasi semi-otomatis disiapkan ✅ (`output/ai_disclosure_spotcheck_10pct.csv`, `output/ai_disclosure_spotcheck_note.md`)
 - [x] **Langkah 6**: Dokumentasikan prosedur lengkap untuk lampiran tesis (`output/metodologi_penelitian.md`)
 
 ### Step 2.6 — Metode Analisis Data
@@ -198,6 +199,7 @@
   - Intangible Assets
   - Shares Outstanding
   - (Dari catatan atas laporan keuangan jika perlu)
+- [x] Monitoring availability FS/AR/Price otomatis disiapkan ✅ (`scripts/update_collection_availability.ps1`, `output/data_collection_master_status.csv`, `output/data_collection_availability_report.md`)
 
 ### Step 3.3 — Download Data Harga Saham
 - [ ] Download closing price akhir tahun (31 Desember atau hari bursa terakhir) untuk setiap sampel

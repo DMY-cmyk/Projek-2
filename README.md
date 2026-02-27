@@ -109,6 +109,18 @@ Run:
 Output:
 - `output/ai_disclosure_index.csv`
 
+Build 10% spot-check template for manual validation:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_ai_spotcheck_template.ps1 `
+  -MasterCsv .\output\data_collection_master_status.csv `
+  -OutCsv .\output\ai_disclosure_spotcheck_10pct.csv `
+  -OutMd .\output\ai_disclosure_spotcheck_note.md
+```
+
+Outputs:
+- `output/ai_disclosure_spotcheck_10pct.csv`
+- `output/ai_disclosure_spotcheck_note.md`
+
 ## Sample Estimation Automation (Step 2.2 / 3.1)
 Prepare input file:
 - `output/sample_selection_template.csv`
@@ -147,6 +159,18 @@ Outputs:
 - `output/data_collection_master_interim.csv`
 - `output/manual_crosscheck_10pct.csv`
 - `output/data_collection_manifest_interim.md`
+
+Refresh file-availability status against expected paths:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\update_collection_availability.ps1 `
+  -MasterCsv .\output\data_collection_master_interim.csv `
+  -OutStatusCsv .\output\data_collection_master_status.csv `
+  -OutReportMd .\output\data_collection_availability_report.md
+```
+
+Outputs:
+- `output/data_collection_master_status.csv`
+- `output/data_collection_availability_report.md`
 
 ### IDX Population Ingestion (before sample estimation)
 If you export IDX issuer list to CSV, normalize it first:
