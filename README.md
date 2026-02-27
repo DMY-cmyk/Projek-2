@@ -214,6 +214,23 @@ Outputs:
 - `output/hypothesis_results.csv`
 - `output/hypothesis_decision.md`
 
+## Thesis Draft Exports (Phase 5)
+Generated draft files:
+- `draft/thesis_draft.md`
+- `draft/thesis_draft.docx`
+- `draft/thesis_draft.pdf`
+
+Regenerate DOCX:
+```powershell
+pandoc .\draft\thesis_draft.md -o .\draft\thesis_draft.docx
+```
+
+Regenerate PDF:
+```powershell
+pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
+& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu --print-to-pdf="D:\VsCode\Projek-2\draft\thesis_draft.pdf" "file:///D:/VsCode/Projek-2/draft/thesis_draft.html"
+```
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.

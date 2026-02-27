@@ -331,6 +331,7 @@
 ## FASE 5: PENULISAN TESIS
 
 ### Step 5.1 — BAB I: Pendahuluan
+- [x] Draft BAB I selesai (versi awal) di `draft/thesis_draft.md`
 - [ ] Latar belakang masalah:
   - Perkembangan sektor teknologi di Indonesia
   - Pentingnya analisis fundamental bagi investor
@@ -342,6 +343,7 @@
 - [ ] Manfaat penelitian (teoretis + praktis)
 - [ ] Sistematika penulisan
 
+- [x] Draft BAB II selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.2 — BAB II: Tinjauan Pustaka
 - [ ] Landasan teori (Signaling Theory, EMH, RBV)
 - [ ] Tinjauan literatur:
@@ -353,6 +355,7 @@
 - [ ] Kerangka pemikiran (diagram)
 - [ ] Hipotesis penelitian
 
+- [x] Draft BAB III selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.3 — BAB III: Metodologi Penelitian
 - [ ] Jenis & pendekatan penelitian
 - [ ] Populasi & sampel (kriteria, proses seleksi, jumlah final)
@@ -361,6 +364,7 @@
 - [ ] Metode analisis data (deskriptif, uji asumsi, panel regression, robustness)
 - [ ] Konstruksi AI Disclosure Index (prosedur detail)
 
+- [x] Draft BAB IV selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.4 — BAB IV: Hasil & Pembahasan
 - [ ] Deskripsi objek penelitian (profil sektor teknologi BEI)
 - [ ] Statistik deskriptif (tabel + interpretasi)
@@ -376,6 +380,7 @@
   - Bandingkan dengan penelitian terdahulu
   - Jelaskan mengapa hasil konsisten/berbeda
   - Implikasi dari moderasi AI dan structural break
+- [x] Draft BAB V selesai (versi awal) di `draft/thesis_draft.md`
 
 ### Step 5.5 — BAB V: Kesimpulan & Saran
 - [ ] Kesimpulan (jawab setiap rumusan masalah)
@@ -384,6 +389,7 @@
   - Praktis (untuk investor, manajemen, regulator)
 - [ ] Keterbatasan penelitian
 - [ ] Saran untuk penelitian selanjutnya
+- [x] Export dokumen draft ke DOCX dan PDF selesai (`draft/thesis_draft.docx`, `draft/thesis_draft.pdf`)
 
 ### Step 5.6 — Kelengkapan
 - [ ] Daftar pustaka (format APA 7th atau sesuai panduan kampus)
