@@ -95,15 +95,19 @@ Sektor teknologi di Bursa Efek Indonesia menunjukkan dinamika pertumbuhan dan vo
 
 Studi terdahulu menunjukkan hasil yang belum konsisten pada hubungan rasio fundamental dengan harga saham, return, dan nilai perusahaan. Selain itu, penelitian yang secara eksplisit memasukkan AI disclosure sebagai variabel moderasi pada konteks sektor teknologi Indonesia masih terbatas.
 
+Berbasis telaah literatur tesis dan jurnal yang sudah dihimpun pada proyek ini, terdapat lima gap utama yang melatarbelakangi penelitian: (1) minimnya pengujian moderasi AI disclosure di sektor teknologi BEI, (2) belum diuji formalnya structural break era GenAI pasca-2023, (3) dominannya model asosiatif tanpa robustness kausal, (4) minim studi multi-dependen (PRICE, RET, TQ) dalam satu desain terpadu, dan (5) keterbatasan periode observasi penelitian terdahulu. Oleh karena itu, penelitian ini dirancang untuk menguji relevansi rasio fundamental dalam kerangka era AI dengan desain panel yang dapat direplikasi.
+
 ## 1.2 Rumusan Masalah
 1. Apakah rasio fundamental berpengaruh terhadap harga saham, return saham, dan nilai perusahaan?
 2. Apakah AI Disclosure Index memoderasi hubungan rasio fundamental dengan variabel dependen?
 3. Apakah terjadi perubahan sensitivitas hubungan tersebut setelah 2023 (era GenAI)?
+4. Sejauh mana hasil utama tetap konsisten pada pengujian robustness (subsample, winsorization, dan proksi alternatif)?
 
 ## 1.3 Tujuan Penelitian
 1. Menguji pengaruh rasio fundamental terhadap price, return, dan Tobin's Q.
 2. Menguji moderasi AI Disclosure Index.
 3. Menguji structural break pada periode post-2023.
+4. Menilai konsistensi hasil melalui serangkaian robustness checks.
 
 ## 1.4 Manfaat Penelitian
 1. Manfaat teoretis: memperkaya literatur akuntansi pasar modal dan digital disclosure.
@@ -113,6 +117,13 @@ Studi terdahulu menunjukkan hasil yang belum konsisten pada hubungan rasio funda
 1. Kontribusi konteks: fokus sektor teknologi BEI dengan horizon 2019-2025.
 2. Kontribusi variabel: integrasi rasio fundamental, AI disclosure, dan dummy rezim.
 3. Kontribusi metodologi: pipeline analisis reproducible hingga keputusan hipotesis.
+
+## 1.6 Sistematika Penulisan
+1. BAB I memuat latar belakang, rumusan masalah, tujuan, manfaat, kontribusi, dan sistematika.
+2. BAB II memuat landasan teori, penelitian terdahulu, kerangka pemikiran, serta hipotesis.
+3. BAB III memuat desain penelitian, populasi-sampel, definisi variabel, teknik pengumpulan data, dan metode analisis.
+4. BAB IV memuat hasil pengolahan data, pengujian model, dan pembahasan.
+5. BAB V memuat kesimpulan, implikasi, keterbatasan, dan saran penelitian lanjutan.
 
 \newpage
 
@@ -131,6 +142,8 @@ Kapabilitas teknologi dan aset tidak berwujud dapat menjadi sumber keunggulan ko
 ### 2.1.4 Value Relevance Theory
 Angka akuntansi dipandang relevan apabila menjelaskan variasi nilai pasar perusahaan.
 
+Landasan teori penelitian ini mengacu pada integrasi Signaling Theory, EMH, Resource-Based View, Value Relevance Theory, dan Innovation Diffusion Theory sebagaimana didokumentasikan pada `output/kerangka_teori.md`. Rasio fundamental diposisikan sebagai sinyal utama, sedangkan AI disclosure diposisikan sebagai sinyal non-keuangan tambahan yang dapat memperkuat atau mengubah interpretasi pasar.
+
 ## 2.2 Rasio Fundamental dan Nilai Pasar
 Rasio profitabilitas, likuiditas, leverage, dan efisiensi lazim digunakan untuk memprediksi price, return, dan firm value.
 
@@ -141,6 +154,8 @@ AI disclosure mencerminkan intensitas narasi adopsi teknologi, yang berpotensi m
 Ringkasan penelitian terdahulu mengacu pada:
 1. `output/literatur_tesis.md`
 2. `output/literatur_jurnal.md`
+
+Ringkasan komparatif penelitian terdahulu (minimal 10 studi) telah dihimpun dalam matriks yang memuat variabel, metode, dan temuan utama. Secara umum, penelitian terdahulu mengonfirmasi adanya hubungan rasio fundamental dengan indikator pasar, tetapi masih terdapat inkonsistensi arah dan signifikansi antar konteks sektor dan periode. Pada konteks ini, gap AI disclosure dan era GenAI menjadi ruang kontribusi utama penelitian.
 
 Referensi format/struktur tesis yang dijadikan acuan utama:
 1. https://repo.undiksha.ac.id/23085/
@@ -158,6 +173,8 @@ H3: EPS berpengaruh positif terhadap variabel pasar.
 H4: AI Disclosure Index memoderasi pengaruh rasio fundamental terhadap variabel pasar.  
 H5: Dummy post-2023 memoderasi pengaruh rasio fundamental terhadap variabel pasar.
 
+Spesifikasi lengkap kelompok hipotesis (11 kelompok, 25+ sub-hipotesis) merujuk ke `output/hipotesis.md` dan menjadi dasar pemetaan model baseline, moderasi, serta structural break.
+
 \newpage
 
 # BAB III METODOLOGI PENELITIAN
@@ -172,6 +189,8 @@ Pipeline teknis:
 1. `scripts/ingest_idx_population.ps1`
 2. `scripts/estimate_sample.ps1`
 
+Analisis skenario populasi-sampel menunjukkan opsi paling memadai secara statistik adalah perluasan ke Technology + Telecommunication dengan cutoff listing ketat (27 perusahaan, 189 observasi panel balanced), sebagaimana diringkas di `output/sample_analysis_comprehensive.md`. Penetapan sampel final tetap bergantung pada verifikasi kelengkapan data manual.
+
 ## 3.3 Jenis dan Definisi Operasional Variabel Penelitian
 ### 3.3.1 Variabel Dependen
 1. PRICE
@@ -184,6 +203,8 @@ ROA, ROE, NPM, CR, DER, TATO, EPS
 ### 3.3.3 Variabel Kontrol dan Moderasi
 SIZE, GROWTH, AGE, VOL, AID, DGENAI, II
 
+Definisi konseptual, definisi operasional, dan rumus pengukuran variabel merujuk pada dokumentasi metodologi di `output/metodologi_penelitian.md`.
+
 ## 3.4 Model Penelitian
 Model baseline, model moderasi AID, dan model structural break (post-2023).
 
@@ -194,6 +215,8 @@ Model baseline, model moderasi AID, dan model structural break (post-2023).
 4. Estimasi 9 regresi utama
 5. Robustness checks
 6. Keputusan hipotesis
+
+Pada status saat ini, keluaran statistik dan asumsi yang tersedia masih berbasis dataset pilot sehingga digunakan untuk validasi alur analisis, bukan untuk inferensi final.
 
 ## 3.6 Pengestimasian Model Regresi Data Panel
 Implementasi otomatis merujuk ke script dalam proyek:
@@ -209,6 +232,8 @@ Implementasi otomatis merujuk ke script dalam proyek:
 
 ## 4.1 Deskripsi Data Penelitian
 Deskripsi populasi, sampel, dan sebaran observasi panel disusun dari hasil pipeline seleksi.
+
+Secara operasional, data yang sudah tersedia dalam repositori mencakup: (1) template dan hasil normalisasi populasi IDX, (2) hasil analisis skenario sampel, (3) dataset panel pilot untuk validasi pipeline, dan (4) keluaran awal statistik/deskriptif serta asumsi.
 
 ## 4.2 Statistik Deskriptif
 Merujuk pada:
@@ -239,29 +264,37 @@ Rujukan output:
 8. `output/eviews/eq_ret_break.txt`
 9. `output/eviews/eq_tq_break.txt`
 
+Dokumen hasil estimasi final untuk seluruh model akan diisi setelah dataset panel final (non-pilot) selesai disusun dan lolos tahapan pemilihan model.
+
 ## 4.5 Robustness Checks
 Merujuk pada:
 1. `output/robustness_checks.md`
 2. folder `output/robustness/`
+
+Keluaran robustness dataset (subsample, winsorization, proksi alternatif PBV, dan exclude-2020) sudah tersedia sebagai tahap kesiapan analitis, namun interpretasi inferensial tetap menunggu hasil estimasi model final.
 
 ## 4.6 Hasil Uji Hipotesis
 Merujuk pada:
 1. `output/hypothesis_results.csv`
 2. `output/hypothesis_decision.md`
 
+Pada tahap ini, status keputusan hipotesis masih `Pending` karena parameter koefisien dan signifikansi final belum dapat diekstrak dari dataset pilot.
+
 ## 4.7 Pembahasan
-Pembahasan akhir diisi saat hasil regresi final dataset tersedia penuh.
+Pembahasan sementara menunjukkan bahwa kerangka analisis telah terbentuk dan seluruh pipeline inti dapat dijalankan secara teknis. Namun, pembahasan substantif yang mengaitkan temuan dengan teori (Signaling, EMH, RBV, dan Value Relevance) baru dapat dituntaskan setelah hasil estimasi final tersedia.
 
 \newpage
 
 # BAB V PENUTUP
 
 ## 5.1 Kesimpulan
-Kesimpulan final akan dirumuskan setelah seluruh estimasi model pada dataset final selesai.
+Secara metodologis, penelitian telah berhasil menyiapkan alur kerja terintegrasi dari tahap seleksi populasi, pembentukan variabel, pengujian asumsi, estimasi model panel, robustness checks, hingga tabel keputusan hipotesis. Akan tetapi, kesimpulan inferensial final mengenai arah dan signifikansi pengaruh variabel masih menunggu penyelesaian dataset final.
 
 ## 5.2 Implikasi
 1. Implikasi teoretis: penguatan bukti value relevance pada era AI.
 2. Implikasi praktis: dukungan keputusan investor dan strategi disclosure emiten.
+
+Pada tahap interim ini, implikasi praktis difokuskan pada kesiapan protokol analisis yang dapat direplikasi oleh peneliti berikutnya dan kesiapan dokumentasi untuk audit metodologis pembimbing/penguji.
 
 ## 5.3 Keterbatasan Penelitian
 1. Keterbatasan kelengkapan data publik.
@@ -271,6 +304,7 @@ Kesimpulan final akan dirumuskan setelah seluruh estimasi model pada dataset fin
 1. Perluasan cakupan emiten dan periode.
 2. Estimasi System GMM lanjutan.
 3. Pengembangan indeks AI disclosure yang lebih granular.
+4. Finalisasi data primer sekunder (laporan keuangan, annual report, dan harga) per emiten agar model inferensial utama dapat ditutup.
 
 \newpage
 

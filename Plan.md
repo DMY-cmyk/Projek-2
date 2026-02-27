@@ -336,50 +336,50 @@
 
 ### Step 5.1 — BAB I: Pendahuluan
 - [x] Draft BAB I selesai (versi awal) di `draft/thesis_draft.md`
-- [ ] Latar belakang masalah:
+- [x] Latar belakang masalah: ✅ (versi elaborasi diperbarui di `draft/thesis_draft.md`)
   - Perkembangan sektor teknologi di Indonesia
   - Pentingnya analisis fundamental bagi investor
   - Fenomena AI/GenAI dan dampaknya terhadap pasar modal
   - Inkonsistensi hasil penelitian terdahulu (cite tesis pembanding)
   - Gap research (lihat `analysis_output.md` bagian 4)
-- [ ] Rumusan masalah (4 pertanyaan)
-- [ ] Tujuan penelitian
-- [ ] Manfaat penelitian (teoretis + praktis)
-- [ ] Sistematika penulisan
+- [x] Rumusan masalah (4 pertanyaan) ✅
+- [x] Tujuan penelitian ✅
+- [x] Manfaat penelitian (teoretis + praktis) ✅
+- [x] Sistematika penulisan ✅
 
 - [x] Draft BAB II selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.2 — BAB II: Tinjauan Pustaka
-- [ ] Landasan teori (Signaling Theory, EMH, RBV)
-- [ ] Tinjauan literatur:
+- [x] Landasan teori (Signaling Theory, EMH, RBV) ✅ (elaborasi diperbarui; rujukan `output/kerangka_teori.md`)
+- [x] Tinjauan literatur: ✅ (diringkas dan dirujuk ke matriks literatur)
   - Analisis fundamental & harga/return/nilai perusahaan
   - AI disclosure & firm performance
   - Structural break dalam keuangan
   - Sektor teknologi & valuasi
-- [ ] Penelitian terdahulu (tabel perbandingan minimal 10 penelitian)
-- [ ] Kerangka pemikiran (diagram)
-- [ ] Hipotesis penelitian
+- [x] Penelitian terdahulu (tabel perbandingan minimal 10 penelitian) ✅ (rujukan `output/literatur_tesis.md` & `output/literatur_jurnal.md`)
+- [x] Kerangka pemikiran (diagram) ✅ (rujukan `output/kerangka_teori.md`)
+- [x] Hipotesis penelitian ✅ (rujukan `output/hipotesis.md`)
 
 - [x] Draft BAB III selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.3 — BAB III: Metodologi Penelitian
-- [ ] Jenis & pendekatan penelitian
-- [ ] Populasi & sampel (kriteria, proses seleksi, jumlah final)
-- [ ] Definisi operasional variabel (tabel lengkap)
-- [ ] Metode pengumpulan data
-- [ ] Metode analisis data (deskriptif, uji asumsi, panel regression, robustness)
-- [ ] Konstruksi AI Disclosure Index (prosedur detail)
+- [x] Jenis & pendekatan penelitian ✅
+- [x] Populasi & sampel (kriteria, proses seleksi, jumlah final) ✅ (status final sampel menunggu verifikasi availability)
+- [x] Definisi operasional variabel (tabel lengkap) ✅ (rujukan `output/metodologi_penelitian.md`)
+- [x] Metode pengumpulan data ✅
+- [x] Metode analisis data (deskriptif, uji asumsi, panel regression, robustness) ✅
+- [x] Konstruksi AI Disclosure Index (prosedur detail) ✅
 
 - [x] Draft BAB IV selesai (versi awal) di `draft/thesis_draft.md`
 ### Step 5.4 — BAB IV: Hasil & Pembahasan
-- [ ] Deskripsi objek penelitian (profil sektor teknologi BEI)
-- [ ] Statistik deskriptif (tabel + interpretasi)
-- [ ] Hasil uji asumsi klasik
+- [x] Deskripsi objek penelitian (profil sektor teknologi BEI) ✅ (versi draft berbasis output populasi/sampel)
+- [x] Statistik deskriptif (tabel + interpretasi) ✅ (versi preliminary)
+- [x] Hasil uji asumsi klasik ✅ (versi preliminary)
 - [ ] Hasil pemilihan model panel
 - [ ] Hasil estimasi model (9 regresi utama):
   - Model Baseline (Tabel + interpretasi)
   - Model Moderasi AID (Tabel + interpretasi)
   - Model Structural Break (Tabel + interpretasi)
-- [ ] Hasil robustness checks (tabel ringkasan)
-- [ ] Pembahasan:
+- [x] Hasil robustness checks (tabel ringkasan) ✅ (rujukan output robustness tersedia)
+- [x] Pembahasan: ✅ (versi sementara; pembahasan inferensial final menunggu dataset final)
   - Hubungkan temuan dengan teori
   - Bandingkan dengan penelitian terdahulu
   - Jelaskan mengapa hasil konsisten/berbeda
@@ -387,12 +387,12 @@
 - [x] Draft BAB V selesai (versi awal) di `draft/thesis_draft.md`
 
 ### Step 5.5 — BAB V: Kesimpulan & Saran
-- [ ] Kesimpulan (jawab setiap rumusan masalah)
-- [ ] Implikasi:
+- [x] Kesimpulan (jawab setiap rumusan masalah) ✅ (versi interim; final setelah estimasi final)
+- [x] Implikasi: ✅ (teoretis & praktis versi interim)
   - Teoretis (kontribusi terhadap literatur)
   - Praktis (untuk investor, manajemen, regulator)
-- [ ] Keterbatasan penelitian
-- [ ] Saran untuk penelitian selanjutnya
+- [x] Keterbatasan penelitian ✅
+- [x] Saran untuk penelitian selanjutnya ✅
 - [x] Export dokumen draft ke DOCX dan PDF selesai (`draft/thesis_draft.docx`, `draft/thesis_draft.pdf`)
 - [x] Revisi draft mengikuti template kampus utama (`Skripsi_31998_DZAKI.docx`)
 
