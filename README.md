@@ -240,6 +240,16 @@ pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
 ## Internal Review Progress (Step 6.1)
 - `output/review_internal_checklist.md`
 
+## Supervisor and Exam Package (Step 6.2 / 6.3)
+Prepared files:
+- `output/supervisor_submission_checklist.md`
+- `draft/consultation_revision_log.md`
+- `draft/one_page_summary_penguji.md`
+- `draft/one_page_summary_penguji.docx`
+- `draft/one_page_summary_penguji.pdf`
+- `draft/slides_outline.md`
+- `draft/faq_sidang.md`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
