@@ -286,23 +286,23 @@
 ### Step 4.4 — Estimasi Model Utama (9 Regresi)
 
 **Blok A — Model Baseline (3 regresi):**
-- [ ] Model 1a: PRICE_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + μ_i + ε_it
-- [ ] Model 1b: RET_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + μ_i + ε_it
-- [ ] Model 1c: TQ_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + μ_i + ε_it
+- [x] Model 1a: PRICE_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + mu_i + e_it (otomasi: `scripts/eviews_run.ps1`)
+- [x] Model 1b: RET_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + mu_i + e_it (otomasi: `scripts/eviews_run.ps1`)
+- [x] Model 1c: TQ_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + mu_i + e_it (otomasi: `scripts/eviews_run.ps1`)
 - [ ] Catat: koefisien, t-stat/z-stat, p-value, R², adjusted R², F-stat
 - [ ] Interpretasi: rasio mana yang signifikan untuk masing-masing dependen?
 
 **Blok B — Model Moderasi AI Disclosure (3 regresi):**
-- [ ] Model 2a: PRICE_it = f(X, AID, X×AID, Controls) + μ_i + ε_it
-- [ ] Model 2b: RET_it = f(X, AID, X×AID, Controls) + μ_i + ε_it
-- [ ] Model 2c: TQ_it = f(X, AID, X×AID, Controls) + μ_i + ε_it
+- [x] Model 2a: PRICE_it = f(X, AID, XxAID, Controls) + mu_i + e_it (otomasi tersedia)
+- [x] Model 2b: RET_it = f(X, AID, XxAID, Controls) + mu_i + e_it (otomasi tersedia)
+- [x] Model 2c: TQ_it = f(X, AID, XxAID, Controls) + mu_i + e_it (otomasi tersedia)
 - [ ] Fokus interpretasi: koefisien interaksi (X×AID) — apakah signifikan dan arahnya?
 - [ ] Catatan: mungkin perlu memilih 2–3 rasio utama saja untuk interaksi (hindari overfitting)
 
 **Blok C — Model Structural Break GenAI (3 regresi):**
-- [ ] Model 3a: PRICE_it = f(X, DGENAI, X×DGENAI, Controls) + μ_i + ε_it
-- [ ] Model 3b: RET_it = f(X, DGENAI, X×DGENAI, Controls) + μ_i + ε_it
-- [ ] Model 3c: TQ_it = f(X, DGENAI, X×DGENAI, Controls) + μ_i + ε_it
+- [x] Model 3a: PRICE_it = f(X, DGENAI, XxDGENAI, Controls) + mu_i + e_it (otomasi tersedia)
+- [x] Model 3b: RET_it = f(X, DGENAI, XxDGENAI, Controls) + mu_i + e_it (otomasi tersedia)
+- [x] Model 3c: TQ_it = f(X, DGENAI, XxDGENAI, Controls) + mu_i + e_it (otomasi tersedia)
 - [ ] Fokus interpretasi: koefisien interaksi (X×DGENAI) — apakah relevansi rasio berubah post-2023?
 
 ### Step 4.5 — Robustness Checks

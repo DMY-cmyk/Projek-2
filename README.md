@@ -77,9 +77,15 @@ Quick smoke check with small/synthetic data:
 .\scripts\eviews_run.ps1 -DatasetPath .\output\panel_dataset_template.csv -SmokeMode
 ```
 
+Adaptive fallback spec (for small/collinear datasets):
+```powershell
+.\scripts\eviews_run.ps1 -DatasetPath .\output\panel_dataset_template.csv -AdaptiveSpec
+```
+
 Generated outputs:
 - `output/eviews/panel_2019_2025.wf1`
 - `output/eviews/eq_*.txt`
+- `output/eviews/eviews_run_summary.md`
 
 ### 3) Build AI disclosure index (semi-automated)
 Place annual report text files as:
