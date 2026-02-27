@@ -276,9 +276,9 @@
 - [x] Dokumentasikan semua hasil uji dan keputusan yang diambil (`output/assumption_tests.md`)
 
 ### Step 4.3 — Pemilihan Model Panel
-- [ ] Estimasi Pooled OLS, Fixed Effect, Random Effect untuk model baseline
-- [ ] **Chow test**: Pooled OLS vs Fixed Effect (H0: pooled lebih baik)
-- [ ] **Hausman test**: Fixed Effect vs Random Effect (H0: RE konsisten)
+- [x] Estimasi Pooled OLS, Fixed Effect, Random Effect untuk model baseline (otomasi tersedia: `scripts/panel_model_selection.ps1`)
+- [x] **Chow test**: Pooled OLS vs Fixed Effect (H0: pooled lebih baik) -> auto-attempt di script + fallback manual EViews
+- [x] **Hausman test**: Fixed Effect vs Random Effect (H0: RE konsisten) -> auto-attempt di script + fallback manual EViews
 - [ ] Pilih model terbaik berdasarkan hasil uji
 - [ ] Jika FE terpilih: gunakan entity-fixed effects (firm dummies)
 - [ ] Pertimbangkan time-fixed effects juga (year dummies)

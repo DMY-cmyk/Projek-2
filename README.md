@@ -170,6 +170,19 @@ Outputs:
 - `output/assumption_tests.md`
 - `output/vif_table.csv`
 
+## Panel Model Selection Automation (Step 4.3)
+Run (EViews COM):
+```powershell
+.\scripts\panel_model_selection.ps1 -DatasetPath .\output\panel_dataset_template.csv -Dependent price
+```
+
+Outputs:
+- `output/panel_model_selection.md`
+- `output/eviews_model_selection/eq_pool.txt`
+- `output/eviews_model_selection/eq_fe.txt` (if FE command succeeds)
+- `output/eviews_model_selection/eq_re.txt` (if RE command succeeds)
+- `output/eviews_model_selection/chow_test.txt` and `hausman_test.txt` (if supported by command path)
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.
