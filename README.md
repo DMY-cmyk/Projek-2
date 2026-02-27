@@ -305,6 +305,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\model_readiness_report.ps1 `
 
 Output:
 - `output/model_readiness_report.md`
+- `output/model_selection_decision_template.md`
 
 ## Robustness Dataset Pipeline (Step 4.5)
 Run:
@@ -346,6 +347,17 @@ Run:
 Outputs:
 - `output/hypothesis_results.csv`
 - `output/hypothesis_decision.md`
+
+## Model Interpretation Templates (Step 4.4 / 4.5)
+Run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build_model_interpretation_templates.ps1
+```
+
+Outputs:
+- `output/regression_reporting_template.csv`
+- `output/interaction_interpretation_template.md`
+- `output/system_gmm_preparation_note.md`
 
 ## Thesis Draft Exports (Phase 5)
 Generated draft files:

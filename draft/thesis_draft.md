@@ -265,6 +265,8 @@ Merujuk pada:
 
 Pada tahap pilot, estimasi model penuh belum stabil karena isu near-singular matrix dan ukuran sampel efektif yang kecil. Oleh karena itu, pemilihan model final (Pooled vs FE vs RE) ditetapkan sebagai agenda tahap dataset final.
 
+Untuk menjaga konsistensi pelaporan pada tahap final, template keputusan model dan template pelaporan regresi telah disiapkan pada `output/model_selection_decision_template.md` dan `output/regression_reporting_template.csv`.
+
 ## 4.4 Hasil Estimasi Model Baseline, Moderasi, dan Structural Break
 Rujukan output:
 1. `output/eviews/eq_price_base.txt`
@@ -285,6 +287,8 @@ Merujuk pada:
 2. folder `output/robustness/`
 
 Keluaran robustness dataset (subsample, winsorization, proksi alternatif PBV, dan exclude-2020) sudah tersedia sebagai tahap kesiapan analitis, namun interpretasi inferensial tetap menunggu hasil estimasi model final.
+
+Template interpretasi interaksi (X x AID, X x DGENAI) dan catatan persiapan System GMM tersedia di `output/interaction_interpretation_template.md` serta `output/system_gmm_preparation_note.md`.
 
 ## 4.6 Hasil Uji Hipotesis
 Merujuk pada:

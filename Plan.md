@@ -296,6 +296,7 @@
 - [ ] Pilih model terbaik berdasarkan hasil uji
 - [ ] Jika FE terpilih: gunakan entity-fixed effects (firm dummies)
 - [ ] Pertimbangkan time-fixed effects juga (year dummies)
+- [x] Template keputusan pemilihan model disiapkan ✅ (`output/model_selection_decision_template.md`)
 
 ### Step 4.4 — Estimasi Model Utama (9 Regresi)
 
@@ -305,6 +306,7 @@
 - [x] Model 1c: TQ_it = f(ROA, ROE, NPM, CR, DER, TATO, EPS, Controls) + mu_i + e_it (otomasi: `scripts/eviews_run.ps1`)
 - [ ] Catat: koefisien, t-stat/z-stat, p-value, R², adjusted R², F-stat
 - [ ] Interpretasi: rasio mana yang signifikan untuk masing-masing dependen?
+- [x] Template pelaporan 9 regresi disiapkan ✅ (`output/regression_reporting_template.csv`)
 
 **Blok B — Model Moderasi AI Disclosure (3 regresi):**
 - [x] Model 2a: PRICE_it = f(X, AID, XxAID, Controls) + mu_i + e_it (otomasi tersedia)
@@ -312,6 +314,7 @@
 - [x] Model 2c: TQ_it = f(X, AID, XxAID, Controls) + mu_i + e_it (otomasi tersedia)
 - [ ] Fokus interpretasi: koefisien interaksi (X×AID) — apakah signifikan dan arahnya?
 - [ ] Catatan: mungkin perlu memilih 2–3 rasio utama saja untuk interaksi (hindari overfitting)
+- [x] Template interpretasi interaksi dan catatan overfitting disiapkan ✅ (`output/interaction_interpretation_template.md`)
 
 **Blok C — Model Structural Break GenAI (3 regresi):**
 - [x] Model 3a: PRICE_it = f(X, DGENAI, XxDGENAI, Controls) + mu_i + e_it (otomasi tersedia)
@@ -323,6 +326,7 @@
 - [ ] **System GMM**: Estimasi ulang model baseline dengan Arellano-Bond GMM
   - Cek AR(1) signifikan, AR(2) tidak signifikan
   - Cek Hansen/Sargan test for overidentification
+- [x] Catatan persiapan System GMM disiapkan ✅ (`output/system_gmm_preparation_note.md`)
 - [x] **Subsample**: Estimasi model terpisah untuk 2019-2022 dan 2023-2025 (pipeline dataset tersedia: `scripts/robustness_checks.ps1`)
   - Bandingkan koefisien dan signifikansi
 - [x] **Winsorizing**: dataset winsor 1/99 dan 5/95 disiapkan (`output/robustness/*winsor*.csv`)
