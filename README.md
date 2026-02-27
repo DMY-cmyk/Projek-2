@@ -189,6 +189,21 @@ Outputs:
 - `output/eviews_model_selection/eq_re.txt` (if RE command succeeds)
 - `output/eviews_model_selection/chow_test.txt` and `hausman_test.txt` (if supported by command path)
 
+## Robustness Dataset Pipeline (Step 4.5)
+Run:
+```powershell
+.\scripts\robustness_checks.ps1 -InputCsv .\output\panel_dataset_built.csv
+```
+
+Outputs:
+- `output/robustness_checks.md`
+- `output/robustness/panel_pre_2019_2022.csv`
+- `output/robustness/panel_post_2023_2025.csv`
+- `output/robustness/panel_exclude_2020.csv`
+- `output/robustness/panel_winsor_1_99.csv`
+- `output/robustness/panel_winsor_5_95.csv`
+- `output/robustness/panel_alt_proxy_pbv.csv`
+
 ## Outputs
 - `sec_companyfacts.csv`: Raw SEC facts (filtered whitelist).
 - `sec_ratios.csv`: FY-only ratios with EPS and optional PBV.

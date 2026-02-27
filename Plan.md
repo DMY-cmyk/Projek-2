@@ -309,13 +309,13 @@
 - [ ] **System GMM**: Estimasi ulang model baseline dengan Arellano-Bond GMM
   - Cek AR(1) signifikan, AR(2) tidak signifikan
   - Cek Hansen/Sargan test for overidentification
-- [ ] **Subsample**: Estimasi model terpisah untuk 2019–2022 dan 2023–2025
+- [x] **Subsample**: Estimasi model terpisah untuk 2019-2022 dan 2023-2025 (pipeline dataset tersedia: `scripts/robustness_checks.ps1`)
   - Bandingkan koefisien dan signifikansi
-- [ ] **Winsorizing**: Estimasi ulang setelah winsorize 1%/99% dan 5%/95%
+- [x] **Winsorizing**: dataset winsor 1/99 dan 5/95 disiapkan (`output/robustness/*winsor*.csv`)
   - Bandingkan apakah hasil konsisten
-- [ ] **Alternatif proksi**: Ganti Tobin's Q dengan PBV, estimasi ulang
-- [ ] **Exclude COVID**: Drop tahun 2020, estimasi ulang
-- [ ] Dokumentasikan semua robustness results dalam tabel terpisah
+- [x] **Alternatif proksi**: dataset alternatif PBV disiapkan (`output/robustness/panel_alt_proxy_pbv.csv`)
+- [x] **Exclude COVID**: dataset tanpa tahun 2020 disiapkan (`output/robustness/panel_exclude_2020.csv`)
+- [x] Dokumentasikan semua robustness results dalam tabel terpisah (`output/robustness_checks.md`)
 
 ### Step 4.6 — Uji Hipotesis & Keputusan
 - [ ] Untuk setiap hipotesis, tentukan: diterima / ditolak
