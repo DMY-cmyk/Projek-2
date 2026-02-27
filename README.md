@@ -217,6 +217,21 @@ Outputs:
 - `output/robustness/panel_winsor_5_95.csv`
 - `output/robustness/panel_alt_proxy_pbv.csv`
 
+## US vs Indonesia Supplementary Comparison (Step 7)
+Run:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\compare_id_us.ps1 `
+  -IdCsv .\data\processed\panel_dataset.csv `
+  -UsDir .\data\sec_cache `
+  -StartYear 2019 `
+  -EndYear 2025
+```
+
+Outputs:
+- `output/us_sec_ratios_2019_2025.csv`
+- `output/us_id_descriptive_comparison.md`
+- `output/us_id_context_discussion.md`
+
 ## Hypothesis Decision Table (Step 4.6)
 Run:
 ```powershell

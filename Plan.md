@@ -448,16 +448,16 @@
 ## FASE 7: TOOLS & DATA PIPELINE (Opsional — Pembanding AS)
 
 ### Step 7.1 — SEC Data Pipeline (sudah tersedia di project)
-- [ ] Gunakan `scripts/sec_tickers.ps1` untuk download peta ticker SEC
-- [ ] Gunakan `scripts/sec_fetch.ps1` untuk fetch data keuangan perusahaan teknologi AS
-- [ ] Target perusahaan: AAPL, MSFT, GOOGL, META, NVDA, AMZN, TSLA, CRM, ADBE, ORCL
-- [ ] Hitung rasio yang sama (ROA, ROE, NPM, CR, DER, TATO, EPS, PBV)
-- [ ] Gunakan `scripts/price_fetch.ps1` untuk data harga saham AS
+- [x] Gunakan `scripts/sec_tickers.ps1` untuk download peta ticker SEC ✅ (`data/sec_cache/company_tickers.json`)
+- [x] Gunakan `scripts/sec_fetch.ps1` untuk fetch data keuangan perusahaan teknologi AS ✅ (cache rasio/facts tersedia di `data/sec_cache/*_ratios.csv`)
+- [x] Target perusahaan: AAPL, MSFT, GOOGL, META, NVDA, AMZN, TSLA, CRM, ADBE, ORCL ✅
+- [x] Hitung rasio yang sama (ROA, ROE, NPM, CR, DER, TATO, EPS, PBV) ✅ (tersedia parsial sesuai coverage SEC tags; agregasi `output/us_sec_ratios_2019_2025.csv`)
+- [ ] Gunakan `scripts/price_fetch.ps1` untuk data harga saham AS (⏳ belum bisa dijalankan pada environment ini karena koneksi Yahoo belum tersedia)
 
 ### Step 7.2 — Analisis Komparatif
-- [ ] Bandingkan statistik deskriptif rasio Indonesia vs AS
-- [ ] Bandingkan signifikansi rasio fundamental di kedua pasar
-- [ ] Diskusikan perbedaan konteks (market maturity, regulasi, adopsi AI)
+- [x] Bandingkan statistik deskriptif rasio Indonesia vs AS ✅ (`output/us_id_descriptive_comparison.md`)
+- [ ] Bandingkan signifikansi rasio fundamental di kedua pasar (⏳ menunggu dataset final Indonesia + estimasi model final komparatif)
+- [x] Diskusikan perbedaan konteks (market maturity, regulasi, adopsi AI) ✅ (`output/us_id_context_discussion.md`)
 - [ ] Catatan: ini sebagai supplementary analysis, bukan bagian utama tesis
 
 ---
