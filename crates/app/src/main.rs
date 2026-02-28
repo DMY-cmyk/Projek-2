@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::fs;
 use std::path::PathBuf;
 
-use chrono::{DateTime, Datelike, Utc};
+use chrono::{DateTime, Datelike, TimeZone, Utc};
 use clap::{Parser, Subcommand};
 use serde::Deserialize;
 
@@ -122,8 +122,8 @@ async fn main() -> anyhow::Result<()> {
             } else if let Some(ticker) = price_ticker.as_ref() {
                 Some(fetch_price_map(
                     ticker,
-                    *price_start_year,
-                    *price_end_year,
+                    price_start_year,
+                    price_end_year,
                 )
                 .await?)
             } else {
@@ -165,7 +165,7 @@ fn normalize_cik(input: &str) -> anyhow::Result<String> {
 }
 
 async fn fetch_company_tickers(user_agent: &str) -> anyhow::Result<String> {
-    let url = "https://data.sec.gov/files/company_tickers.json";
+    let url = "https://www.sec.gov/files/company_tickers.json";
     let client = reqwest::Client::builder()
         .user_agent(user_agent)
         .build()?;
@@ -194,13 +194,18 @@ async fn load_or_fetch_tickers(
 fn parse_company_tickers(text: &str) -> anyhow::Result<HashMap<String, String>> {
     #[derive(Deserialize)]
     struct TickerItem {
-        cik_str: String,
+        cik_str: serde_json::Value,
         ticker: String,
     }
     let map: HashMap<String, TickerItem> = serde_json::from_str(text)?;
     let mut out = HashMap::new();
     for (_, item) in map {
-        let cik10 = normalize_cik(&item.cik_str)?;
+        let cik_string = match &item.cik_str {
+            serde_json::Value::String(s) => s.clone(),
+            serde_json::Value::Number(n) => n.to_string(),
+            _ => continue,
+        };
+        let cik10 = normalize_cik(&cik_string)?;
         out.insert(item.ticker.to_uppercase(), cik10);
     }
     Ok(out)
@@ -209,13 +214,15 @@ fn parse_company_tickers(text: &str) -> anyhow::Result<HashMap<String, String>> 
 #[derive(Debug, Deserialize)]
 struct CompanyFacts {
     cik: Option<u64>,
-    entityName: Option<String>,
+    #[serde(rename = "entityName")]
+    entity_name: Option<String>,
     facts: Facts,
 }
 
 #[derive(Debug, Deserialize)]
 struct Facts {
-    us-gaap: Option<HashMap<String, FactItem>>,
+    #[serde(rename = "us-gaap")]
+    us_gaap: Option<HashMap<String, FactItem>>,
 }
 
 #[derive(Debug, Deserialize)]
@@ -255,12 +262,12 @@ fn extract_minimal_rows(facts: &CompanyFacts) -> Vec<CsvRow> {
         .map(|v| format!("{:0>10}", v))
         .unwrap_or_else(|| "0000000000".to_string());
     let entity = facts
-        .entityName
+        .entity_name
         .clone()
         .unwrap_or_else(|| "UNKNOWN".to_string());
     let fetched_at = Utc::now();
 
-    let Some(usgaap) = facts.facts.us-gaap.as_ref() else {
+    let Some(usgaap) = facts.facts.us_gaap.as_ref() else {
         return rows;
     };
 
@@ -336,35 +343,29 @@ fn compute_ratios(
         .map(|v| format!("{:0>10}", v))
         .unwrap_or_else(|| "0000000000".to_string());
     let entity = facts
-        .entityName
+        .entity_name
         .clone()
         .unwrap_or_else(|| "UNKNOWN".to_string());
     let fetched_at = Utc::now();
 
     let mut by_fy: HashMap<i32, RatioRow> = HashMap::new();
-    let Some(usgaap) = facts.facts.us-gaap.as_ref() else {
+    let Some(usgaap) = facts.facts.us_gaap.as_ref() else {
         return Vec::new();
     };
 
-    let series = [
-        ("Assets", |r: &mut RatioRow, v| r.assets = Some(v)),
-        ("Liabilities", |r: &mut RatioRow, v| r.liabilities = Some(v)),
-        ("NetIncomeLoss", |r: &mut RatioRow, v| r.net_income = Some(v)),
-        (
-            "Revenues",
-            |r: &mut RatioRow, v| r.revenue = Some(v),
-        ),
+    let series: [(&str, fn(&mut RatioRow, f64)); 7] = [
+        ("Assets", |r, v| r.assets = Some(v)),
+        ("Liabilities", |r, v| r.liabilities = Some(v)),
+        ("NetIncomeLoss", |r, v| r.net_income = Some(v)),
+        ("Revenues", |r, v| r.revenue = Some(v)),
         (
             "RevenueFromContractWithCustomerExcludingAssessedTax",
-            |r: &mut RatioRow, v| r.revenue = Some(v),
+            |r, v| r.revenue = Some(v),
         ),
-        (
-            "SharesOutstanding",
-            |r: &mut RatioRow, v| r.shares_outstanding = Some(v),
-        ),
+        ("SharesOutstanding", |r, v| r.shares_outstanding = Some(v)),
         (
             "WeightedAverageNumberOfDilutedSharesOutstanding",
-            |r: &mut RatioRow, v| r.shares_outstanding = Some(v),
+            |r, v| r.shares_outstanding = Some(v),
         ),
     ];
 
@@ -561,51 +562,46 @@ async fn fetch_price_map(
     start_year: i32,
     end_year: i32,
 ) -> anyhow::Result<HashMap<i32, f64>> {
-    let start = chrono::Utc
-        .with_ymd_and_hms(start_year, 1, 1, 0, 0, 0)
-        .single()
-        .ok_or_else(|| anyhow::anyhow!("Invalid start year"))?;
-    let end = chrono::Utc
-        .with_ymd_and_hms(end_year, 12, 31, 23, 59, 59)
-        .single()
-        .ok_or_else(|| anyhow::anyhow!("Invalid end year"))?;
+    // Use Yahoo Finance v8 chart API (v7 download requires authentication)
+    let url = format!(
+        "https://query1.finance.yahoo.com/v8/finance/chart/{ticker}?range=10y&interval=1mo&includeAdjustedClose=true"
+    );
 
-    let period1 = start.timestamp();
-    let period2 = end.timestamp();
-    let url = format!("https://query1.finance.yahoo.com/v7/finance/download/{ticker}?period1={period1}&period2={period2}&interval=1d&events=history&includeAdjustedClose=true");
-
-    let client = reqwest::Client::builder().build()?;
-    let resp = client.get(url).send().await?.error_for_status()?;
+    let client = reqwest::Client::builder()
+        .user_agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36")
+        .build()?;
+    let resp = client.get(&url).send().await?.error_for_status()?;
     let text = resp.text().await?;
 
-    let mut rdr = csv::Reader::from_reader(text.as_bytes());
-    let mut rows: Vec<(chrono::NaiveDate, f64)> = Vec::new();
-    #[derive(Deserialize)]
-    struct YahooRow {
-        #[serde(rename = "Date")]
-        date: String,
-        #[serde(rename = "Close")]
-        close: String,
-    }
-    for result in rdr.deserialize::<YahooRow>() {
-        let r = result?;
-        if r.close == "null" {
-            continue;
-        }
-        let date = chrono::NaiveDate::parse_from_str(&r.date, "%Y-%m-%d")?;
-        let close: f64 = r.close.parse()?;
-        rows.push((date, close));
-    }
+    let json: serde_json::Value = serde_json::from_str(&text)?;
+    let result = json["chart"]["result"]
+        .get(0)
+        .ok_or_else(|| anyhow::anyhow!("No chart data returned for {ticker}"))?;
 
-    let mut by_year: HashMap<i32, (chrono::NaiveDate, f64)> = HashMap::new();
-    for (date, close) in rows {
-        let y = date.year();
+    let timestamps = result["timestamp"]
+        .as_array()
+        .ok_or_else(|| anyhow::anyhow!("No timestamps in response"))?;
+    let closes = result["indicators"]["quote"]
+        .get(0)
+        .and_then(|q| q["close"].as_array())
+        .ok_or_else(|| anyhow::anyhow!("No close prices in response"))?;
+
+    let mut by_year: HashMap<i32, (i64, f64)> = HashMap::new();
+    for (i, ts_val) in timestamps.iter().enumerate() {
+        let ts = ts_val.as_i64().unwrap_or(0);
+        let close = match closes.get(i).and_then(|v| v.as_f64()) {
+            Some(c) => c,
+            None => continue,
+        };
+        let dt = Utc.timestamp_opt(ts, 0).single();
+        let Some(dt) = dt else { continue };
+        let y = dt.year();
         if y < start_year || y > end_year {
             continue;
         }
-        let entry = by_year.entry(y).or_insert((date, close));
-        if date > entry.0 {
-            *entry = (date, close);
+        let entry = by_year.entry(y).or_insert((ts, close));
+        if ts > entry.0 {
+            *entry = (ts, close);
         }
     }
 

@@ -1,23 +1,23 @@
 # Daily Standup
 
-- Generated at: 2026-02-27 21:50:02
+- Generated at: 2026-02-28 16:35:14
 
 ## Progress Snapshot
-- Latest timestamp: 2026-02-27 21:50:01
-- FS available: 0 / 189
-- AR available: 0 / 189
-- Price available: 0 / 189
-- Fully complete rows: 0 / 189
-- Plan completion: 79.04% (181 done, 48 pending)
-- Pending actions: 48
+- Latest timestamp: 2026-02-28 16:35:13
+- FS available: 0 / 182
+- AR available: 0 / 182
+- Price available: 182 / 182
+- Fully complete rows: 0 / 182
+- Plan completion: 81.82% (189 done, 42 pending)
+- Pending actions: 42
 
 ### Delta vs Previous Snapshot
 - FS delta: 0
 - AR delta: 0
 - Price delta: 0
 - Fully complete delta: 0
-- Plan completion delta (%): 0.280000000000001
-- Pending actions delta: 0
+- Plan completion delta (%): 0.349999999999994
+- Pending actions delta: -1
 
 ## Today Focus
 # Daily Collection Batch
@@ -45,7 +45,7 @@
 ## Current Blockers
 - FS availability: 0
 - AR availability: 0
-- Price availability: 0
+- Price availability: 182
 - Model ready for full estimation: False
 - Total pending actions: 48
 

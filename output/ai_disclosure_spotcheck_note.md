@@ -1,7 +1,7 @@
 # AI Disclosure Spot-Check Note (10%)
 
 - Source status file: .\output\data_collection_master_status.csv
-- Total master rows: 189
+- Total master rows: 182
 - AR-ready rows (current): 0
 - Spot-check rows generated (10%): 19
 - Spot-check file: .\output\ai_disclosure_spotcheck_10pct.csv

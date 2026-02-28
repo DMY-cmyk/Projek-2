@@ -13,7 +13,7 @@
 | Total population identified | 66 |
 | Technology sector (IDX-IC I) | 44 |
 | Telecommunication sector (IDX-IC J3) | 22 |
-| Listed before 2019-01-01 (strict) | 27 |
+| Listed before 2019-01-01 (strict) | 26 (FREN excluded) |
 | Listed before 2020-01-01 (relaxed) | 32 |
 | Active status | 66 |
 
@@ -62,7 +62,7 @@
 
 ### Scenario C: Technology + Telecom, Strict Cutoff (before 2019-01-01) — BALANCED PANEL ⭐ RECOMMENDED
 
-**Additional telecom companies (+16 = 27 total):**
+**Additional telecom companies (+15 = 26 total):**
 
 | No | Ticker | Company Name | Listing Date | Sub-sector |
 |----|--------|-------------|-------------|------------|
@@ -72,31 +72,31 @@
 | 15 | CENT | Centratama Telekomunikasi Indonesia Tbk | 2001-11-01 | J321 Wireless Telecom |
 | 16 | EXCL | XL Axiata Tbk | 2005-09-29 | J321 Wireless Telecom |
 | 17 | BTEL | Bakrie Telecom Tbk | 2006-02-03 | J321 Wireless Telecom |
-| 18 | FREN | Smartfren Telecom Tbk | 2006-11-29 | J321 Wireless Telecom |
-| 19 | TOWR | Sarana Menara Nusantara Tbk | 2010-03-08 | J321 Wireless Telecom |
-| 20 | TBIG | Tower Bersama Infrastructure Tbk | 2010-10-26 | J321 Wireless Telecom |
-| 21 | SUPR | Solusi Tunas Pratama Tbk | 2011-10-11 | J321 Wireless Telecom |
-| 22 | IBST | Inti Bangun Sejahtera Tbk | 2012-08-31 | J321 Wireless Telecom |
-| 23 | BALI | Bali Towerindo Sentra Tbk | 2014-03-13 | J321 Wireless Telecom |
-| 24 | LINK | Link Net Tbk | 2014-06-02 | J311 Wired Telecom |
-| 25 | OASA | Maharaksa Biru Energi Tbk | 2016-07-18 | J321 Wireless Telecom |
-| 26 | LCKM | LCK Global Kedaton Tbk | 2018-01-16 | J321 Wireless Telecom |
-| 27 | GHON | Gihon Telekomunikasi Indonesia Tbk | 2018-04-09 | J321 Wireless Telecom |
+| 18 | TOWR | Sarana Menara Nusantara Tbk | 2010-03-08 | J321 Wireless Telecom |
+| 19 | TBIG | Tower Bersama Infrastructure Tbk | 2010-10-26 | J321 Wireless Telecom |
+| 20 | SUPR | Solusi Tunas Pratama Tbk | 2011-10-11 | J321 Wireless Telecom |
+| 21 | IBST | Inti Bangun Sejahtera Tbk | 2012-08-31 | J321 Wireless Telecom |
+| 22 | BALI | Bali Towerindo Sentra Tbk | 2014-03-13 | J321 Wireless Telecom |
+| 23 | LINK | Link Net Tbk | 2014-06-02 | J311 Wired Telecom |
+| 24 | OASA | Maharaksa Biru Energi Tbk | 2016-07-18 | J321 Wireless Telecom |
+| 25 | LCKM | LCK Global Kedaton Tbk | 2018-01-16 | J321 Wireless Telecom |
+| 26 | GHON | Gihon Telekomunikasi Indonesia Tbk | 2018-04-09 | J321 Wireless Telecom |
 
-- **Total observations**: 27 × 7 = **189**
+- **Total observations**: 26 × 7 = **182**
 - **Assessment**: ✅ **Sangat memadai** — cukup untuk panel regression dengan moderasi dan interaksi
 - **Justifikasi perluasan ke telecom**: Sektor teknologi dan telekomunikasi saling terkait erat dalam ekosistem digital; banyak studi serupa mengelompokkan keduanya (ICT sector)
+- **Catatan eksklusi FREN**: Smartfren Telecom Tbk (FREN) dikeluarkan dari sampel karena: (1) saham efektif tidak aktif/suspended di bursa, (2) harga di level penny-stock (Rp 23), (3) dilusi saham ekstrem (477,9 miliar lembar), dan (4) data harga tidak tersedia di Yahoo Finance. Eksklusi ini menghasilkan panel 26 perusahaan yang lebih bersih dan tetap memadai secara statistik untuk panel regression dengan moderasi dan interaksi.
 
 ---
 
 ### Scenario D: Technology + Telecom, Relaxed Cutoff (before 2020-01-01) — BALANCED PANEL
 
-**Additional companies (+5 = 32 total):**
+**Additional companies (+5 = 31 total):**
 
 Adding from tech: ENVY, HDIT, DMMX, GLVA
 Adding from telecom: JAST (Jasnita Telekomindo, listing 2019-05-16)
 
-- **Total observations**: 32 × 7 = **224**
+- **Total observations**: 31 × 7 = **217**
 - **Assessment**: ✅ Sangat memadai, namun data 2019 untuk 5 perusahaan bisa parsial
 
 ---
@@ -124,14 +124,14 @@ Adding from telecom: JAST (Jasnita Telekomindo, listing 2019-05-16)
 
 | Listing Year | Tech | Telecom | Total | Years | Observations |
 |-------------|------|---------|-------|-------|-------------|
-| Before 2019 | 11 | 16 | 27 | 7 | 189 |
+| Before 2019 | 11 | 15 | 26 | 7 | 182 |
 | 2019 | 4 | 1 | 5 | 7 | 35 |
 | 2020 | 4 | 0 | 4 | 6 | 24 |
 | 2021 | 7 | 1 | 8 | 5 | 40 |
 | 2022 | 5 | 2 | 7 | 4 | 28 |
 | 2023 | 10 | 1 | 11 | 3 | 33 |
 | 2024 | 3 | 1 | 4 | 2 | 8 |
-| **Total** | **44** | **22** | **66** | | **357** |
+| **Total** | **44** | **21** | **65** | | **350** |
 
 - **Assessment**: ✅ Dataset terbesar, sangat memadai untuk semua analisis
 
@@ -143,10 +143,10 @@ Adding from telecom: JAST (Jasnita Telekomindo, listing 2019-05-16)
 |----------|-----------|-----------|-----------|-----------|-------------|
 | A | Balanced | 11 | 7 | 77 | ⚠️ Terlalu kecil |
 | B | Balanced | 15 | 7 | 105 | ✅ Marginal |
-| C | Balanced | 27 | 7 | 189 | ✅ **Recommended** |
-| D | Balanced | 32 | 7 | 224 | ✅ Sangat baik |
+| C | Balanced | 26 | 7 | 182 | ✅ **Recommended** |
+| D | Balanced | 31 | 7 | 217 | ✅ Sangat baik |
 | E | Unbalanced | 44 | 2–7 | 220 | ✅ Baik (perlu justifikasi) |
-| F | Unbalanced | 66 | 2–7 | 357 | ✅ Sangat baik |
+| F | Unbalanced | 65 | 2–7 | 350 | ✅ Sangat baik |
 
 ---
 
@@ -155,7 +155,7 @@ Adding from telecom: JAST (Jasnita Telekomindo, listing 2019-05-16)
 ### Primary Recommendation: Scenario C (Technology + Telecom, Strict Cutoff)
 
 **Alasan:**
-1. **Jumlah observasi memadai (189)** — cukup untuk 9 regresi utama dengan ~10 variabel independen
+1. **Jumlah observasi memadai (182)** — cukup untuk 9 regresi utama dengan ~10 variabel independen
 2. **Balanced panel** — lebih mudah diestimasi, tidak memerlukan justifikasi unbalanced panel
 3. **Justifikasi akademis kuat** — sektor Technology dan Telecommunication sering dikelompokkan bersama sebagai sektor ICT (Information & Communication Technology) dalam literatur:
    - World Bank menggunakan klasifikasi ICT yang mencakup keduanya
@@ -165,7 +165,7 @@ Adding from telecom: JAST (Jasnita Telekomindo, listing 2019-05-16)
 
 ### Alternative: Scenario D (Relaxed Cutoff to 2020)
 
-Jika Scenario C masih dirasa kurang, relaksasi cutoff ke 2020-01-01 menambah 5 perusahaan (32 total, 224 observasi). Ini memerlukan catatan bahwa data FY2019 untuk 5 perusahaan tersebut mungkin tidak mencakup setahun penuh.
+Jika Scenario C masih dirasa kurang, relaksasi cutoff ke 2020-01-01 menambah 5 perusahaan (31 total, 217 observasi). Ini memerlukan catatan bahwa data FY2019 untuk 5 perusahaan tersebut mungkin tidak mencakup setahun penuh.
 
 ### Robustness Strategy
 

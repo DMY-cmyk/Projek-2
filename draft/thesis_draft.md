@@ -189,11 +189,11 @@ Pipeline teknis:
 1. `scripts/ingest_idx_population.ps1`
 2. `scripts/estimate_sample.ps1`
 
-Analisis skenario populasi-sampel menunjukkan opsi paling memadai secara statistik adalah perluasan ke Technology + Telecommunication dengan cutoff listing ketat (27 perusahaan, 189 observasi panel balanced), sebagaimana diringkas di `output/sample_analysis_comprehensive.md`. Penetapan sampel final tetap bergantung pada verifikasi kelengkapan data manual.
+Analisis skenario populasi-sampel menunjukkan opsi paling memadai secara statistik adalah perluasan ke Technology + Telecommunication dengan cutoff listing ketat (26 perusahaan, 182 observasi panel balanced), sebagaimana diringkas di `output/sample_analysis_comprehensive.md`. Penetapan sampel final tetap bergantung pada verifikasi kelengkapan data manual.
 
 Tabel seleksi sampel interim disajikan pada `output/sample_selection_flow_interim.md` sebagai basis dokumentasi alur Populasi -> Kriteria -> Kandidat Sampel sebelum verifikasi final availability.
 
-Untuk tahap operasional pengumpulan data, lembar master firm-year juga telah disiapkan pada `output/data_collection_master_interim.csv` (189 baris) beserta sampel verifikasi manual 10% pada `output/manual_crosscheck_10pct.csv`.
+Untuk tahap operasional pengumpulan data, lembar master firm-year juga telah disiapkan pada `output/data_collection_master_interim.csv` (182 baris) beserta sampel verifikasi manual 10% pada `output/manual_crosscheck_10pct.csv`.
 
 Status ketersediaan dokumen (FS/AR/Price) dapat dipantau melalui `output/data_collection_master_status.csv` dan `output/data_collection_availability_report.md`, sementara template validasi AI disclosure 10% disiapkan pada `output/ai_disclosure_spotcheck_10pct.csv`.
 
@@ -245,7 +245,7 @@ Deskripsi populasi, sampel, dan sebaran observasi panel disusun dari hasil pipel
 
 Secara operasional, data yang sudah tersedia dalam repositori mencakup: (1) template dan hasil normalisasi populasi IDX, (2) hasil analisis skenario sampel, (3) dataset panel pilot untuk validasi pipeline, dan (4) keluaran awal statistik/deskriptif serta asumsi.
 
-Sebagai ringkasan interim untuk pelaporan BAB IV, alur seleksi sampel sudah dirangkum dalam tabel seleksi interim (`output/sample_selection_flow_interim.md`) dengan rekomendasi sementara skenario balanced panel 27 emiten (189 observasi).
+Sebagai ringkasan interim untuk pelaporan BAB IV, alur seleksi sampel sudah dirangkum dalam tabel seleksi interim (`output/sample_selection_flow_interim.md`) dengan rekomendasi sementara skenario balanced panel 26 emiten (182 observasi).
 
 ## 4.2 Statistik Deskriptif
 Merujuk pada:

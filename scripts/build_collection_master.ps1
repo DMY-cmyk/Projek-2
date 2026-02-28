@@ -22,7 +22,7 @@ if ($sample.Count -eq 0) { throw "Sample template is empty: $SampleTemplate" }
 # Scenario C recommended tickers (Technology + Telecommunication, strict cutoff pre-2019)
 $tickers = @(
     "MTDL","LMAS","PTSN","SKYB","MLPT","ATIC","KIOS","MCAS","NFCX","DIVA","LUCK",
-    "ISAT","TLKM","KBLV","CENT","EXCL","BTEL","FREN","TOWR","TBIG","SUPR","IBST","BALI","LINK","OASA","LCKM","GHON"
+    "ISAT","TLKM","KBLV","CENT","EXCL","BTEL","TOWR","TBIG","SUPR","IBST","BALI","LINK","OASA","LCKM","GHON"
 )
 
 $lookup = @{}

@@ -1,9 +1,9 @@
 # Download Queue Summary
 
 - Source status CSV: .\output\data_collection_master_status.csv
-- FS queue rows: 189
-- AR queue rows: 189
-- Price queue rows: 189
+- FS queue rows: 182
+- AR queue rows: 182
+- Price queue rows: 0
 
 ## Queue Files
 - FS queue: .\output\download_queue_fs.csv

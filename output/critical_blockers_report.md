@@ -7,7 +7,7 @@
 ## Current Blockers
 - FS availability: 0
 - AR availability: 0
-- Price availability: 0
+- Price availability: 182
 - Model ready for full estimation: False
 - Total pending actions: 48
 

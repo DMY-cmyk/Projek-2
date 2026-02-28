@@ -511,6 +511,9 @@ Build manifest:
 - Step 3.5 pilot complete: `data/processed/panel_dataset.csv` generated from templates.
 - Step 4.1 interpretation and high-correlation screening documented (preliminary, pilot basis).
 - Step 4.2 cross-sectional dependence preliminary check documented (pilot basis).
+- Sample finalized: Scenario C — 26 companies (Tech + Telecom), balanced panel, 182 firm-year observations (2019-2025).
+- FREN (Smartfren Telecom) excluded from sample: inactive/suspended stock, penny-stock price level, extreme share dilution, unavailable on Yahoo Finance.
+- All 26 tickers price data fetched via Yahoo Finance v8 API.
 
 ## Current Limitation
 - Current panel file is still pilot-sized (4 rows), so model selection and full inference remain pending until full real dataset collection is completed.

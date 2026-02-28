@@ -13,6 +13,6 @@
 - incomplete_annual_reports: 66
 - incomplete_financial_statements: 66
 - listing_after_cutoff: 39
-- missing_price_data: 66
+- missing_price_data: 40
 - non_idr_reporting: 66
 - non_technology_sector: 22

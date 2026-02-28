@@ -1,7 +1,7 @@
 # AI Disclosure Manual Sheet Note (Interim)
 
 - Source collection status: .\output\data_collection_master_status.csv
-- Total firm-year rows: 189
+- Total firm-year rows: 182
 - AR-ready rows currently: 0
 - Manual sheet output: .\output\ai_disclosure_manual_sheet_interim.csv
 

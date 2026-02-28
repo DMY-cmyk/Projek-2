@@ -110,7 +110,7 @@
   - Relaksasi kriteria (misal listing sebelum 2020) ✅ dianalisis
   - Output relaksasi terdokumentasi ✅ (`output/sample_estimation_relaxed.md`, `output/sample_selection_result_relaxed.csv`)
   - Unbalanced panel (izinkan entry/exit) ✅ dianalisis
-  - Atau perluas ke sektor terkait (Technology + Telecommunication) ✅ **Rekomendasi utama: Tech + Telecom balanced panel (27 perusahaan, 189 observasi)**
+  - Atau perluas ke sektor terkait (Technology + Telecommunication) ✅ **Rekomendasi utama: Tech + Telecom balanced panel (26 perusahaan, 182 observasi)**
 
 ### Step 2.3 — Definisi Operasional Variabel
 - [x] Gunakan tabel definisi variabel dari `analysis_output.md` bagian 8.A
@@ -124,7 +124,7 @@
 ### Step 2.4 — Metode Pengumpulan Data
 - [ ] **Laporan keuangan**: Download dari IDX (idx.co.id → Listed Companies → Financial Statements)
 - [ ] **Annual report**: Download dari IDX atau website perusahaan
-- [ ] **Harga saham**: Download dari Yahoo Finance atau IDX (closing price akhir tahun)
+- [x] **Harga saham**: Download dari Yahoo Finance v8 chart API ✅ (26 tickers; lihat `data/prices/price_master.csv`)
 - [ ] **Data pendukung**: Website perusahaan untuk informasi AI/digital transformation
 - [x] Buat checklist data per perusahaan per tahun (`output/data_collection_checklist.md`)
 
@@ -193,7 +193,7 @@
 - [ ] Untuk setiap perusahaan sampel, download laporan keuangan tahunan 2019–2025
 - [ ] Sumber: IDX (idx.co.id) → Listed Companies → Financial Statements & Annual Report
 - [ ] Simpan di `data/raw/` dengan penamaan: `{TICKER}_{YEAR}_FS.pdf`
-- [x] Buat spreadsheet master: 1 baris per perusahaan per tahun ✅ (`output/data_collection_master_interim.csv`, 189 firm-year rows)
+- [x] Buat spreadsheet master: 1 baris per perusahaan per tahun ✅ (`output/data_collection_master_interim.csv`, 182 firm-year rows)
 - [ ] Ekstrak data berikut dari setiap laporan keuangan:
   - Total Assets, Total Liabilities, Total Equity
   - Current Assets, Current Liabilities
@@ -206,13 +206,15 @@
 - [x] Batch harian koleksi data disiapkan ✅ (`output/daily_collection_batch.md`, `scripts/build_daily_collection_batch.ps1`)
 
 ### Step 3.3 — Download Data Harga Saham
-- [ ] Download closing price akhir tahun (31 Desember atau hari bursa terakhir) untuk setiap sampel
-- [ ] Sumber: Yahoo Finance, IDX, atau `scripts/price_fetch.ps1` (untuk saham AS)
-- [ ] Download juga harga bulanan (untuk menghitung volatilitas)
-- [ ] Simpan di `data/prices/`
-- [x] Otomasi batch fetch harga untuk kandidat sampel disiapkan (`scripts/fetch_all_prices.ps1`)
+- [x] Download closing price akhir tahun (31 Desember atau hari bursa terakhir) untuk setiap sampel ✅ (26 tickers via Yahoo v8 API)
+- [x] Sumber: Yahoo Finance v8 chart API (`scripts/fetch_prices_v8.ps1`) ✅
+- [x] Download juga harga bulanan (untuk menghitung volatilitas) ✅ (`scripts/fetch_monthly_prices_v8.ps1`, `data/prices/monthly_all.csv` — 2184 baris)
+- [x] Simpan di `data/prices/` ✅ (`data/prices/price_master.csv`, `data/prices/volatility_master.csv`)
+- [x] Otomasi batch fetch harga untuk kandidat sampel disiapkan (`scripts/fetch_all_prices.ps1`, `scripts/fetch_prices_v8.ps1`)
 - [x] Skrip validasi koneksi Yahoo disiapkan (`scripts/test_yahoo.ps1`)
-- [x] Download queue harga disiapkan ✅ (`output/download_queue_price.csv`)
+- [x] Download queue harga disiapkan ✅ (`output/download_queue_price.csv` — 0 rows remaining)
+- [x] Konsolidasi harga + volatilitas tahunan ✅ (`scripts/consolidate_prices.ps1`, `data/prices/price_master.csv` 182 rows, `data/prices/volatility_master.csv` 182 rows)
+
 
 ### Step 3.4 — Download & Analisis Annual Report (untuk AI Disclosure Index)
 - [ ] Download annual report (bukan laporan keuangan) untuk setiap sampel 2019–2025
@@ -481,11 +483,11 @@
 - [x] Gunakan `scripts/sec_fetch.ps1` untuk fetch data keuangan perusahaan teknologi AS ✅ (cache rasio/facts tersedia di `data/sec_cache/*_ratios.csv`)
 - [x] Target perusahaan: AAPL, MSFT, GOOGL, META, NVDA, AMZN, TSLA, CRM, ADBE, ORCL ✅
 - [x] Hitung rasio yang sama (ROA, ROE, NPM, CR, DER, TATO, EPS, PBV) ✅ (tersedia parsial sesuai coverage SEC tags; agregasi `output/us_sec_ratios_2019_2025.csv`)
-- [ ] Gunakan `scripts/price_fetch.ps1` untuk data harga saham AS (⏳ belum bisa dijalankan pada environment ini karena koneksi Yahoo belum tersedia)
+- [x] Gunakan Yahoo Finance v8 API via `projek-2.exe sec-fetch --price-ticker` untuk data harga saham AS ✅ (10 perusahaan, 2019-2025, terintegrasi di `output/us_sec_ratios_2019_2025.csv` dengan PBV)
 
 ### Step 7.2 — Analisis Komparatif
 - [x] Bandingkan statistik deskriptif rasio Indonesia vs AS ✅ (`output/us_id_descriptive_comparison.md`)
-- [ ] Bandingkan signifikansi rasio fundamental di kedua pasar (⏳ menunggu dataset final Indonesia + estimasi model final komparatif)
+- [ ] Bandingkan signifikansi rasio fundamental di kedua pasar (⏳ menunggu dataset final Indonesia; data AS sudah lengkap termasuk harga + PBV)
 - [x] Diskusikan perbedaan konteks (market maturity, regulasi, adopsi AI) ✅ (`output/us_id_context_discussion.md`)
 - [x] Catatan: ini sebagai supplementary analysis, bukan bagian utama tesis ✅ (`output/supplementary_analysis_scope_note.md`)
 
