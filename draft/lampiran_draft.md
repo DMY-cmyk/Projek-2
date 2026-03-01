@@ -1,34 +1,113 @@
-# LAMPIRAN (DRAFT)
+# LAMPIRAN
 
-## Lampiran 1. Daftar Sampel dan Seleksi
-1. `output/idx_population_normalized.csv`
-2. `output/sample_selection_template.csv`
-3. `output/sample_selection_result.csv`
-4. `output/sample_estimation.md`
+## Lampiran 1. Daftar Sampel Perusahaan dan Kode Saham
 
-## Lampiran 2. Definisi Variabel dan Metodologi
-1. `output/metodologi_penelitian.md`
-2. `output/data_collection_checklist.md`
+Daftar 26 perusahaan sektor teknologi dan telekomunikasi yang terdaftar di BEI yang memenuhi kriteria purposive sampling, meliputi:
+- Kode saham (ticker)
+- Nama perusahaan
+- Tanggal listing
+- Sub-sektor berdasarkan IDX-IC
+- Status perdagangan selama periode observasi
 
-## Lampiran 3. Statistik Deskriptif dan Uji Asumsi
-1. `output/descriptive_stats.md`
-2. `output/correlation_matrix.csv`
-3. `output/assumption_tests.md`
-4. `output/vif_table.csv`
+## Lampiran 2. Data Panel Penelitian (182 Observasi)
 
-## Lampiran 4. Model Panel dan Ringkasan EViews
-1. `output/panel_model_selection.md`
-2. `output/eviews/eviews_run_summary.md`
+Tabel data panel lengkap untuk 26 perusahaan × 7 tahun (2019–2025) meliputi seluruh variabel penelitian:
+- Variabel dependen: PRICE, RET, TQ
+- Variabel independen: ROA, ROE, NPM, CR, DER, TATO, EPS
+- Variabel moderasi: AID, DGENAI
+- Variabel kontrol: SIZE, GROWTH, AGE, VOL
 
-## Lampiran 5. Robustness Checks
-1. `output/robustness_checks.md`
-2. `output/robustness/panel_pre_2019_2022.csv`
-3. `output/robustness/panel_post_2023_2025.csv`
-4. `output/robustness/panel_exclude_2020.csv`
-5. `output/robustness/panel_winsor_1_99.csv`
-6. `output/robustness/panel_winsor_5_95.csv`
-7. `output/robustness/panel_alt_proxy_pbv.csv`
+## Lampiran 3. Output Statistik Deskriptif
 
-## Lampiran 6. Keputusan Hipotesis
-1. `output/hypothesis_results.csv`
-2. `output/hypothesis_decision.md`
+Tabel statistik deskriptif (mean, median, standar deviasi, minimum, maksimum) untuk seluruh variabel penelitian.
+
+## Lampiran 4. Output Uji Asumsi Klasik
+
+### 4a. Uji Multikolinearitas (VIF)
+Tabel Variance Inflation Factor untuk seluruh variabel independen dalam setiap model.
+
+### 4b. Uji Heteroskedastisitas
+Hasil Breusch-Pagan/White test untuk setiap model regresi.
+
+### 4c. Uji Autokorelasi
+Hasil Wooldridge test untuk autokorelasi panel data.
+
+### 4d. Matriks Korelasi Pearson
+Matriks korelasi antar seluruh variabel penelitian.
+
+## Lampiran 5. Output Pemilihan Model Panel
+
+### 5a. Hasil Uji Chow (CEM vs FEM)
+Tabel hasil Uji Chow untuk masing-masing dari 9 persamaan regresi.
+
+### 5b. Hasil Uji Hausman (FEM vs REM)
+Tabel hasil Uji Hausman untuk masing-masing dari 9 persamaan regresi.
+
+### 5c. Hasil Uji Breusch-Pagan Lagrange Multiplier (CEM vs REM)
+Tabel hasil Uji BP-LM untuk model yang memerlukan pengujian lanjutan.
+
+## Lampiran 6. Output Regresi Model Baseline (3 Model)
+
+### 6a. Model Baseline — Variabel Dependen: PRICE
+Tabel koefisien, standard error, t-statistik, p-value, R², Adjusted R², F-statistik.
+
+### 6b. Model Baseline — Variabel Dependen: RET
+Tabel koefisien, standard error, t-statistik, p-value, R², Adjusted R², F-statistik.
+
+### 6c. Model Baseline — Variabel Dependen: TQ
+Tabel koefisien, standard error, t-statistik, p-value, R², Adjusted R², F-statistik.
+
+## Lampiran 7. Output Regresi Model Moderasi AID (3 Model)
+
+### 7a. Model Moderasi AID — Variabel Dependen: PRICE
+Tabel koefisien termasuk interaksi X×AID, standard error, t-statistik, p-value, R², Adjusted R², F-statistik.
+
+### 7b. Model Moderasi AID — Variabel Dependen: RET
+Tabel koefisien termasuk interaksi X×AID.
+
+### 7c. Model Moderasi AID — Variabel Dependen: TQ
+Tabel koefisien termasuk interaksi X×AID.
+
+## Lampiran 8. Output Regresi Model Structural Break (3 Model)
+
+### 8a. Model Structural Break — Variabel Dependen: PRICE
+Tabel koefisien termasuk interaksi X×DGENAI, standard error, t-statistik, p-value, R², Adjusted R², F-statistik.
+
+### 8b. Model Structural Break — Variabel Dependen: RET
+Tabel koefisien termasuk interaksi X×DGENAI.
+
+### 8c. Model Structural Break — Variabel Dependen: TQ
+Tabel koefisien termasuk interaksi X×DGENAI.
+
+## Lampiran 9. Output Robustness Checks
+
+### 9a. Subsample Analysis: Technology-only (11 perusahaan)
+### 9b. Subsample Analysis: Pre-GenAI (2019–2022) vs Post-GenAI (2023–2025)
+### 9c. Subsample Analysis: Exclude tahun 2020 (efek COVID)
+### 9d. Winsorization (persentil 1%/99%)
+### 9e. Proksi Alternatif: PBV sebagai pengganti Tobin's Q
+### 9f. System GMM Estimation
+
+## Lampiran 10. Tabel Keputusan Hipotesis Lengkap
+
+Tabel ringkasan keputusan untuk 11 kelompok hipotesis (25+ sub-hipotesis):
+- Kode hipotesis
+- Variabel independen dan dependen
+- Prediksi arah
+- Koefisien estimasi
+- Signifikansi (p-value)
+- Keputusan (Diterima/Ditolak)
+
+## Lampiran 11. Lembar Kerja AI Disclosure Index
+
+### 11a. Daftar Kata Kunci AI Disclosure
+Tabel kategori dan kata kunci yang digunakan dalam content analysis annual report:
+- Kategori 1 (AI Core): artificial intelligence, kecerdasan buatan, machine learning, deep learning, neural network
+- Kategori 2 (Digital Tech): big data, cloud computing, IoT, internet of things, blockchain, automation, robotics
+- Kategori 3 (Digital Transformation): digital transformation, transformasi digital, digitalisasi, digitization
+
+### 11b. Hasil Scoring AI Disclosure Index per Perusahaan per Tahun
+Tabel skor AID (metode biner dan frekuensi) untuk 26 perusahaan × 7 tahun.
+
+### 11c. Hasil Validasi Inter-coder Reliability / Spot-check
+Dokumentasi proses validasi 10% sampel secara manual beserta hasil Cohen's Kappa.
