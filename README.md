@@ -4,12 +4,12 @@ Rust workspace for thesis analysis tooling with SEC `data.sec.gov` integration.
 
 ## Structure
 - `Cargo.toml`: Workspace root.
-- `crates/app/`: Main CLI application.
-- `scripts/`: PowerShell helpers for SEC data.
-- `scripts/eviews_run.ps1`: EViews COM automation runner for panel analysis.
-- `scripts/build_ai_disclosure_index.ps1`: AI disclosure index builder from annual report text.
-- `chat_transcript.md`: Input transcript (reference).
-- `Plan.md`: Analysis plan.
+- `crates/app/`: Main CLI application (SEC data fetching).
+- `scripts/`: 30+ PowerShell automation scripts for data pipeline, analysis, and reporting.
+- `draft/`: Thesis draft files (BAB I–V, bibliography, slides, speaker notes, proposal).
+- `output/`: Generated analysis outputs, templates, dashboards, and tracking files.
+- `data/`: Raw and processed data (gitignored).
+- `Plan.md`: Master step-by-step plan with checkbox tracking (231 items).
 
 ## Quick Start
 ```powershell
@@ -503,20 +503,24 @@ Build manifest:
 - `output/cross_sectional_dependence.md`: Preliminary Pesaran CD diagnostic (pilot only).
 
 ## Research Plan Progress Snapshot
-- Step 1.1 complete: thesis inventory/classification.
-- Step 1.2 complete: 28 journal references matrix.
-- Step 1.3-1.5 complete: theory, gap, and hypotheses.
-- Step 2 scaffolding complete in tooling/docs (methodology templates and automation scripts).
-- EViews COM connection validated with smoke test.
-- Step 3.5 pilot complete: `data/processed/panel_dataset.csv` generated from templates.
-- Step 4.1 interpretation and high-correlation screening documented (preliminary, pilot basis).
-- Step 4.2 cross-sectional dependence preliminary check documented (pilot basis).
-- Sample finalized: Scenario C — 26 companies (Tech + Telecom), balanced panel, 182 firm-year observations (2019-2025).
-- FREN (Smartfren Telecom) excluded from sample: inactive/suspended stock, penny-stock price level, extreme share dilution, unavailable on Yahoo Finance.
+- **Overall**: 81.82% complete (189/231 items done, 42 pending).
+- **Phase 0–1**: Complete — literature review, theories, hypotheses, research gap confirmed.
+- **Phase 2**: Methodology mostly done; sample estimation analysis completed (6 scenarios).
+- **Phase 3**: Price data complete (182/182). **FS and AR download pending** (requires manual collection from IDX).
+- **Phase 4**: Automation pipelines ready; awaiting final dataset for full estimation.
+- **Phase 5**: All BAB I–V draft completed in `draft/thesis_draft.md`:
+  - BAB I–III fully written with proper academic citations (42 references).
+  - BAB IV–V structured with placeholder tables awaiting data.
+  - All 10 entries in Tabel 2.1 (Penelitian Terdahulu) cited with proper author names.
+  - Bibliography (DAFTAR PUSTAKA) complete — all in-text citations verified.
+- **Phase 6**: Defense materials prepared (slides, speaker notes, FAQ, one-page summary).
+- **Phase 7**: US comparison data fetched (10 companies via SEC EDGAR).
+- **Sample**: Scenario C — 26 companies (11 Tech + 15 Telecom), balanced panel, 182 firm-year observations (2019–2025). FREN excluded.
 - All 26 tickers price data fetched via Yahoo Finance v8 API.
 
-## Current Limitation
-- Current panel file is still pilot-sized (4 rows), so model selection and full inference remain pending until full real dataset collection is completed.
+## Current Blocker
+- **Financial statements (FS) and annual reports (AR) not yet downloaded** from IDX (0/182 each). This blocks the full panel dataset, regression estimation, and BAB IV–V finalization.
+- Current panel file is pilot-sized (4 rows); model selection and full inference remain pending until FS/AR collection is completed.
 
 ## Notes
 - SEC API requires a descriptive `User-Agent`.
