@@ -4,9 +4,9 @@
 
 | No | Peneliti | Tahun | Kampus | Sektor/Periode | Variabel Utama | Metode | Temuan Kunci | Sumber |
 |----|----------|-------|--------|----------------|----------------|--------|--------------|--------|
-| 1 | — | 2025 | UNDIKSHA | Teknologi BEI, 2021–2023 | IC & WCM → Financial Distress → Return Saham | Regresi + mediasi | IC & WCM berpengaruh terhadap return melalui financial distress | repo.undiksha.ac.id/23085/ |
-| 2 | — | 2024 | ITB | Teknologi BEI, 2021Q1–2023Q2 | EPS, PBV, TATO, FATO → Financial Distress (Altman Z-Score) | Regresi panel | Rasio fundamental berpengaruh terhadap financial distress | digilib.itb.ac.id/gdl/view/79966 |
-| 3 | — | 2025 | UNISSULA | Teknologi BEI, 2020–2023 | Profitabilitas, Likuiditas, Leverage → Nilai Perusahaan | PLS / Regresi | Rasio fundamental berpengaruh terhadap nilai perusahaan | repository.unissula.ac.id/43161/ |
+| 1 | Ni Made Siti Ambarawati | 2025 | UNDIKSHA | Teknologi BEI, 2021–2023 | IC & WCM → Financial Distress → Return Saham | Regresi + mediasi | IC & WCM berpengaruh terhadap return melalui financial distress | repo.undiksha.ac.id/23085/ |
+| 2 | Cintya Nindy Nofita | 2024 | ITB | Teknologi BEI, 2021Q1–2023Q2 | EPS, PBV, TATO, FATO → Financial Distress (Altman Z-Score) | Regresi panel | Rasio fundamental berpengaruh terhadap financial distress | digilib.itb.ac.id/gdl/view/79966 |
+| 3 | Aris Kusdwiantara | 2025 | UNISSULA | Teknologi BEI, 2020–2023 | Profitabilitas, Likuiditas, Leverage → Nilai Perusahaan | PLS / Regresi | Rasio fundamental berpengaruh terhadap nilai perusahaan | repository.unissula.ac.id/43161/ |
 | 4 | M. Syukrihady Irsyad | 2025 | UNAND | Teknologi BEI, 2018–2023 | IC Disclosure, Ukuran Perusahaan, Struktur Modal → Financial Sustainability (mediasi: Kinerja Perusahaan) | Path analysis + Sobel test | IC disclosure TIDAK berpengaruh; ukuran & struktur modal berpengaruh melalui kinerja | scholar.unand.ac.id/511212/ |
 
 ## Tesis S2 Terverifikasi — Sektor Lain (Metodologi Relevan)

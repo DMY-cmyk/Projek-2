@@ -7,7 +7,7 @@
 
 ## Slide 2 — Latar Belakang (1:30)
 - Jelaskan dinamika sektor teknologi BEI: 66 emiten, pertumbuhan pesat sejak 2019.
-- Tekankan inkonsistensi hasil terdahulu: Dayanti *et al.* (2024) hanya TATO signifikan, UNISSULA (2025) rasio berpengaruh terhadap nilai perusahaan.
+- Tekankan inkonsistensi hasil terdahulu: Dayanti *et al.* (2024) hanya TATO signifikan, Kusdwiantara (2025) rasio berpengaruh terhadap nilai perusahaan.
 - Hubungkan dengan perubahan paradigma: peluncuran ChatGPT Nov 2022, era GenAI mengubah cara investor menilai informasi.
 - Sitasi kunci: Das *et al.* (2024), Abuzayed *et al.* (2023).
 

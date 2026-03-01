@@ -2,7 +2,13 @@
 
 Abuzayed, B., Al-Fayoumi, N., & Charfeddine, L. (2023). Chatting with ChatGPT: Early evidence on market returns. *Finance Research Letters*, 58, 104576. https://doi.org/10.1016/j.frl.2023.104576
 
+Adrianto, E. S. (2024). *Pengaruh faktor makroekonomi dan rasio keuangan terhadap harga saham perusahaan sektor konstruksi di BEI periode 2012–2022* [Tesis magister, Universitas Indonesia]. Repositori UI.
+
 Ali, F., Khurram, M. U., & Jiang, Y. (2023). The regime-dependent dynamics of stock returns, momentum and mean reversion. *Economic Modelling*, 127, 106466. https://doi.org/10.1016/j.econmod.2023.106466
+
+Ambarawati, N. M. S. (2025). *Pengaruh intellectual capital dan manajemen modal kerja terhadap financial distress serta dampaknya pada return saham* [Tesis magister, Universitas Pendidikan Ganesha]. https://repo.undiksha.ac.id/23085/
+
+Andila, R. A. (2020). *Pengaruh EVA, financial distress, leverage, dan profitabilitas terhadap return saham perusahaan perdagangan di BEI periode 2015–2019* [Tesis magister, Universitas Bakrie]. https://repository.bakrie.ac.id/3602/
 
 Al-Mashaqbeh, H. A., Al-Gasawneh, J. A., & Nusairat, N. M. (2025). Digital transformation and sustainable performance: A meta-analysis. *Future Business Journal*, 11, 407. https://doi.org/10.1186/s43093-025-00407-z
 
@@ -48,9 +54,15 @@ Hair, J. F., Black, W. C., Babin, B. J., & Anderson, R. E. (2019). *Multivariate
 
 Irani, M., Tristiarto, Y., & Sugianto, A. (2025). Pengaruh DER, ROA, suku bunga, dan inflasi terhadap nilai perusahaan teknologi BEI. *IKRAITH-EKONOMIKA*, 8(1).
 
+Irsyad, M. S. (2025). *Pengaruh intellectual capital disclosure, ukuran perusahaan, dan struktur modal terhadap financial sustainability dengan kinerja perusahaan sebagai variabel mediasi pada perusahaan teknologi di BEI periode 2018–2023* [Tesis magister, Universitas Andalas]. https://scholar.unand.ac.id/511212/
+
+Kusdwiantara, A. (2025). *Model peningkatan nilai perusahaan di Bursa Efek Indonesia* [Tesis magister, Universitas Islam Sultan Agung]. https://repository.unissula.ac.id/43161/
+
 Lev, B., & Thiagarajan, S. R. (1993). Fundamental information analysis. *Journal of Accounting Research*, 31(2), 190–215.
 
 Mulyana, A., Riani, N., & Hidayat, R. (2025). Pengaruh AI adoption terhadap ESG dan firm value di Indonesia. *Jurnal Akuntansi*, 15(1).
+
+Nofita, C. N. (2024). *Pengaruh rasio nilai pasar dan rasio aktivitas terhadap financial distress pada perusahaan sektor teknologi yang terdaftar di BEI 2021–2023* [Tesis magister, Institut Teknologi Bandung]. https://digilib.itb.ac.id/gdl/view/79966
 
 Novy-Marx, R. (2013). The other side of value: The gross profitability premium. *Journal of Financial Economics*, 108(1), 1–28. https://doi.org/10.1016/j.jfineco.2013.01.003
 
@@ -66,6 +78,8 @@ Rogers, E. M. (1962). *Diffusion of Innovations*. Free Press.
 
 Ross, S. A. (1977). The determination of financial structure: The incentive-signalling approach. *The Bell Journal of Economics*, 8(1), 23–40.
 
+Salsabila, N. (2025). *Pengaruh kinerja keuangan terhadap harga saham dengan kebijakan dividen sebagai variabel moderasi pada perusahaan teknologi ASEAN-5 periode 2019–2023* [Tesis magister, Universitas Pendidikan Indonesia]. Repositori UPI.
+
 Sattar, A., Saadat, S., & Khan, M. A. (2026). OpenAI announcements and stock returns. *Research in International Business and Finance*, 75, 103217. https://doi.org/10.1016/j.ribaf.2025.103217
 
 Sloan, R. G. (1996). Do stock prices fully reflect information in accruals and cash flows about future earnings? *The Accounting Review*, 71(3), 289–315.
@@ -79,5 +93,7 @@ Uddin, M. A., Hasan, M. K., & Ali, M. (2025). ChatGPT attention and stock market
 Verhoef, P. C., Broekhuizen, T., Bart, Y., Bhattacharya, A., Dong, J. Q., Fabian, N., & Haenlein, M. (2021). Digital transformation: A multidisciplinary reflection and research agenda. *Journal of Business Research*, 122, 889–901.
 
 Vial, G. (2019). Understanding digital transformation: A review and a research agenda. *The Journal of Strategic Information Systems*, 28(2), 118–144.
+
+Wulandari, R. (2025). *Pengaruh rasio keuangan terhadap return saham pada perusahaan transportasi dan logistik di BEI* [Tesis magister, Universitas Bakrie]. Repositori Universitas Bakrie.
 
 Zeileis, A., Leisch, F., Hornik, K., & Kleiber, C. (2002). strucchange: An R package for testing for structural change in linear regression models. *Journal of Statistical Software*, 7(2), 1–38.

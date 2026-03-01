@@ -4,7 +4,7 @@
 Relevansi Rasio Fundamental di Era Artificial Intelligence: Moderasi AI Disclosure Index pada Perusahaan Sektor Teknologi BEI Periode 2019–2025
 
 ## Latar Belakang
-Penelitian mengenai pengaruh rasio fundamental terhadap indikator kinerja pasar pada sektor teknologi BEI menunjukkan hasil yang belum konsisten (Dayanti *et al.*, 2024; UNDIKSHA, 2025; UNISSULA, 2025). Di sisi lain, era Generative AI pasca-2023 berpotensi mengubah cara investor menilai informasi fundamental perusahaan teknologi (Das *et al.*, 2024). Penelitian ini menguji kembali relevansi rasio fundamental dengan menambahkan moderasi AI Disclosure Index dan pengujian structural break era GenAI — dua aspek yang belum pernah diteliti pada konteks sektor teknologi BEI.
+Penelitian mengenai pengaruh rasio fundamental terhadap indikator kinerja pasar pada sektor teknologi BEI menunjukkan hasil yang belum konsisten (Dayanti *et al.*, 2024; Ambarawati, 2025; Kusdwiantara, 2025). Di sisi lain, era Generative AI pasca-2023 berpotensi mengubah cara investor menilai informasi fundamental perusahaan teknologi (Das *et al.*, 2024). Penelitian ini menguji kembali relevansi rasio fundamental dengan menambahkan moderasi AI Disclosure Index dan pengujian structural break era GenAI — dua aspek yang belum pernah diteliti pada konteks sektor teknologi BEI.
 
 ## Tujuan Penelitian
 1. Menguji pengaruh rasio fundamental (ROA, ROE, NPM, CR, DER, TATO, EPS) terhadap harga saham (PRICE), return saham (RET), dan Tobin's Q (TQ).

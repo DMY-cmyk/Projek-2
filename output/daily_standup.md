@@ -1,9 +1,9 @@
 # Daily Standup
 
-- Generated at: 2026-02-28 16:35:14
+- Generated at: 2026-03-01 12:32:04
 
 ## Progress Snapshot
-- Latest timestamp: 2026-02-28 16:35:13
+- Latest timestamp: 2026-03-01 12:32:04
 - FS available: 0 / 182
 - AR available: 0 / 182
 - Price available: 182 / 182
@@ -16,8 +16,8 @@
 - AR delta: 0
 - Price delta: 0
 - Fully complete delta: 0
-- Plan completion delta (%): 0.349999999999994
-- Pending actions delta: -1
+- Plan completion delta (%): 0
+- Pending actions delta: 0
 
 ## Today Focus
 # Daily Collection Batch

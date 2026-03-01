@@ -10,7 +10,7 @@ Magister Akuntansi
 
 - Sektor teknologi dan telekomunikasi BEI tumbuh dinamis dengan 66 emiten (IDX-IC).
 - Rasio fundamental (ROA, ROE, NPM, CR, DER, TATO, EPS) merupakan sinyal utama bagi investor (Brigham & Houston, 2021; Piotroski, 2000).
-- Studi terdahulu menunjukkan hasil tidak konsisten: Dayanti *et al.* (2024) — hanya TATO signifikan; UNISSULA (2025) — rasio berpengaruh terhadap nilai perusahaan.
+- Studi terdahulu menunjukkan hasil tidak konsisten: Dayanti *et al.* (2024) — hanya TATO signifikan; Kusdwiantara (2025) — rasio berpengaruh terhadap nilai perusahaan.
 - Era GenAI pasca-2023 berpotensi mengubah relevansi informasi fundamental (Das *et al.*, 2024; Abuzayed *et al.*, 2023).
 
 ---

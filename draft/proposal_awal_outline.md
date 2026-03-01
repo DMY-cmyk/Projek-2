@@ -8,7 +8,7 @@ Relevansi Rasio Fundamental di Era Artificial Intelligence: Moderasi AI Disclosu
 
 Sektor teknologi dan telekomunikasi di Bursa Efek Indonesia (BEI) mengalami pertumbuhan dinamis sepanjang 2019–2025, dengan peningkatan jumlah emiten dan transformasi digital yang substansial. Analisis fundamental melalui rasio keuangan seperti ROA, ROE, NPM, CR, DER, TATO, dan EPS merupakan pendekatan yang telah lama digunakan investor untuk menilai kinerja perusahaan (Brigham dan Houston, 2021; Piotroski, 2000).
 
-Namun, studi terdahulu pada sektor teknologi BEI menunjukkan hasil yang tidak konsisten. Dayanti *et al.* (2024) menemukan hanya TATO yang signifikan terhadap harga saham, sementara penelitian di UNISSULA (2025) menunjukkan rasio fundamental berpengaruh terhadap nilai perusahaan. Di sisi lain, era Generative AI pasca-2023 berpotensi mengubah cara investor memproses informasi fundamental (Das *et al.*, 2024; Abuzayed *et al.*, 2023).
+Namun, studi terdahulu pada sektor teknologi BEI menunjukkan hasil yang tidak konsisten. Dayanti *et al.* (2024) menemukan hanya TATO yang signifikan terhadap harga saham, sementara Kusdwiantara (2025) menunjukkan rasio fundamental berpengaruh terhadap nilai perusahaan. Di sisi lain, era Generative AI pasca-2023 berpotensi mengubah cara investor memproses informasi fundamental (Das *et al.*, 2024; Abuzayed *et al.*, 2023).
 
 Terdapat lima celah penelitian utama: (1) belum ada pengujian moderasi AI disclosure di sektor teknologi BEI, (2) belum ada pengujian structural break era GenAI, (3) dominasi metode asosiatif tanpa robustness kausal, (4) belum ada studi multi-dependen dalam satu desain terpadu, dan (5) keterbatasan periode observasi penelitian terdahulu.
 
