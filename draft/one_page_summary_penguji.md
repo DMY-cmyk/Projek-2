@@ -31,6 +31,9 @@ Penelitian mengenai pengaruh rasio fundamental terhadap indikator kinerja pasar 
 - **Praktis**: Memberikan masukan bagi investor dalam mengevaluasi relevansi rasio fundamental, bagi manajemen dalam strategi pengungkapan AI, dan bagi regulator dalam penyusunan pedoman pengungkapan adopsi teknologi.
 
 ## Status dan Rencana Penyelesaian
-- BAB I–III dan kerangka BAB IV–V telah disusun dalam format akademis lengkap.
-- Pengisian hasil analisis BAB IV menunggu finalisasi dataset panel (laporan keuangan dan annual report).
-- Langkah berikutnya: finalisasi pengumpulan data → estimasi 9 model regresi → interpretasi dan pembahasan.
+- BAB I–III telah disusun dalam format akademis lengkap.
+- BAB IV–V telah diperluas dengan konten kondisional-interpretatif:
+  - **BAB IV**: Robustness checks (4.5.1–4.5.4: subsample, winsorization, proksi alternatif PBV, System GMM), 7 discussion sections (4.6.1–4.6.7) termasuk analisis komparatif deskriptif Indonesia vs AS menggunakan data SEC EDGAR (4.6.6).
+  - **BAB V**: Kesimpulan terstruktur per RM1–RM4, 6 keterbatasan (termasuk kesenjangan AI disclosure vs adopsi aktual), dan 7 saran penelitian masa depan (termasuk studi lintas negara dengan DID/matching dan pengembangan AID berbasis NLP).
+- Seluruh angka numerik menggunakan placeholder `[akan diisi]` — pengisian menunggu finalisasi dataset panel (laporan keuangan dan annual report).
+- Langkah berikutnya: finalisasi pengumpulan data → estimasi 9 model regresi → pengisian numerik → interpretasi final.

@@ -111,3 +111,18 @@ Tabel skor AID (metode biner dan frekuensi) untuk 26 perusahaan × 7 tahun.
 
 ### 11c. Hasil Validasi Inter-coder Reliability / Spot-check
 Dokumentasi proses validasi 10% sampel secara manual beserta hasil Cohen's Kappa.
+
+## Lampiran 12. Data Perbandingan Rasio Fundamental Indonesia vs AS (Suplementer)
+
+Data pelengkap untuk analisis komparatif deskriptif pada Section 4.6.6 dan Tabel 4.21.
+
+### 12a. Daftar 10 Perusahaan Teknologi AS (Sampel SEC EDGAR)
+Tabel berisi nama perusahaan, ticker, CIK number, dan periode data yang diambil dari SEC EDGAR filings (10-K).
+
+### 12b. Statistik Deskriptif Rasio Fundamental — Perusahaan Teknologi AS
+Tabel statistik deskriptif (mean, median, standar deviasi, minimum, maksimum) untuk variabel: ROA, ROE, NPM, CR, DER, TATO, EPS pada 10 perusahaan teknologi AS.
+
+### 12c. Perbandingan Side-by-Side Indonesia vs AS
+Tabel perbandingan statistik deskriptif rasio fundamental antara 26 perusahaan teknologi BEI dan 10 perusahaan teknologi AS, meliputi perbedaan mean, median, dan distribusi.
+
+**Catatan**: Perbandingan ini bersifat deskriptif, bukan kausal. Perbedaan standar akuntansi (PSAK vs US GAAP), ukuran pasar, dan komposisi sampel membatasi generalisasi langsung. Lihat diskusi lengkap pada Section 4.6.6.

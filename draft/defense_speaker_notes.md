@@ -58,16 +58,22 @@
 
 ## Slide 11 — Hasil (1:00)
 - Jelaskan bahwa BAB I–III sudah lengkap dalam format akademis.
-- BAB IV terstruktur dan siap diisi setelah data final tersedia.
-- Keputusan hipotesis menunggu estimasi model pada dataset panel lengkap.
+- BAB IV telah distruktur dengan robustness checks (4.5.1–4.5.4: subsample, winsorization, proksi alternatif PBV, System GMM) dan 7 discussion sections (4.6.1–4.6.7) termasuk komparasi deskriptif Indonesia vs AS menggunakan data SEC EDGAR.
+- BAB V telah diperluas dengan kesimpulan terstruktur per RM1–RM4, 6 keterbatasan, dan 7 saran penelitian masa depan.
+- Pengisian numerik menunggu finalisasi dataset panel dan estimasi model.
 
 ## Slide 12 — Kontribusi (1:00)
 - Bedakan tiga kontribusi: konteks, variabel, metodologi.
 - Tekankan bahwa multi-dependen dan moderasi AI disclosure belum pernah dilakukan di konteks serupa.
+- Tambahkan: framework perbandingan lintas negara (Saran 5) dengan data awal 10 perusahaan teknologi AS dari SEC EDGAR, membuka jalan bagi studi komparatif DID/matching di masa depan.
 
 ## Slide 13 — Keterbatasan dan Rencana (1:00)
-- Sebutkan 3 keterbatasan utama secara jujur.
+- Sebutkan keterbatasan utama secara jujur, termasuk:
+  - Sampel terbatas (26 perusahaan, 182 observasi)
+  - Periode observasi mencakup pandemi COVID-19
+  - Limitasi 6: AI disclosure ≠ actual adoption — content analysis hanya menangkap pengungkapan di annual report, bukan adopsi teknologi sesungguhnya (potensi *AI-washing*)
 - Jelaskan rencana penyelesaian: finalisasi data → estimasi → interpretasi.
+- Tekankan bahwa keterbatasan telah dimitigasi melalui robustness checks yang komprehensif.
 
 ## Slide 14 — Antisipasi Q&A (1:00)
 - Siapkan jawaban untuk: mengapa sektor teknologi, mengapa 2023, validitas AID, sampel kecil.
