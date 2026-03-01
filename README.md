@@ -9,7 +9,7 @@ Rust workspace for thesis analysis tooling with SEC `data.sec.gov` integration.
 - `draft/`: Thesis draft files (BAB I–V, bibliography, slides, speaker notes, proposal).
 - `output/`: Generated analysis outputs, templates, dashboards, and tracking files.
 - `data/`: Raw and processed data (gitignored).
-- `Plan.md`: Master step-by-step plan with checkbox tracking (231 items).
+- `Plan.md`: Master step-by-step plan with checkbox tracking (239 items).
 
 ## Quick Start
 ```powershell
@@ -387,10 +387,9 @@ Regenerate DOCX:
 pandoc .\draft\thesis_draft.md --reference-doc=.\Skripsi_31998_DZAKI.docx -o .\draft\thesis_draft.docx
 ```
 
-Regenerate PDF:
+Regenerate PDF (requires MiKTeX):
 ```powershell
-pandoc .\draft\thesis_draft.md -s -o .\draft\thesis_draft.html
-& "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless --disable-gpu --print-to-pdf="D:\VsCode\Projek-2\draft\thesis_draft.pdf" "file:///D:/VsCode/Projek-2/draft/thesis_draft.html"
+pandoc .\draft\thesis_draft.md --pdf-engine=xelatex -V geometry:margin=2.5cm -V fontsize=12pt -V "mainfont=Times New Roman" -o .\draft\thesis_draft.pdf
 ```
 
 ## Internal Review Progress (Step 6.1)
@@ -501,26 +500,32 @@ Build manifest:
 - `output/metodologi_penelitian.md`: Methodology implementation notes.
 - `output/preliminary_analysis_note.md`: Preliminary interpretation on pilot panel dataset.
 - `output/cross_sectional_dependence.md`: Preliminary Pesaran CD diagnostic (pilot only).
+- `output/journal_publication_outline.md`: Journal publication plan (target journals, article structure, adaptation notes).
 
 ## Research Plan Progress Snapshot
-- **Overall**: 81.82% complete (189/231 items done, 42 pending).
+- **Overall**: 83.26% complete (199/239 items done, 40 pending).
 - **Phase 0–1**: Complete — literature review, theories, hypotheses, research gap confirmed.
 - **Phase 2**: Methodology mostly done; sample estimation analysis completed (6 scenarios).
 - **Phase 3**: Price data complete (182/182). **FS and AR download pending** (requires manual collection from IDX).
 - **Phase 4**: Automation pipelines ready; awaiting final dataset for full estimation.
-- **Phase 5**: All BAB I–V draft completed in `draft/thesis_draft.md`:
+- **Phase 5**: All BAB I–V draft completed in `draft/thesis_draft.md` (1,511 lines):
   - BAB I–III fully written with proper academic citations (42 references).
-  - BAB IV–V structured with placeholder tables awaiting data.
+  - BAB IV expanded: model selection (4.3), regression tables (4.4, Tabel 4.5–4.13), robustness checks (4.5, Tabel 4.15–4.20, 4 subsections), discussion (4.6, ~2,500 words conditional-interpretive prose), US vs Indonesia comparative analysis (4.6.6, Tabel 4.21).
+  - BAB V expanded: structured conditional conclusions per RM1–RM4, 6 limitations (incl. AI disclosure gap), 7 suggestions (incl. cross-country, NLP-based AID, cross-sector replication).
+  - All numeric values use `[akan diisi]` markers pending data collection.
   - All 10 entries in Tabel 2.1 (Penelitian Terdahulu) cited with proper author names.
-  - Bibliography (DAFTAR PUSTAKA) complete — all in-text citations verified.
+  - Bibliography (DAFTAR PUSTAKA) complete — 42 entries, all in-text citations verified.
+  - DOCX compiled with campus template; PDF compiled with MiKTeX XeLaTeX.
 - **Phase 6**: Defense materials prepared (slides, speaker notes, FAQ, one-page summary).
 - **Phase 7**: US comparison data fetched (10 companies via SEC EDGAR).
 - **Sample**: Scenario C — 26 companies (11 Tech + 15 Telecom), balanced panel, 182 firm-year observations (2019–2025). FREN excluded.
 - All 26 tickers price data fetched via Yahoo Finance v8 API.
+- **Journal outline**: Target journals (SINTA 2 + Scopus Q1/Q2) and article structure documented in `output/journal_publication_outline.md`.
 
 ## Current Blocker
-- **Financial statements (FS) and annual reports (AR) not yet downloaded** from IDX (0/182 each). This blocks the full panel dataset, regression estimation, and BAB IV–V finalization.
+- **Financial statements (FS) and annual reports (AR) not yet downloaded** from IDX (0/182 each). This blocks the full panel dataset, regression estimation, and BAB IV–V numeric finalization.
 - Current panel file is pilot-sized (4 rows); model selection and full inference remain pending until FS/AR collection is completed.
+- All 40 remaining Plan.md items are blocked on either human action (data collection, supervisor) or EViews estimation (requires Phase 3 data).
 
 ## Notes
 - SEC API requires a descriptive `User-Agent`.

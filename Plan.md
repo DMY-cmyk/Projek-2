@@ -392,26 +392,27 @@
 - [x] Deskripsi objek penelitian (profil sektor teknologi BEI) ✅ (versi draft berbasis output populasi/sampel)
 - [x] Statistik deskriptif (tabel + interpretasi) ✅ (versi preliminary)
 - [x] Hasil uji asumsi klasik ✅ (versi preliminary)
-- [ ] Hasil pemilihan model panel
-- [ ] Hasil estimasi model (9 regresi utama):
-  - Model Baseline (Tabel + interpretasi)
-  - Model Moderasi AID (Tabel + interpretasi)
-  - Model Structural Break (Tabel + interpretasi)
-- [x] Hasil robustness checks (tabel ringkasan) ✅ (rujukan output robustness tersedia)
-- [x] Pembahasan: ✅ (versi sementara; pembahasan inferensial final menunggu dataset final)
-  - Hubungkan temuan dengan teori
-  - Bandingkan dengan penelitian terdahulu
-  - Jelaskan mengapa hasil konsisten/berbeda
-  - Implikasi dari moderasi AI dan structural break
+- [x] Hasil pemilihan model panel ✅ (Tabel 4.2 + prosedur + interpretasi conditional; numerik menunggu EViews)
+- [x] Hasil estimasi model (9 regresi utama): ✅ (Tabel 4.5–4.13 + interpretive scaffolding; numerik menunggu dataset)
+  - [x] Model Baseline (Tabel 4.5–4.7 + interpretasi)
+  - [x] Model Moderasi AID (Tabel 4.8–4.10 + interpretasi)
+  - [x] Model Structural Break (Tabel 4.11–4.13 + interpretasi)
+- [x] Hasil robustness checks (tabel ringkasan) ✅ (Tabel 4.15–4.20 + 4 subseksi terstruktur)
+- [x] Pembahasan: ✅ (conditional-interpretive prose ~2.500 kata; final numerik menunggu dataset final)
+  - [x] Hubungkan temuan dengan teori ✅ (Signaling, EMH, RBV, Value Relevance, Innovation Diffusion)
+  - [x] Bandingkan dengan penelitian terdahulu ✅ (Dayanti, Kusdwiantara, Gharbi, Das, Abuzayed, dll.)
+  - [x] Jelaskan mengapa hasil konsisten/berbeda ✅ (conditional framework)
+  - [x] Implikasi dari moderasi AI dan structural break ✅
+  - [x] Analisis komparatif suplementer Indonesia vs AS ✅ (deskriptif, non-kausal)
 - [x] Draft BAB V selesai (versi awal) di `draft/thesis_draft.md`
 
 ### Step 5.5 — BAB V: Kesimpulan & Saran
-- [x] Kesimpulan (jawab setiap rumusan masalah) ✅ (versi interim; final setelah estimasi final)
+- [x] Kesimpulan (jawab setiap rumusan masalah) ✅ (structured conditional templates per RM1-RM4; final numerik menunggu dataset)
 - [x] Implikasi: ✅ (teoretis & praktis versi interim)
   - Teoretis (kontribusi terhadap literatur)
   - Praktis (untuk investor, manajemen, regulator)
-- [x] Keterbatasan penelitian ✅
-- [x] Saran untuk penelitian selanjutnya ✅
+- [x] Keterbatasan penelitian ✅ (6 limitasi termasuk AI disclosure gap)
+- [x] Saran untuk penelitian selanjutnya ✅ (7 saran termasuk cross-country, NLP-based AID, replikasi lintas sektor)
 - [x] Export dokumen draft ke DOCX dan PDF selesai (`draft/thesis_draft.docx`, `draft/thesis_draft.pdf`)
 - [x] Revisi draft mengikuti template kampus utama (`Skripsi_31998_DZAKI.docx`)
 
@@ -469,7 +470,7 @@
 - [ ] Revisi berdasarkan masukan penguji
 - [ ] Finalisasi tesis
 - [ ] Upload ke repositori kampus
-- [ ] (Opsional) Publikasi ke jurnal nasional terakreditasi
+- [ ] (Opsional) Publikasi ke jurnal nasional terakreditasi — outline tersedia: `output/journal_publication_outline.md`
 - [x] Tracker revisi pasca-ujian disiapkan ✅ (`output/post_defense_revision_tracker.md`)
 - [x] Matriks respons revisi penguji disiapkan ✅ (`output/defense_revision_response_matrix.md`)
 - [x] Checklist upload repositori kampus disiapkan ✅ (`output/campus_repository_upload_checklist.md`)

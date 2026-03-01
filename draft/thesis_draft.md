@@ -129,9 +129,26 @@ BAB IV ANALISIS DATA DAN PEMBAHASAN
 4.1 Deskripsi Data Penelitian
 4.2 Statistik Deskriptif
 4.3 Uji Estimasi Model
+  4.3.1 Prosedur Pemilihan Model
+  4.3.2 Interpretasi Pemilihan Model
+  4.3.3 Catatan Teknis
 4.4 Analisis Regresi Data Panel
+  4.4.1 Hasil Regresi Model Baseline (H1–H7)
+  4.4.2 Hasil Regresi Model Moderasi AID (H8–H9)
+  4.4.3 Hasil Regresi Model Structural Break (H10–H11)
 4.5 Robustness Checks
+  4.5.1 Analisis Subsampel
+  4.5.2 Winsorization
+  4.5.3 Proksi Alternatif Nilai Perusahaan
+  4.5.4 System GMM
 4.6 Pembahasan
+  4.6.1 Pengaruh Rasio Profitabilitas (H1–H3)
+  4.6.2 Pengaruh Rasio Likuiditas dan Leverage (H4–H5)
+  4.6.3 Pengaruh Rasio Aktivitas dan Pasar (H6–H7)
+  4.6.4 Moderasi AI Disclosure Index (H8–H9)
+  4.6.5 Structural Break Era GenAI (H10–H11)
+  4.6.6 Analisis Komparatif Suplementer: Indonesia vs AS
+  4.6.7 Ringkasan Keputusan Hipotesis
 
 BAB V PENUTUP
 5.1 Kesimpulan
@@ -150,9 +167,7 @@ Tabel 3.1 Proses Seleksi Sampel Penelitian
 Tabel 3.2 Daftar Perusahaan Sampel
 Tabel 3.3 Definisi Operasional dan Pengukuran Variabel
 Tabel 4.1 Statistik Deskriptif
-Tabel 4.2 Hasil Uji Chow
-Tabel 4.3 Hasil Uji Hausman
-Tabel 4.4 Hasil Uji Breusch-Pagan LM
+Tabel 4.2 Hasil Pemilihan Model Panel (Uji Chow, Hausman, dan BP-LM)
 Tabel 4.5 Hasil Regresi Model Baseline (PRICE)
 Tabel 4.6 Hasil Regresi Model Baseline (RET)
 Tabel 4.7 Hasil Regresi Model Baseline (TQ)
@@ -163,6 +178,13 @@ Tabel 4.11 Hasil Regresi Model Structural Break (PRICE)
 Tabel 4.12 Hasil Regresi Model Structural Break (RET)
 Tabel 4.13 Hasil Regresi Model Structural Break (TQ)
 Tabel 4.14 Ringkasan Keputusan Hipotesis
+Tabel 4.15 Perbandingan Koefisien — Sampel Penuh vs Technology-Only
+Tabel 4.16 Perbandingan Koefisien — Pre-GenAI vs Post-GenAI
+Tabel 4.17 Perbandingan Koefisien — Tanpa Winsorization vs Winsorized
+Tabel 4.18 Perbandingan Koefisien — TQ vs PBV
+Tabel 4.19 Diagnostik System GMM
+Tabel 4.20 Perbandingan Koefisien — Panel Utama vs System GMM
+Tabel 4.21 Perbandingan Deskriptif Rasio Fundamental — Indonesia vs AS
 
 \newpage
 
@@ -749,30 +771,423 @@ Sampel terdiri dari 11 perusahaan sektor teknologi dan 15 perusahaan sektor tele
 
 ## 4.3 Uji Estimasi Model
 
-Pemilihan model terbaik untuk masing-masing persamaan regresi dilakukan melalui Uji Chow, Uji Hausman, dan Uji Breusch-Pagan LM. Hasil pengujian akan menentukan apakah Common Effect Model (CEM), Fixed Effect Model (FEM), atau Random Effect Model (REM) yang paling tepat digunakan untuk setiap model.
+Pemilihan model terbaik untuk masing-masing persamaan regresi dilakukan melalui serangkaian pengujian statistik sesuai prosedur yang telah ditetapkan dalam BAB III (Subbab 3.5.2). Hasil pengujian menentukan apakah Common Effect Model (CEM), Fixed Effect Model (FEM), atau Random Effect Model (REM) yang paling tepat digunakan untuk setiap model regresi.
 
-*[Tabel hasil Uji Chow, Uji Hausman, dan Uji BP-LM untuk masing-masing dari 9 persamaan regresi akan disajikan setelah estimasi dilakukan.]*
+### 4.3.1 Prosedur Pemilihan Model
+
+Prosedur pemilihan model mengikuti alur keputusan tiga tahap sebagaimana direkomendasikan oleh Gujarati dan Porter (2009). Tahap pertama adalah Uji Chow yang membandingkan CEM dengan FEM. Apabila Uji Chow menunjukkan bahwa FEM lebih tepat (p-value < 0,05), maka dilanjutkan ke tahap kedua yaitu Uji Hausman yang membandingkan FEM dengan REM. Apabila Uji Hausman menunjukkan bahwa REM lebih tepat (p-value > 0,05), maka dilanjutkan ke tahap ketiga yaitu Uji Breusch-Pagan Lagrange Multiplier (BP-LM) yang mengonfirmasi pilihan antara CEM dan REM. Seluruh pengujian dilakukan pada tingkat signifikansi α = 0,05.
+
+Pengujian dilakukan untuk masing-masing dari sembilan persamaan regresi yang terdiri dari tiga model baseline (PRICE, RET, TQ), tiga model moderasi AID (PRICE, RET, TQ), dan tiga model structural break (PRICE, RET, TQ). Hasil pengujian disajikan dalam Tabel 4.2 berikut.
+
+**Tabel 4.2 Hasil Pemilihan Model Panel (Uji Chow, Hausman, dan BP-LM)**
+
+| Model | Variabel Dependen | Uji Chow (p-value) | Keputusan Chow | Uji Hausman (p-value) | Keputusan Hausman | Uji BP-LM (p-value) | Model Terpilih |
+|-------|-------------------|--------------------|-----------------|-----------------------|-------------------|---------------------|----------------|
+| 1a – Baseline | PRICE | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 1b – Baseline | RET | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 1c – Baseline | TQ | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 2a – Moderasi AID | PRICE | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 2b – Moderasi AID | RET | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 2c – Moderasi AID | TQ | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 3a – Structural Break | PRICE | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 3b – Structural Break | RET | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+| 3c – Structural Break | TQ | [akan diisi] | [CEM/FEM] | [akan diisi] | [FEM/REM] | [akan diisi] | [akan diisi] |
+
+*Catatan: Nilai p-value dan keputusan model akan diisi setelah estimasi dengan data final. Seluruh pengujian dilakukan pada α = 0,05.*
+
+### 4.3.2 Interpretasi Pemilihan Model
+
+Interpretasi hasil pemilihan model bergantung pada model yang terpilih melalui prosedur pengujian di atas. Setiap model memiliki implikasi metodologis yang berbeda terhadap estimasi koefisien dan interpretasi hasil.
+
+Apabila **Fixed Effect Model (FEM)** terpilih, maka model mengakomodasi heterogenitas antar perusahaan melalui intersep yang berbeda-beda (*individual fixed effects*). Konsekuensinya, variabel yang bersifat *time-invariant* atau berubah sangat lambat antar waktu — seperti AGE — akan mengalami masalah kolinieritas dengan efek tetap individu. Dalam konteks penelitian ini, AGE berkorelasi tinggi dengan efek tetap karena AGE merupakan fungsi linear dari tahun observasi dan tahun listing yang bersifat konstan per perusahaan. Apabila FEM terpilih, koefisien AGE mungkin tidak dapat diestimasi atau tidak reliabel, sehingga interpretasinya perlu dilakukan dengan hati-hati. Estimasi FEM menggunakan *robust standard errors* (White cross-section) untuk menangani potensi heteroskedastisitas dan korelasi antar cross-section.
+
+Apabila **Random Effect Model (REM)** terpilih, maka perbedaan antar perusahaan diperlakukan sebagai komponen error acak. Keunggulan REM adalah kemampuannya untuk memasukkan variabel *time-invariant* seperti AGE secara langsung dalam estimasi. REM juga menghasilkan estimator yang lebih efisien dibandingkan FEM apabila asumsi bahwa efek individu tidak berkorelasi dengan variabel independen terpenuhi. Estimasi REM menggunakan metode Generalized Least Squares (GLS) dengan koreksi Swamy-Arora atau Wallace-Hussain.
+
+Apabila **Common Effect Model (CEM)** terpilih, maka model tidak mempertimbangkan heterogenitas individu dan mengasumsikan bahwa intersep dan slope sama untuk seluruh perusahaan. CEM merupakan model paling sederhana dan tepat digunakan apabila variasi antar perusahaan tidak signifikan secara statistik. Estimasi CEM menggunakan OLS dengan opsi *robust standard errors* untuk koreksi heteroskedastisitas.
+
+Perlu dicatat bahwa model yang terpilih dapat berbeda antar persamaan regresi, mengingat karakteristik masing-masing variabel dependen yang berbeda. Harga saham (PRICE) cenderung memiliki variasi antar perusahaan yang tinggi karena perbedaan skala harga, sehingga kemungkinan FEM terpilih lebih besar. Return saham (RET) dan Tobin's Q (TQ) yang sudah berupa rasio cenderung memiliki variasi antar perusahaan yang lebih rendah, sehingga REM atau CEM mungkin lebih tepat.
+
+### 4.3.3 Catatan Teknis
+
+Seluruh prosedur pemilihan model diimplementasikan menggunakan EViews 13 dengan *workfile* bertipe panel (*balanced panel*, N = 26, T = 7). Alur estimasi dan pengujian dilakukan secara terstruktur mengikuti pipeline otomasi yang telah disiapkan. Output lengkap hasil Uji Chow, Uji Hausman, dan Uji BP-LM untuk masing-masing persamaan disajikan dalam **Lampiran 5**. Hasil akhir pemilihan model menjadi dasar bagi estimasi regresi yang dibahas dalam Subbab 4.4.
 
 ## 4.4 Analisis Regresi Data Panel
 
-Hasil estimasi regresi data panel untuk sembilan model penelitian akan disajikan dalam tabel-tabel berikut:
+Setelah model terbaik ditentukan melalui prosedur pemilihan model pada Subbab 4.3, dilakukan estimasi regresi data panel untuk seluruh sembilan persamaan. Hasil estimasi disajikan dalam tiga kelompok model: model baseline (Tabel 4.5–4.7), model moderasi AID (Tabel 4.8–4.10), dan model structural break (Tabel 4.11–4.13). Seluruh estimasi menggunakan *robust standard errors* untuk menangani potensi heteroskedastisitas.
 
-- **Model Baseline**: Tabel 4.5 (PRICE), Tabel 4.6 (RET), Tabel 4.7 (TQ)
-- **Model Moderasi AID**: Tabel 4.8 (PRICE), Tabel 4.9 (RET), Tabel 4.10 (TQ)
-- **Model Structural Break**: Tabel 4.11 (PRICE), Tabel 4.12 (RET), Tabel 4.13 (TQ)
+### 4.4.1 Hasil Regresi Model Baseline (H1–H7)
 
-*[Tabel-tabel hasil regresi akan disajikan setelah estimasi dilakukan, memuat koefisien, standard error, t-statistic, p-value, R², Adjusted R², dan F-statistic.]*
+Model baseline menguji pengaruh langsung tujuh rasio fundamental terhadap masing-masing variabel dependen, dengan empat variabel kontrol. Model ini menjadi dasar untuk menguji hipotesis H1 hingga H7.
+
+**Tabel 4.5 Hasil Regresi Model Baseline — Variabel Dependen: PRICE**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%. Estimasi menggunakan [CEM/FEM/REM] sesuai hasil Tabel 4.2.*
+
+**Tabel 4.6 Hasil Regresi Model Baseline — Variabel Dependen: RET**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%. Estimasi menggunakan [CEM/FEM/REM] sesuai hasil Tabel 4.2.*
+
+**Tabel 4.7 Hasil Regresi Model Baseline — Variabel Dependen: TQ**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%. Estimasi menggunakan [CEM/FEM/REM] sesuai hasil Tabel 4.2.*
+
+Berdasarkan hasil estimasi model baseline, dapat diidentifikasi variabel independen mana yang memiliki pengaruh signifikan terhadap masing-masing variabel dependen. Perbandingan konsistensi pengaruh rasio fundamental antar ketiga variabel dependen memberikan gambaran mengenai dimensi *value relevance* yang berbeda dari setiap rasio fundamental.
+
+### 4.4.2 Hasil Regresi Model Moderasi AID (H8–H9)
+
+Model moderasi menambahkan variabel AI Disclosure Index (AID) dan lima term interaksi (ROA×AID, ROE×AID, NPM×AID, CR×AID, DER×AID) ke dalam model baseline. Signifikansi koefisien interaksi menunjukkan apakah AID memperkuat atau memperlemah pengaruh rasio fundamental terhadap variabel dependen.
+
+**Tabel 4.8 Hasil Regresi Model Moderasi AID — Variabel Dependen: PRICE**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%. Term interaksi diinterpretasi sebagai efek moderasi AID terhadap pengaruh rasio fundamental.*
+
+**Tabel 4.9 Hasil Regresi Model Moderasi AID — Variabel Dependen: RET**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%.*
+
+**Tabel 4.10 Hasil Regresi Model Moderasi AID — Variabel Dependen: TQ**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × AID | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%.*
+
+Interpretasi term interaksi pada model moderasi memerlukan perhatian khusus. Koefisien interaksi (misalnya ROA × AID) menunjukkan seberapa besar efek marginal ROA terhadap variabel dependen berubah ketika AID meningkat satu unit. Koefisien interaksi yang positif dan signifikan mengindikasikan bahwa AID memperkuat pengaruh positif variabel independen, sedangkan koefisien interaksi yang negatif mengindikasikan efek pelemahan. Perlu diperhatikan bahwa dalam model moderasi, koefisien utama (misalnya ROA) diinterpretasi sebagai efek ROA ketika AID = 0, bukan sebagai efek rata-rata.
+
+### 4.4.3 Hasil Regresi Model Structural Break (H10–H11)
+
+Model structural break menambahkan dummy variabel era Generative AI (DGENAI) dan lima term interaksi (ROA×DGENAI, ROE×DGENAI, NPM×DGENAI, CR×DGENAI, DER×DGENAI) ke dalam model baseline. Signifikansi koefisien interaksi menunjukkan apakah pengaruh rasio fundamental berbeda secara signifikan antara periode pre-GenAI (2019–2022) dan post-GenAI (2023–2025).
+
+**Tabel 4.11 Hasil Regresi Model Structural Break — Variabel Dependen: PRICE**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%. Koefisien DGENAI menunjukkan pergeseran intersep, koefisien interaksi menunjukkan pergeseran slope.*
+
+**Tabel 4.12 Hasil Regresi Model Structural Break — Variabel Dependen: RET**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%.*
+
+**Tabel 4.13 Hasil Regresi Model Structural Break — Variabel Dependen: TQ**
+
+| Variabel | Koefisien | Std. Error | t-Statistic | p-value | Sig. |
+|----------|-----------|------------|-------------|---------|------|
+| C (Konstanta) | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROA × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| ROE × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| NPM × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| CR × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| DER × DGENAI | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| SIZE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| GROWTH | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| AGE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| VOL | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | |
+| **Model Fit** | R² = [akan diisi] | Adj. R² = [akan diisi] | F-stat = [akan diisi] | Prob(F) = [akan diisi] | |
+| **Obs.** | N = 182 | | | | |
+
+*Catatan: ***, **, * menunjukkan signifikansi pada level 1%, 5%, 10%.*
+
+Pada model structural break, koefisien utama variabel independen (misalnya ROA) menunjukkan pengaruh variabel tersebut pada periode pre-GenAI (DGENAI = 0, yaitu 2019–2022). Koefisien interaksi (misalnya ROA × DGENAI) menunjukkan perubahan inkremental pada koefisien tersebut di periode post-GenAI (2023–2025). Dengan demikian, pengaruh total ROA pada periode post-GenAI adalah penjumlahan koefisien ROA dan koefisien ROA × DGENAI. Uji signifikansi bersama (*joint significance test*) terhadap seluruh term interaksi DGENAI dilakukan untuk menguji H10 secara keseluruhan.
 
 ## 4.5 Robustness Checks
 
-Untuk memastikan konsistensi hasil pengujian utama, dilakukan serangkaian pengujian *robustness* sebagai berikut:
+Untuk memastikan konsistensi dan reliabilitas hasil pengujian utama, dilakukan serangkaian pengujian *robustness* yang mencakup analisis subsampel, penanganan outlier, proksi alternatif, dan estimasi System GMM. Masing-masing pengujian dirancang untuk mengatasi potensi ancaman terhadap validitas internal hasil regresi utama.
 
-1. **Analisis subsampel**: Estimasi ulang menggunakan subsampel (a) Technology-only, (b) Pre-GenAI vs Post-GenAI, dan (c) Exclude tahun 2020 (efek COVID).
-2. **Winsorization**: Penanganan outlier dengan winsorization pada persentil 1% dan 99%.
-3. **Proksi alternatif**: Penggunaan Price to Book Value (PBV) sebagai proksi alternatif nilai perusahaan.
-4. **System GMM**: Estimasi menggunakan System Generalized Method of Moments untuk menangani potensi endogeneity.
+### 4.5.1 Analisis Subsampel
 
-*[Hasil robustness checks akan disajikan setelah estimasi dilakukan.]*
+Analisis subsampel bertujuan untuk menguji apakah temuan utama konsisten ketika estimasi dilakukan pada subset data yang berbeda. Tiga skenario subsampel digunakan:
+
+**a) Subsampel Technology-Only (11 perusahaan, 77 observasi)**
+
+Sampel penuh mencakup perusahaan dari dua subsektor: sektor teknologi (IDX-IC Sektor I, 11 perusahaan) dan sektor telekomunikasi (IDX-IC Sektor J3, 15 perusahaan). Estimasi ulang dilakukan hanya pada subsampel perusahaan sektor teknologi untuk memverifikasi bahwa temuan tidak didorong oleh karakteristik spesifik perusahaan telekomunikasi yang cenderung memiliki struktur modal, skala aset, dan pola pendapatan yang berbeda. Subsampel ini juga lebih tepat merepresentasikan perusahaan yang paling terpapar dampak langsung era Generative AI.
+
+**Tabel 4.15 Perbandingan Koefisien — Sampel Penuh vs Technology-Only (Model Baseline)**
+
+| Variabel | PRICE (Full) | PRICE (Tech) | RET (Full) | RET (Tech) | TQ (Full) | TQ (Tech) |
+|----------|-------------|-------------|-----------|-----------|----------|----------|
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| Adj. R² | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| N | 182 | 77 | 182 | 77 | 182 | 77 |
+
+*Catatan: Tabel menampilkan koefisien dan signifikansi. Konsistensi arah dan signifikansi antar sampel penuh dan subsampel mengindikasikan robustness hasil.*
+
+**b) Subsampel Pre-GenAI vs Post-GenAI**
+
+Estimasi model baseline dilakukan secara terpisah untuk periode pre-GenAI (2019–2022, 4 tahun, 104 observasi) dan post-GenAI (2023–2025, 3 tahun, 78 observasi). Analisis ini melengkapi model structural break (Subbab 4.4.3) dengan memberikan estimasi koefisien yang sepenuhnya independen antar periode, tanpa mengasumsikan kesamaan parameter lain selain yang diinteraksikan.
+
+**Tabel 4.16 Perbandingan Koefisien — Pre-GenAI vs Post-GenAI (Model Baseline PRICE)**
+
+| Variabel | Pre-GenAI (2019–2022) | Post-GenAI (2023–2025) | Perbedaan Arah |
+|----------|-----------------------|------------------------|----------------|
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] |
+| Adj. R² | [akan diisi] | [akan diisi] | — |
+| N | 104 | 78 | — |
+
+*Catatan: Perbandingan serupa untuk variabel dependen RET dan TQ disajikan dalam Lampiran 9.*
+
+**c) Subsampel Exclude Tahun 2020 (COVID-19)**
+
+Tahun 2020 merupakan periode luar biasa akibat pandemi COVID-19 yang menyebabkan gangguan signifikan terhadap pasar modal dan kinerja keuangan perusahaan (Costa *et al.*, 2023). Estimasi ulang dilakukan dengan mengeksklusi tahun 2020 (26 perusahaan × 6 tahun = 156 observasi) untuk memverifikasi bahwa temuan utama tidak didorong oleh efek COVID-19 yang bersifat *one-off*. Apabila arah dan signifikansi koefisien tetap konsisten setelah eksklusi tahun 2020, maka temuan utama dinilai robust terhadap pengaruh pandemi.
+
+### 4.5.2 Winsorization
+
+Penanganan outlier dilakukan melalui *winsorization* pada persentil 1% dan 99% untuk seluruh variabel kontinu. Nilai yang berada di bawah persentil 1% diganti dengan nilai persentil 1%, dan nilai di atas persentil 99% diganti dengan nilai persentil 99%. Prosedur ini memitigasi pengaruh *extreme values* tanpa menghapus observasi, sehingga ukuran sampel tetap 182 observasi.
+
+**Tabel 4.17 Perbandingan Koefisien — Tanpa Winsorization vs Winsorized (Model Baseline PRICE)**
+
+| Variabel | Koef. Original | Sig. | Koef. Winsorized | Sig. | Konsisten? |
+|----------|---------------|------|-----------------|------|-----------|
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+
+*Catatan: Kolom "Konsisten?" menunjukkan apakah arah dan signifikansi koefisien tidak berubah setelah winsorization. Perbandingan untuk model RET dan TQ disajikan dalam Lampiran 9.*
+
+Apabila hasil utama tetap konsisten setelah winsorization, maka temuan dinilai tidak sensitif terhadap observasi ekstrem. Apabila terdapat perubahan signifikansi pada variabel tertentu, hal ini akan didiskusikan secara spesifik sebagai indikasi bahwa hubungan tersebut mungkin didorong oleh observasi outlier.
+
+### 4.5.3 Proksi Alternatif Nilai Perusahaan
+
+Sebagai uji sensitivitas terhadap pengukuran variabel dependen, digunakan Price to Book Value (PBV) sebagai proksi alternatif untuk Tobin's Q. PBV dihitung sebagai rasio harga pasar per saham terhadap nilai buku per saham, dan merupakan proksi yang umum digunakan dalam literatur untuk mengukur valuasi relatif perusahaan terhadap nilai bukunya. Penggunaan PBV sebagai alternatif TQ bertujuan untuk memastikan bahwa temuan tidak bergantung pada satu proksi valuasi tertentu.
+
+**Tabel 4.18 Perbandingan Koefisien — TQ vs PBV sebagai Variabel Dependen (Model Baseline)**
+
+| Variabel | TQ (Koef.) | TQ (Sig.) | PBV (Koef.) | PBV (Sig.) | Konsisten? |
+|----------|-----------|----------|------------|----------|-----------|
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+
+*Catatan: Konsistensi arah dan signifikansi antara model TQ dan PBV memperkuat validitas temuan terhadap pilihan proksi valuasi.*
+
+### 4.5.4 System GMM
+
+Untuk mengatasi potensi endogeneity — yang dapat timbul dari simultaneitas antara kinerja keuangan dan valuasi pasar (*reverse causality*), variabel yang dihilangkan (*omitted variables*), atau kesalahan pengukuran — dilakukan estimasi menggunakan System Generalized Method of Moments (System GMM) sebagaimana dikembangkan oleh Arellano dan Bond (1991) serta Blundell dan Bond (1998). System GMM menggunakan lag variabel dependen dan lag variabel independen sebagai instrumen internal, sehingga tidak memerlukan instrumen eksternal yang sulit diperoleh.
+
+Estimasi System GMM dilakukan pada model baseline dengan variabel dependen utama (PRICE, RET, TQ). Validitas estimasi dievaluasi melalui tiga diagnostik utama:
+
+1. **Uji Arellano-Bond AR(1)**: Diharapkan **signifikan** (p < 0,05), mengindikasikan adanya autokorelasi orde pertama pada residual *first-differenced* yang merupakan konsekuensi wajar dari transformasi.
+2. **Uji Arellano-Bond AR(2)**: Diharapkan **tidak signifikan** (p > 0,05), mengonfirmasi tidak adanya autokorelasi orde kedua pada residual asli, yang merupakan syarat konsistensi estimator GMM.
+3. **Uji Hansen (atau Sargan)**: Diharapkan **tidak signifikan** (p > 0,05), mengonfirmasi validitas instrumen yang digunakan (*overidentifying restrictions* terpenuhi).
+
+**Tabel 4.19 Diagnostik System GMM**
+
+| Diagnostik | PRICE | RET | TQ |
+|------------|-------|-----|-----|
+| AR(1) p-value | [akan diisi] | [akan diisi] | [akan diisi] |
+| AR(2) p-value | [akan diisi] | [akan diisi] | [akan diisi] |
+| Hansen p-value | [akan diisi] | [akan diisi] | [akan diisi] |
+| Jumlah instrumen | [akan diisi] | [akan diisi] | [akan diisi] |
+| Jumlah grup | 26 | 26 | 26 |
+
+*Catatan: Jumlah instrumen harus lebih kecil dari jumlah grup untuk menghindari proliferasi instrumen (Roodman, 2009).*
+
+Apabila diagnostik System GMM terpenuhi dan arah serta signifikansi koefisien utama konsisten dengan model panel utama, maka temuan dinilai robust terhadap ancaman endogeneity. Apabila terdapat perubahan substansial pada koefisien, hal ini akan didiskusikan sebagai indikasi potensi *endogeneity bias* pada model utama, dan interpretasi akan disesuaikan.
+
+**Tabel 4.20 Perbandingan Koefisien — Panel Utama vs System GMM (PRICE)**
+
+| Variabel | Panel (Koef.) | Panel (Sig.) | GMM (Koef.) | GMM (Sig.) | Konsisten? |
+|----------|--------------|-------------|------------|----------|-----------|
+| L.PRICE | — | — | [akan diisi] | [akan diisi] | — |
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| CR | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| TATO | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+
+*Catatan: L.PRICE adalah lag variabel dependen yang hanya ada pada model GMM. Perbandingan untuk RET dan TQ disajikan dalam Lampiran 9.*
+
+Ringkasan hasil seluruh *robustness checks* akan disajikan dalam bentuk matriks konsistensi yang menunjukkan apakah kesimpulan hipotesis utama tetap berlaku pada setiap skenario pengujian alternatif. Konsistensi yang tinggi memperkuat validitas internal temuan, sementara inkonsistensi akan dibahas sebagai batasan yang perlu diperhatikan dalam interpretasi.
 
 ## 4.6 Pembahasan
 
@@ -780,25 +1195,111 @@ Pembahasan temuan penelitian akan mengaitkan hasil estimasi dengan hipotesis yan
 
 ### 4.6.1 Pengaruh Rasio Profitabilitas (H1–H3)
 
-*[Pembahasan hasil pengujian H1–H3 dalam konteks Signaling Theory dan Value Relevance Theory.]*
+Hipotesis H1–H3 menguji pengaruh tiga rasio profitabilitas — ROA, ROE, dan NPM — terhadap harga saham (PRICE), return saham (RET), dan Tobin's Q (TQ) perusahaan sektor teknologi dan telekomunikasi di BEI. Ketiga hipotesis memprediksi arah positif berdasarkan Signaling Theory (Spence, 1973; Ross, 1977) dan Value Relevance Theory (Ohlson, 1995; Barth *et al.*, 2001).
+
+**Return on Assets (ROA) — H1a–c.** Berdasarkan hasil estimasi model baseline (Tabel 4.5–4.7), koefisien ROA terhadap [ketiga/sebagian] variabel dependen menunjukkan [arah dan signifikansi — akan diisi setelah data tersedia]. Apabila ROA berpengaruh positif signifikan, temuan ini konsisten dengan Signaling Theory bahwa kemampuan perusahaan menghasilkan laba dari total asetnya merupakan sinyal positif bagi investor. Dalam konteks sektor teknologi, ROA yang tinggi mengindikasikan bahwa investasi perusahaan dalam aset teknologi — termasuk *software*, infrastruktur digital, dan *intellectual property* — memberikan imbal hasil yang memadai. Temuan ini sejalan dengan Dayanti *et al.* (2024) yang menemukan pengaruh positif signifikan ROA terhadap harga saham perusahaan teknologi BEI, serta Kusdwiantara (2025) yang mendokumentasikan pengaruh profitabilitas terhadap nilai perusahaan di BEI secara umum.
+
+Apabila ROA tidak signifikan terhadap RET, hal ini dapat dijelaskan oleh sifat return yang lebih volatile dan forward-looking dibandingkan harga saham level yang bersifat *backward-looking*. Investor mungkin sudah mengantisipasi informasi profitabilitas sebelum laporan keuangan dipublikasikan (*semi-strong efficiency*), sehingga pengumuman ROA tidak lagi menghasilkan abnormal return yang signifikan (Fama, 1970).
+
+**Return on Equity (ROE) — H2a–c.** Koefisien ROE menunjukkan [arah dan signifikansi — akan diisi]. ROE mengukur efisiensi penggunaan ekuitas pemegang saham dan merupakan metrik yang sangat diperhatikan oleh investor karena langsung berkaitan dengan return atas investasi mereka. Apabila ROE berpengaruh positif signifikan, hal ini memperkuat argumen bahwa struktur permodalan perusahaan teknologi yang *equity-heavy* (rata-rata DER relatif rendah) menjadikan ROE sebagai indikator kinerja yang lebih relevan dibandingkan sektor lain yang lebih bergantung pada utang.
+
+Perlu diperhatikan bahwa ROE dan ROA memiliki korelasi yang tinggi melalui komponen DuPont (*ROE = ROA × equity multiplier*), sehingga dalam model multivariat, salah satu variabel mungkin kehilangan signifikansi akibat *multicollinearity*. Apabila hal ini terjadi, interpretasi sebaiknya difokuskan pada variabel yang menunjukkan *variance inflation factor* (VIF) yang lebih rendah atau yang lebih stabil antar model.
+
+**Net Profit Margin (NPM) — H3a–c.** Koefisien NPM menunjukkan [arah dan signifikansi — akan diisi]. NPM mencerminkan kemampuan perusahaan dalam mengendalikan biaya dan mempertahankan marjin laba dari pendapatan. Dalam sektor teknologi, NPM memiliki relevansi khusus karena perusahaan teknologi cenderung memiliki struktur biaya dengan proporsi biaya tetap yang tinggi (*high operating leverage*), sehingga peningkatan pendapatan dapat secara signifikan meningkatkan NPM melalui *scalability* bisnis digital.
+
+Apabila NPM menunjukkan pengaruh yang lebih kuat terhadap TQ dibandingkan PRICE atau RET, hal ini dapat diinterpretasi bahwa marjin profitabilitas lebih relevan untuk valuasi jangka panjang perusahaan (yang diukur oleh TQ) dibandingkan harga saham atau return jangka pendek. Temuan ini konsisten dengan Novy-Marx (2013) yang menunjukkan bahwa profitabilitas merupakan faktor yang kuat dalam menjelaskan variasi *cross-sectional* return saham.
 
 ### 4.6.2 Pengaruh Rasio Likuiditas dan Leverage (H4–H5)
 
-*[Pembahasan hasil pengujian H4–H5 dalam konteks Signaling Theory.]*
+Hipotesis H4 menguji pengaruh positif Current Ratio (CR) dan H5 menguji pengaruh negatif Debt to Equity Ratio (DER) terhadap ketiga variabel dependen. Kedua hipotesis dilandasi oleh Signaling Theory, dengan DER juga dipertimbangkan dari perspektif *trade-off theory*.
+
+**Current Ratio (CR) — H4a–c.** Hasil estimasi menunjukkan koefisien CR [arah dan signifikansi — akan diisi]. CR mengukur kemampuan perusahaan memenuhi kewajiban jangka pendek menggunakan aset lancar. Apabila CR berpengaruh positif signifikan, temuan ini mengonfirmasi bahwa likuiditas yang memadai mengirimkan sinyal positif kepada pasar mengenai *going concern* perusahaan dan kemampuannya menghindari *financial distress* (Brigham dan Houston, 2021). Bagi perusahaan teknologi yang seringkali memiliki siklus pendapatan yang fluktuatif dan bergantung pada kontrak jangka panjang, likuiditas menjadi faktor penting dalam menjaga kelangsungan operasional.
+
+Namun, apabila CR menunjukkan pengaruh negatif atau tidak signifikan, hal ini dapat mengindikasikan bahwa likuiditas yang berlebihan (*excess liquidity*) dipandang investor sebagai tanda inefisiensi dalam pengelolaan modal kerja. Perusahaan teknologi yang menyimpan terlalu banyak kas mungkin dianggap tidak optimal dalam mengalokasikan sumber daya untuk investasi pertumbuhan — suatu interpretasi yang relevan untuk sektor dengan peluang investasi tinggi. Ambarawati (2025) menemukan bahwa manajemen modal kerja memiliki dampak terhadap *financial distress* dan return saham, yang sejalan dengan argumen bahwa pengelolaan likuiditas harus optimal, bukan semata-mata tinggi.
+
+**Debt to Equity Ratio (DER) — H5a–c.** Hipotesis H5 memprediksi pengaruh negatif DER berdasarkan argumen bahwa leverage yang tinggi meningkatkan risiko keuangan. Hasil estimasi menunjukkan koefisien DER [arah dan signifikansi — akan diisi]. Interpretasi DER perlu dilakukan dengan nuansa:
+
+Apabila DER berpengaruh **negatif signifikan**, temuan ini konsisten dengan perspektif *pecking order* dan Signaling Theory — leverage yang tinggi mengirimkan sinyal risiko kebangkrutan yang lebih besar, sehingga investor mendiskon nilai perusahaan. Irani *et al.* (2025) menemukan pengaruh DER terhadap nilai perusahaan teknologi BEI yang mengonfirmasi relevansi struktur modal dalam penilaian investor di sektor ini.
+
+Apabila DER berpengaruh **positif** atau **tidak signifikan**, hal ini dapat dijelaskan oleh *trade-off theory* (Fama dan French, 1992) — penggunaan utang yang produktif (misalnya untuk mendanai ekspansi infrastruktur digital atau akuisisi teknologi) dapat meningkatkan nilai perusahaan melalui *tax shield* dan peningkatan skala bisnis. Beberapa perusahaan telekomunikasi dalam sampel memiliki DER yang relatif tinggi akibat investasi infrastruktur jaringan, namun investasi tersebut menghasilkan arus kas yang stabil dari layanan berlangganan.
+
+Dayanti *et al.* (2024) menemukan bahwa DER berpengaruh signifikan terhadap harga saham perusahaan teknologi BEI, meskipun arah pengaruhnya bergantung pada konteks industri. Hasil penelitian ini akan dibandingkan dengan temuan Dayanti *et al.* untuk mengidentifikasi konsistensi atau perbedaan pola dalam hubungan leverage-valuasi di sektor teknologi Indonesia.
 
 ### 4.6.3 Pengaruh Rasio Aktivitas dan Pasar (H6–H7)
 
-*[Pembahasan hasil pengujian H6–H7 dalam konteks Signaling Theory dan EMH.]*
+Hipotesis H6 menguji pengaruh positif Total Asset Turnover (TATO), sementara H7 menguji pengaruh positif Earnings per Share (EPS) terhadap ketiga variabel dependen. Keduanya dilandasi oleh Signaling Theory dan konsep *value relevance* informasi akuntansi.
+
+**Total Asset Turnover (TATO) — H6a–c.** Hasil estimasi menunjukkan koefisien TATO [arah dan signifikansi — akan diisi]. TATO mengukur efisiensi perusahaan dalam menggunakan total asetnya untuk menghasilkan pendapatan. Apabila TATO berpengaruh positif signifikan, temuan ini mengindikasikan bahwa investor menghargai efisiensi penggunaan aset sebagai indikator kualitas manajemen operasional. Dayanti *et al.* (2024) menemukan bahwa TATO berpengaruh signifikan terhadap harga saham perusahaan teknologi BEI, yang mendukung relevansi rasio aktivitas dalam konteks sektor ini.
+
+Namun, perlu dicatat bahwa perusahaan teknologi — khususnya yang bergerak dalam model bisnis *asset-light* seperti *software-as-a-service* (SaaS) dan platform digital — memiliki karakteristik TATO yang berbeda dari perusahaan manufaktur. Perusahaan teknologi dengan aset tidak berwujud yang dominan (paten, *goodwill*, *software*) cenderung memiliki total aset yang lebih rendah relatif terhadap pendapatan, menghasilkan TATO yang lebih tinggi. Sebaliknya, perusahaan telekomunikasi dengan investasi besar dalam infrastruktur jaringan cenderung memiliki TATO yang lebih rendah. Perbedaan struktural ini perlu dipertimbangkan dalam interpretasi, dan subsampel Technology-only pada Subbab 4.5.1 memberikan verifikasi tambahan.
+
+**Earnings per Share (EPS) — H7a–c.** Hasil estimasi menunjukkan koefisien EPS [arah dan signifikansi — akan diisi]. EPS merupakan metrik keuangan yang paling langsung dipahami dan digunakan oleh investor ritel maupun institusional karena secara eksplisit menunjukkan laba yang diatribusikan ke setiap lembar saham. Dalam kerangka Value Relevance Theory (Ball dan Brown, 1968; Ohlson, 1995), EPS merupakan salah satu variabel yang paling konsisten menunjukkan *value relevance* dalam literatur empiris.
+
+Apabila EPS berpengaruh positif signifikan terhadap PRICE, temuan ini sangat diharapkan karena secara mekanis harga saham merupakan fungsi dari EPS melalui *price-earnings ratio*. Relevansi EPS terhadap RET lebih bergantung pada komponen *unexpected earnings* — yaitu sejauh mana EPS aktual berbeda dari ekspektasi pasar. Dalam model penelitian ini yang menggunakan level EPS (bukan *earnings surprise*), pengaruh terhadap RET mungkin lebih lemah.
+
+Relevansi EPS terhadap TQ juga perlu dicermati. Sloan (1996) menunjukkan bahwa *earnings persistence* — sejauh mana EPS saat ini memprediksi EPS masa depan — memengaruhi reaksi pasar terhadap informasi laba. Perusahaan teknologi dengan *earnings quality* yang tinggi (EPS yang stabil dan *cash-based*) cenderung mendapat valuasi yang lebih tinggi dibandingkan perusahaan dengan laba yang volatile atau bergantung pada *accruals*. Apabila EPS berpengaruh positif terhadap TQ, hal ini mengindikasikan bahwa pasar menilai kemampuan perusahaan menghasilkan laba per saham sebagai sinyal keberlanjutan bisnis jangka panjang.
 
 ### 4.6.4 Moderasi AI Disclosure Index (H8–H9)
 
-*[Pembahasan hasil pengujian H8–H9 dalam konteks Resource-Based View dan Innovation Diffusion Theory.]*
+Hipotesis H8 menyatakan bahwa AI Disclosure Index (AID) memperkuat pengaruh positif rasio profitabilitas (ROA, ROE, NPM) terhadap variabel dependen, sementara H9 menyatakan bahwa AID memperkuat pengaruh rasio likuiditas (CR) dan leverage (DER). Kedua hipotesis dilandasi oleh Resource-Based View (Barney, 1991) dan Innovation Diffusion Theory (Rogers, 1962).
+
+**Interpretasi efek moderasi.** Hasil estimasi model moderasi AID (Tabel 4.8–4.10) menunjukkan koefisien interaksi [pola signifikansi — akan diisi setelah data tersedia]. Dalam model moderasi, interpretasi koefisien memerlukan perhatian khusus: koefisien variabel utama (misalnya ROA) menunjukkan pengaruh ROA ketika AID = 0 (perusahaan tanpa pengungkapan AI), sedangkan koefisien interaksi (ROA × AID) menunjukkan perubahan pengaruh ROA untuk setiap peningkatan satu unit AID. Efek marginal total ROA pada tingkat AID tertentu adalah: β_ROA + β_(ROA×AID) × AID.
+
+**Moderasi pada rasio profitabilitas (H8).** Apabila koefisien interaksi profitabilitas × AID bernilai positif dan signifikan, temuan ini mendukung argumen RBV bahwa perusahaan dengan kapabilitas AI yang superior (*early adopters* dalam terminologi Rogers) mampu mengekstrak nilai lebih dari asetnya. Perusahaan yang secara aktif mengadopsi dan mengungkapkan strategi AI menunjukkan kapabilitas teknologi yang memenuhi kriteria VRIN (Barney, 1991) — khususnya *inimitable* dan *non-substitutable* — sehingga profitabilitas perusahaan tersebut dipandang lebih bernilai oleh investor.
+
+Gharbi *et al.* (2025) dalam tinjauan sistematis menemukan hubungan positif antara adopsi AI dan nilai perusahaan, yang mendukung prediksi bahwa AID memperkuat relevansi informasi keuangan. Al-Mashaqbeh *et al.* (2025) dalam meta-analisis transformasi digital juga menunjukkan bahwa transparansi pengungkapan teknologi memperkuat persepsi kinerja berkelanjutan perusahaan. Mulyana *et al.* (2025) secara spesifik meneliti pengaruh adopsi AI terhadap ESG dan nilai perusahaan di Indonesia, memberikan konteks lokal yang relevan.
+
+Apabila koefisien interaksi tidak signifikan, hal ini dapat mengindikasikan bahwa pasar modal Indonesia belum secara efektif memproses informasi pengungkapan AI, atau bahwa variasi AID dalam sampel belum cukup lebar untuk mendeteksi efek moderasi. Mengingat bahwa pengungkapan AI di BEI masih relatif baru dan belum terstandarisasi, ketidaksignifikanan mungkin mencerminkan tahap awal difusi inovasi di mana pasar belum sepenuhnya memahami implikasi strategis pengungkapan AI.
+
+**Moderasi pada rasio likuiditas dan leverage (H9).** Apabila AID memperkuat pengaruh CR (interaksi CR × AID positif signifikan), hal ini menunjukkan bahwa perusahaan dengan pengungkapan AI yang tinggi mampu mengonversi likuiditas menjadi investasi teknologi yang dihargai pasar, sehingga likuiditas bukan sekadar *buffer* tetapi menjadi potensi pertumbuhan. Apabila AID memoderasi pengaruh DER (interaksi DER × AID signifikan), hal ini mengindikasikan bahwa transparansi AI membantu investor mengevaluasi apakah leverage digunakan secara produktif untuk investasi digital, mengurangi persepsi negatif terhadap utang.
+
+Secara keseluruhan, signifikansi efek moderasi AID menjadi kontribusi empiris utama penelitian ini, mengingat belum banyak studi yang menguji interaksi antara pengungkapan adopsi AI dan relevansi rasio fundamental di pasar modal *emerging market* seperti Indonesia.
 
 ### 4.6.5 Structural Break Era GenAI (H10–H11)
 
-*[Pembahasan hasil pengujian H10–H11 dalam konteks EMH dan perubahan paradigma teknologi.]*
+Hipotesis H10 menguji apakah terdapat perbedaan signifikan dalam pengaruh rasio fundamental terhadap harga saham sebelum (2019–2022) dan sesudah (2023–2025) era Generative AI. H11 menguji apakah pengaruh rasio fundamental terhadap return saham dan Tobin's Q lebih kuat pada periode pasca-GenAI untuk perusahaan dengan AID tinggi. Kedua hipotesis dilandasi oleh EMH (Fama, 1970) dan konsep *paradigm shift* dalam teknologi.
 
-### 4.6.6 Ringkasan Keputusan Hipotesis
+**Structural break pada model PRICE (H10).** Hasil estimasi model structural break (Tabel 4.11) menunjukkan koefisien DGENAI dan interaksi [arah dan signifikansi — akan diisi]. Koefisien DGENAI menunjukkan pergeseran intersep — yaitu apakah level harga saham secara rata-rata berbeda antara kedua periode setelah mengontrol variabel independen. Koefisien interaksi (X × DGENAI) menunjukkan pergeseran slope — yaitu apakah sensitivitas harga saham terhadap masing-masing rasio fundamental berubah di era pasca-GenAI.
+
+Apabila terdapat perubahan signifikan pada koefisien interaksi, temuan ini mendukung argumen bahwa era GenAI telah mengubah cara pasar memproses dan menilai informasi fundamental perusahaan teknologi. Das *et al.* (2024) mendokumentasikan bahwa pengumuman ChatGPT pada November 2022 memberikan dampak signifikan terhadap saham teknologi, yang mengindikasikan adanya *structural shift* dalam valuasi sektor ini. Sattar *et al.* (2026) juga mengonfirmasi bahwa pengumuman OpenAI memiliki dampak nyata terhadap return saham, mendukung keberadaan *event-driven structural break*.
+
+Dalam perspektif EMH, perubahan struktural dalam relevansi fundamental dapat diinterpretasi sebagai: (a) peningkatan efisiensi pasar karena ketersediaan alat analisis berbasis AI yang mempercepat penyerapan informasi; (b) pergeseran preferensi investor dari metrik fundamental tradisional ke metrik yang lebih mencerminkan kapabilitas digital; atau (c) *repricing* rasio fundamental dalam konteks baru di mana ekspektasi pertumbuhan berbasis AI mempengaruhi *discount rate* dan *expected cash flows*.
+
+**Structural break pada model RET dan TQ (H10 dan H11).** Untuk return saham dan Tobin's Q, analisis structural break memberikan perspektif tambahan tentang apakah *value relevance* fundamental berubah secara dinamis. Apabila koefisien rasio fundamental meningkat signifikansinya di era pasca-GenAI, hal ini menunjukkan bahwa informasi fundamental menjadi lebih — bukan kurang — relevan di era AI, mungkin karena perusahaan dengan fundamental yang kuat lebih dipercaya mampu mengadopsi dan memanfaatkan teknologi AI secara efektif.
+
+Hipotesis H11 secara spesifik memprediksi bahwa efek penguatan ini lebih terasa bagi perusahaan dengan AID tinggi. Pengujian H11 idealnya melibatkan triple interaction (X × DGENAI × AID), namun mengingat keterbatasan derajat kebebasan dengan 182 observasi, pendekatan yang digunakan adalah membandingkan koefisien interaksi DGENAI antara subsampel AID tinggi dan rendah (berdasarkan median split).
+
+Abuzayed *et al.* (2023) meneliti dampak ChatGPT terhadap return pasar saham dan menemukan *early evidence* bahwa pasar merespons secara berbeda terhadap perusahaan berdasarkan eksposur teknologinya. Ftiti *et al.* (2024) menunjukkan bahwa dampak ChatGPT bervariasi antar jenis bank dan negara, mengimplikasikan bahwa efek structural break bersifat heterogen dan bergantung pada konteks industri serta pasar. Uddin *et al.* (2025) mendokumentasikan bahwa atensi pasar terhadap ChatGPT memengaruhi likuiditas pasar saham, yang mengindikasikan adanya perubahan fundamental dalam *market microstructure* pasca-GenAI.
+
+Apabila H10 dan H11 tidak didukung, hal ini mengindikasikan bahwa pasar modal Indonesia belum sepenuhnya merespons era GenAI dalam valuasi sektor teknologi — mungkin karena adopsi AI di Indonesia masih pada tahap awal difusi, atau karena investor di BEI belum secara substansial mengubah kerangka analisis fundamental mereka. Interpretasi ini konsisten dengan karakteristik pasar *emerging market* di mana kecepatan penyerapan informasi teknologi mungkin lebih lambat dibandingkan pasar maju.
+
+### 4.6.6 Analisis Komparatif Suplementer: Indonesia vs Amerika Serikat
+
+Sebagai analisis suplementer, dilakukan perbandingan deskriptif antara rasio fundamental perusahaan teknologi Indonesia (26 perusahaan, 182 observasi) dan perusahaan teknologi Amerika Serikat (10 perusahaan *large-cap*, 70 observasi) untuk memberikan konteks posisi relatif sektor teknologi BEI dalam lanskap global. Data perusahaan AS diperoleh dari SEC EDGAR untuk periode 2019–2025. **Catatan penting**: analisis ini bersifat deskriptif dan tidak dimaksudkan sebagai inferensi kausal, mengingat perbedaan fundamental dalam skala pasar, regulasi, dan lingkungan bisnis.
+
+**Tabel 4.21 Perbandingan Deskriptif Rasio Fundamental — Indonesia vs AS**
+
+| Variabel | Indonesia (Mean) | Indonesia (Median) | AS (Mean) | AS (Median) | Rasio AS/ID |
+|----------|-----------------|-------------------|----------|------------|-------------|
+| ROA | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| ROE | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| NPM | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| DER | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+| EPS | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] | [akan diisi] |
+
+*Catatan: Data AS dari SEC EDGAR cache (10 perusahaan: AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSLA, CRM, ADBE, ORCL). Nilai akan diisi setelah data Indonesia final tersedia. Kolom Rasio AS/ID menunjukkan perbandingan mean AS terhadap Indonesia.*
+
+Berdasarkan data awal, beberapa perbedaan kontekstual yang perlu dicatat:
+
+**Maturitas pasar.** Perusahaan teknologi AS dalam sampel merupakan *mega-cap* dengan kapitalisasi pasar dan profitabilitas jauh lebih tinggi secara absolut. Perusahaan teknologi Indonesia masih dalam tahap pertumbuhan awal dengan skala yang lebih kecil. Perbedaan skala ini mempengaruhi interpretasi perbandingan rasio — ROA dan NPM AS yang lebih tinggi mencerminkan *economies of scale* dan dominasi pasar global, bukan semata-mata efisiensi operasional yang lebih baik.
+
+**Regulasi dan pelaporan.** Perusahaan AS beroperasi di bawah rezim SEC dengan sejarah pengungkapan yang panjang, cakupan analis yang luas, dan standar pelaporan yang sangat terperinci. Perusahaan Indonesia beroperasi di bawah lingkungan pengungkapan BEI/OJK dengan kedalaman *annual report* yang lebih heterogen, khususnya untuk topik adopsi AI. Perbedaan ini memengaruhi kualitas dan ketersediaan data AID.
+
+**Tahap adopsi AI.** Perusahaan teknologi *mega-cap* AS telah mengadopsi investasi AI lebih awal dan pada skala belanja modal (*capex*) serta aset tak berwujud (*intangibles*) yang jauh lebih besar. Emiten ICT Indonesia berada pada tahap adopsi yang beragam — beberapa operator telekomunikasi besar telah mulai mengintegrasikan AI dalam operasional jaringan, sementara perusahaan teknologi lain masih dalam tahap eksplorasi. Intensitas pengungkapan AI kemungkinan bervariasi signifikan antar subsektor.
+
+**Implikasi untuk interpretasi.** Perbandingan ini tidak dimaksudkan untuk menilai mana yang "lebih baik", melainkan untuk memberikan *benchmark* kontekstual. Apabila pola hubungan rasio fundamental-valuasi di Indonesia menunjukkan kemiripan arah dengan pola di AS (meskipun berbeda magnitudo), hal ini memperkuat generalisabilitas temuan dalam konteks *cross-market*. Sebaliknya, perbedaan pola mengindikasikan faktor-faktor spesifik pasar yang memerlukan penjelasan lebih lanjut.
+
+### 4.6.7 Ringkasan Keputusan Hipotesis
 
 **Tabel 4.14 Ringkasan Keputusan Hipotesis**
 
@@ -822,17 +1323,29 @@ Pembahasan temuan penelitian akan mengaitkan hasil estimasi dengan hipotesis yan
 
 ## 5.1 Kesimpulan
 
-*[Kesimpulan akan disusun setelah seluruh analisis data selesai, dengan menjawab masing-masing rumusan masalah secara sistematis.]*
-
 Berdasarkan hasil analisis data dan pembahasan yang telah diuraikan pada BAB IV, dapat ditarik kesimpulan sebagai berikut:
 
-1. *[Kesimpulan terkait pengaruh rasio fundamental terhadap harga saham, return saham, dan Tobin's Q — menjawab rumusan masalah pertama.]*
+**Pertama**, terkait pengaruh rasio fundamental terhadap nilai pasar perusahaan (menjawab Rumusan Masalah 1):
 
-2. *[Kesimpulan terkait peran moderasi AI Disclosure Index — menjawab rumusan masalah kedua.]*
+Pengujian hipotesis H1–H7 menggunakan regresi data panel dengan 182 observasi (26 perusahaan × 7 tahun) menunjukkan bahwa [jumlah — akan diisi] dari tujuh rasio fundamental berpengaruh signifikan terhadap setidaknya satu variabel dependen. Dari ketiga dimensi nilai pasar yang diuji — harga saham (PRICE), return saham (RET), dan Tobin's Q (TQ) — rasio fundamental menunjukkan pola relevansi yang [akan diisi: konsisten/bervariasi] antar variabel dependen.
 
-3. *[Kesimpulan terkait structural break era Generative AI — menjawab rumusan masalah ketiga.]*
+- Rasio profitabilitas (ROA, ROE, NPM): [Ringkasan arah dan signifikansi — akan diisi]. Temuan ini [konsisten/tidak konsisten] dengan Signaling Theory yang memprediksi pengaruh positif profitabilitas terhadap indikator pasar.
+- Rasio likuiditas (CR): [Ringkasan — akan diisi]. Temuan ini [mendukung/tidak mendukung] H4.
+- Rasio leverage (DER): [Ringkasan — akan diisi]. Arah pengaruh [sesuai/berlawanan] dengan prediksi negatif H5, yang [dapat/tidak dapat] dijelaskan oleh *trade-off theory*.
+- Rasio aktivitas (TATO): [Ringkasan — akan diisi].
+- Rasio pasar (EPS): [Ringkasan — akan diisi]. EPS menunjukkan relevansi [tertinggi/terendah] terhadap PRICE, konsisten dengan perannya sebagai metrik paling langsung bagi investor.
 
-4. *[Kesimpulan terkait konsistensi hasil pada robustness checks — menjawab rumusan masalah keempat.]*
+**Kedua**, terkait peran moderasi AI Disclosure Index (menjawab Rumusan Masalah 2):
+
+Pengujian hipotesis H8–H9 melalui model moderasi menunjukkan bahwa AI Disclosure Index [memiliki/tidak memiliki] efek moderasi yang signifikan terhadap hubungan rasio fundamental dengan nilai pasar. Dari [jumlah — akan diisi] term interaksi yang diuji, [jumlah — akan diisi] menunjukkan signifikansi pada level 5%. Temuan ini [mendukung/tidak mendukung] argumen Resource-Based View (Barney, 1991) bahwa kapabilitas AI memperkuat relevansi kinerja keuangan di mata investor, serta Innovation Diffusion Theory (Rogers, 1962) bahwa *early adopters* AI memperoleh keunggulan valuasi.
+
+**Ketiga**, terkait structural break era Generative AI (menjawab Rumusan Masalah 3):
+
+Pengujian hipotesis H10–H11 melalui model structural break dengan dummy DGENAI menunjukkan bahwa [terdapat/tidak terdapat] perbedaan signifikan dalam pengaruh rasio fundamental antara periode pre-GenAI (2019–2022) dan post-GenAI (2023–2025). Koefisien interaksi menunjukkan bahwa relevansi fundamental [meningkat/menurun/tidak berubah] secara signifikan di era pasca-GenAI. Temuan ini [konsisten/tidak konsisten] dengan teori bahwa perubahan paradigma teknologi AI mengubah cara pasar memproses informasi fundamental (Das *et al.*, 2024; Abuzayed *et al.*, 2023).
+
+**Keempat**, terkait konsistensi hasil pada robustness checks (menjawab Rumusan Masalah 4):
+
+Hasil pengujian utama menunjukkan [tingkat konsistensi — akan diisi] pada seluruh pengujian robustness yang dilakukan: (a) subsampel Technology-only, Pre/Post-GenAI, dan Exclude-2020 menunjukkan [konsistensi/variasi] arah dan signifikansi koefisien; (b) winsorization pada persentil 1%–99% [tidak mengubah/mengubah] kesimpulan utama; (c) penggunaan PBV sebagai proksi alternatif TQ menghasilkan temuan yang [konsisten/berbeda]; dan (d) estimasi System GMM [mengonfirmasi/mempertanyakan] validitas temuan dari model panel utama terhadap ancaman endogeneity.
 
 ## 5.2 Keterbatasan Penelitian
 
@@ -848,6 +1361,8 @@ Penelitian ini memiliki beberapa keterbatasan yang perlu diperhatikan dalam meng
 
 5. Data harga saham dan laporan keuangan beberapa emiten dengan kapitalisasi kecil mungkin kurang likuid, yang dapat memengaruhi akurasi pengukuran variabel dependen.
 
+6. AI Disclosure Index mengukur pengungkapan (*disclosed*) adopsi AI dalam annual report, yang tidak selalu mencerminkan adopsi AI aktual (*actual adoption*). Perusahaan mungkin mengadopsi AI tanpa mengungkapkannya secara eksplisit, atau sebaliknya, mengungkapkan rencana AI tanpa implementasi substantif. Kesenjangan antara *disclosed* dan *actual* AI adoption merupakan keterbatasan inheren dari penggunaan *content analysis* annual report sebagai proksi adopsi teknologi.
+
 ## 5.3 Saran
 
 Berdasarkan hasil penelitian dan keterbatasan yang telah diuraikan, berikut adalah saran untuk penelitian selanjutnya dan implikasi praktis:
@@ -861,6 +1376,12 @@ Berdasarkan hasil penelitian dan keterbatasan yang telah diuraikan, berikut adal
 3. Menggunakan metode estimasi yang lebih robust terhadap endogeneity, seperti Difference-in-Differences (DID) atau Instrumental Variable (IV) regression, dengan instrumen yang lebih kuat.
 
 4. Memperpanjang periode observasi ke tahun-tahun berikutnya untuk mengamati dampak jangka panjang dari adopsi GenAI terhadap relevansi analisis fundamental.
+
+5. Melakukan studi perbandingan lintas negara (*cross-country comparison*) antara pasar modal *emerging market* (BEI) dan *developed market* (misalnya NYSE/NASDAQ) untuk menguji apakah efek moderasi AI disclosure dan structural break GenAI bersifat universal atau *market-specific*. Data awal perbandingan deskriptif dengan perusahaan teknologi AS dalam penelitian ini dapat menjadi titik awal untuk studi komparatif yang lebih komprehensif.
+
+6. Mengembangkan pengukuran AI Disclosure Index berbasis *Natural Language Processing* (NLP) yang dapat mengotomatisasi proses *content analysis* annual report, meningkatkan objektivitas, dan memungkinkan analisis pada skala sampel yang lebih besar. Pendekatan NLP juga memungkinkan penangkapan nuansa semantik pengungkapan AI yang sulit diidentifikasi melalui metode manual.
+
+7. Melakukan replikasi penelitian ini pada sektor lain (misalnya perbankan, manufaktur, atau energi) untuk menguji *external validity* temuan dan mengidentifikasi apakah efek moderasi AI disclosure bersifat spesifik terhadap sektor teknologi atau berlaku secara lebih luas.
 
 ### Implikasi Praktis
 
@@ -984,6 +1505,7 @@ Zeileis, A., Leisch, F., Hornik, K., & Kleiber, C. (2002). strucchange: An R pac
 6. Output Regresi Model Baseline (3 Model)
 7. Output Regresi Model Moderasi AID (3 Model)
 8. Output Regresi Model Structural Break (3 Model)
-9. Output Robustness Checks
+9. Output Robustness Checks (Subsampel, Winsorization, PBV, System GMM)
 10. Tabel Keputusan Hipotesis Lengkap
 11. Lembar Kerja AI Disclosure Index
+12. Data Perbandingan Rasio Fundamental Indonesia vs AS (Suplementer)
